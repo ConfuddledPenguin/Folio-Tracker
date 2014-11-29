@@ -1,0 +1,158 @@
+________________________________________________________________________________
+features of folio tracker
+
+Needed:
+
+- manage multiple portfolios;
+- create and delete portfolios;
+- see the positions (stock name, number of shares held, price per share, and value of the holding) in a portfolio;
+- add and remove stocks to the portfolio;
+- increase and decrease the number of shares of a stock;
+- see the total value of a portfolio.
+
+Extra: (Apparently we only need to do 2 (3 maybe i have forgotten for the extra marks))
+
+- saving portfolio information to disk;
+
+	Simple(ish). I have old xml code we could repurpose. Or could do some serialiasion stuff as i have never done it to save the data.
+
+- indicating whether price is going up or down, perhaps by colouring the text or using little coloured arrows;
+
+	Keep a history of the stock data so we can map the price over time. The complicated option for the server provides a getChnage method. ITs doesn't say what it really does but we might be able to use that.
+
+- allowing the user to enter the price at which a stock was bought, to estimate gains and losses;
+
+	Simples. Store initial value and use a little maths
+
+- keeping track of highs and lows;
+
+	The complicated option provides methods for this.
+
+- setting watches causing an action to occur when the stock goes up or down some amount;
+
+	Shouldn't be overly hard.
+
+- sorting positions by value, ticker symbol, etc.
+
+Questions to answer:
+
+- how portfolios will be identified (with names provided by the user?);
+- when stock prices will be updated (periodically? by explicit command?);
+- how to handle exceptional cases, such as ticker symbols that don't match stocks, or how to behave when the web site is not 	responding;
+- whether multiple portfolios can be shown at once;
+- whether multiple simultaneous views of the same portfolio are allowed.
+
+Basic issues:
+
+- whether the API will be passive, in the sense that the application simply treats it as a source of information, or whether  	it will be active, by having functionality to make periodic callbacks, for example;
+-what types will be exposed at the interface.
+
+________________________________________________________________________________
+What the API needs to be able to do:
+
+NOTE: 	Should we handle workspaces, or just the portfolios?
+		- For workspaces could just save the details of the portfolios and then
+		load them back up when needed.
+
+NOTE:	Things in brackets are ideas
+		Things far of to the right are values needed to facilitate calls
+
+_____________________________
+Control:
+
+Load portfolio
+Save portfolio
+
+(Load workspace)
+(save workspace)
+(new workspace)
+
+(Set Refresh Interval)
+
+_____________________________
+Portfolios:
+
+Create new portfolios 				- Name
+Delete portfolios
+
+List all stocks
+Add stocks to the portfolios
+Remove stocks from the portfolio
+
+Get Total Value
+Get Total Gain/Loss
+
+_____________________________
+Stocks:
+
+NOTES: 	Do we need to handle the fact that when increasing or decreasing the 
+		number of shares of a stock held the initial price of the shares
+		could be different to the current initial price.
+
+Create new stock 					- Ticker, number held, initial price
+Delete stock
+
+Get Ticker
+Get Name
+Get Value
+(Get Lowest Initial Value)
+(Get Highest Initial Value)
+(Get Average Initial value)
+Get Number of Shares
+Get Gain/Loss
+Get Closing Price
+Get Opening Price
+Get Daily change
+
+Set Number of Shares
+Set Initial value
+
+(Sell Shares)						- Number sold, value to sold at
+(buy shares)						- Number purchased, value purchased at
+
+________________________________________________________________________________
+API Spec
+
+After the above thinking, the below thinking was done.
+
+_____________________________
+Control:
+
+boolean newPortolio(String name);
+boolean deletePortfolio(long id); | boolean deletePortfolio(Portfolio p);
+
+Load portfolio
+Save portfolio
+
+long getRefreshInterval();
+void setRefreashInterval();
+
+_____________________________
+Portfolios:
+
+List<Stock> getStocks();
+boolean newStock(String ticker, Int numberHeld, double price);
+boolean deleteStock(long id); | boolean deleteStock(Stock s);
+
+double totalValue();
+double netGain();
+
+_____________________________
+Stocks:
+
+String getTicker();
+String getName();
+double getCurrentValue();
+double getHoldingValue(); - total value
+double getLowestInitialValue();
+double getHighestInitialValue();
+double getAverageInitialValue();
+List<double> getInitialValues();
+int getNumberOfShares();
+double getNetGain();
+double getClosingPrice();
+double getOpeningPrice();
+double getDailyChange();
+
+boolean sellShares(Int NoSold, double soldAt);
+boolean buyShares(Int NoPurchased, double purchasedAT);

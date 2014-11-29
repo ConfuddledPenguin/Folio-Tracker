@@ -4,14 +4,16 @@ import java.util.List;
 
 public interface Portfolio {
 	
-	public boolean newStock(String ticker, int numberHeld, double price);
-	public boolean deleteStock(Stock s);
+	public String GetName();
+	
+	public boolean newStock(String ticker, String name, double currentValue);
+	public boolean deleteStock(Object o);
 
 	public List<Stock> getStocks();
 	
 	public double getTotalValue();
-	public boolean setTotalValue();
+	public boolean setTotalValue(double totalValue);
 	
 	public double getNetGain();
-	public boolean setNetGain();
+	public boolean setNetGain(double netGain);
 }

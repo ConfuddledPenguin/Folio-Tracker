@@ -14,9 +14,9 @@ public class ModelImp implements Model {
 	}
 
 	@Override
-	public Portfolio createPortfolio() {
+	public Portfolio createPortfolio(String name) {
 		
-		Portfolio p = new PortfolioImp();
+		Portfolio p = new PortfolioImp(name);
 		
 		portfolios.add(p);
 		
@@ -24,17 +24,21 @@ public class ModelImp implements Model {
 	}
 
 	@Override
-	public boolean deletePortfolio(Portfolio p) {
+	public boolean deletePortfolio(Object o) {
 		
-		portfolios.remove(p);
+		if ( o instanceof Portfolio){
 		
-		return true;
+			portfolios.remove( (Portfolio) o);
+			return true;
+		}
+		
+		return false;
 	}
 
 	@Override
 	public List<Portfolio> getPortfolios() {
 		
-		return null;
+		return new ArrayList<Portfolio>(portfolios);
 	}
 	
 }
