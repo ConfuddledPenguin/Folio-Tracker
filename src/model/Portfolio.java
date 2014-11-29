@@ -6,7 +6,7 @@ public interface Portfolio {
 	
 	public String GetName();
 	
-	public boolean newStock(String ticker, String name, double currentValue);
+	public Stock newStock(String ticker, String name, String exchange, double currentValue);
 	public boolean deleteStock(Object o);
 
 	public List<Stock> getStocks();

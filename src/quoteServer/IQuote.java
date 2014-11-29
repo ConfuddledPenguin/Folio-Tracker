@@ -128,4 +128,40 @@ public interface IQuote {
 	 */
 	public Double getVolume() throws MethodException;
 	
+	/**
+	 * This method returns the name of the stock
+	 * 
+	 * @effects String name: if string == null throw MethodException else
+	 * 			returns the name of the company.
+	 * 
+	 * @return The name of the company
+	 * 
+	 * @throws MethodException
+	 */
+	public String getName() throws MethodException;
+	
+	/**
+	 * This methods returns the previous close price of the stock
+	 * 
+	 * @effects String close: if close == null throw MethodException else
+	 *          returns the close price
+	 *          
+	 * @return The close price
+	 * 
+	 * @throws MethodException
+	 */
+	public Double getClose() throws MethodException;
+	
+	/**
+	 * This methods returns the exchange the stock is listed on
+	 * 
+	 * @effects String exchange: if exchange == null throw MethodException else
+	 *          returns the exchange the stock is listed on
+	 * 
+	 * @return The exchange name
+	 * 
+	 * @throws MethodException
+	 */
+	public String getExchange() throws MethodException;
+	
 }///:~

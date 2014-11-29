@@ -21,11 +21,13 @@ class PortfolioImp implements Portfolio {
 	}
 
 	@Override
-	public boolean newStock(String ticker, String name, double currentValue) {
+	public Stock newStock(String ticker, String name, String exchange, double currentValue) {
 		
-		Stock s = new StockImp(ticker, name, currentValue);
+		Stock s = new StockImp(ticker, name, exchange, currentValue);
 		
-		return stocks.add(s);
+		stocks.add(s);
+		
+		return s;
 	}
 
 	@Override

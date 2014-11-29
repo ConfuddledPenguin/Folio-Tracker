@@ -4,7 +4,7 @@ package quoteServer;
 
 /** 
  * This class Quote.java retrieves a file from the yahoo webpage, and reads
- * in the sharedata and makes it avaliable for use with a share application.
+ * in the sharedata and makes it available for use with a share application.
  * 
  * <a href="http://finance.yahoo.com">
  * 
@@ -30,7 +30,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class Quote {
+public class Quote implements IQuote {
 
 	/**
 	 * Quote is a utility class that allows calling code to retrieve the latest
@@ -75,7 +75,25 @@ public class Quote {
 			WebsiteDataException, NoSuchTickerException, MethodException {
 
 		String url = "http://finance.yahoo.com/d/quotes.csv?s=";
-		String fileFormat = "&f=sl1d1t1c1ohgv&e=.csv";
+		
+		/*
+		 * s = ticker
+		 * l1 = latest trade price
+		 * d1 = latest trade date
+		 * t1 = latest trade time
+		 * c1 = change
+		 * o = open
+		 * h = days high
+		 * g = days low
+		 * v = Volume available 
+		 * 
+		 * I have added the following
+		 * 
+		 * n = name
+		 * p = previous close
+		 * x = stock exchange listed on
+		 */
+		String fileFormat = "&f=sl1d1t1c1ohgvnpx&e=.csv";
 		
 		if (tickerSymbol == null || tickerSymbol == "") {
 
@@ -112,6 +130,8 @@ public class Quote {
 
 			// strip the file of any punctuation
 			String s = removePunc(str);
+			// Want to see what data we are getting back!! Uncomment below!
+			//System.out.println(s);
 
 			// add the elements to an array with , as a deliminator
 			_shareDataList = Arrays.asList(s.split(","));
@@ -245,6 +265,48 @@ public class Quote {
 	public Double getVolume() throws MethodException {
 			return ensureNotNull(_shareDataList.get(8)) ? Double.valueOf(_shareDataList.get(8)):null;
 	}// end of getVolume
+	
+	/**
+	 * This method returns the name of the stock
+	 * 
+	 * @effects String name: if string == null throw MethodException else
+	 * 			returns the name of the company.
+	 * 
+	 * @return The name of the company
+	 * 
+	 * @throws MethodException
+	 */
+	public String getName() throws MethodException {
+		return ensureNotNull(_shareDataList.get(9)) ? _shareDataList.get(9):null;
+	}
+	
+	/**
+	 * This methods returns the previous close price of the stock
+	 * 
+	 * @effects String close: if close == null throw MethodException else
+	 *          returns the close price
+	 *          
+	 * @return The close price
+	 * 
+	 * @throws MethodException
+	 */
+	public Double getClose() throws MethodException {
+		return ensureNotNull(_shareDataList.get(10)) ? Double.valueOf(_shareDataList.get(10)):null;
+	}
+	
+	/**
+	 * This methods returns the exchange the stock is listed on
+	 * 
+	 * @effects String exchange: if exchange == null throw MethodException else
+	 *          returns the exchange the stock is listed on
+	 * 
+	 * @return The exchange name
+	 * 
+	 * @throws MethodException
+	 */
+	public String getExchange() throws MethodException {
+		return ensureNotNull(_shareDataList.get(11)) ? _shareDataList.get(11):null;
+	}
 
 	// -------------------- Private Methods  --------------------
 	

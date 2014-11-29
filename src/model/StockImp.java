@@ -9,6 +9,8 @@ class StockImp implements Stock {
 	private String ticker;
 	//The stock name
 	private String name;
+	//The Stock exchange wheres its listed
+	private String exchange;
 	//The current value of the stock
 	private double currentValue;
 	//The number of stocks held
@@ -23,23 +25,31 @@ class StockImp implements Stock {
 	private double openingPrice = 0;
 	//The daily change of the sock
 	private double dailyChange = 0;
+	//The daily max
+	private double dailyMax = 0;
+	//The daily min
+	private double dailyMin = 0;
+	//The volume of shares available
+	private double volume = 0;
 	//The shares objects
 	private List<SharesImp> shares;
 	
 	
-	public StockImp(String ticker, String name, double currentValue) {
+	public StockImp(String ticker, String name, String exchange, double currentValue) {
 		this.ticker = ticker;
 		this.name = name;
+		this.exchange = exchange;
 		this.currentValue = currentValue;
 		
 		shares = new ArrayList<SharesImp>();
 	}
 	
-	public boolean addShares(int noShares, double initialValue) {
+	public Shares addShares(int noShares, double initialValue) {
 		
 		SharesImp s = new SharesImp(noShares, initialValue);
+		shares.add(s);
 		
-		return shares.add(s);
+		return s;
 	}
 	
 	public boolean removeShares(Object o){
@@ -52,6 +62,11 @@ class StockImp implements Stock {
 		
 		return false;
 	}
+	
+	/*-----------------------------------------------------------------------
+	 * The land of the getters and setters
+	 */
+	
 
 	public List<Shares> getShares(){
 		
@@ -72,6 +87,11 @@ class StockImp implements Stock {
 		return name;
 	}
 
+	@Override
+	public String getExchange() {
+		
+		return exchange;
+	}
 
 	@Override
 	public double getCurrentValue() {
@@ -171,6 +191,48 @@ class StockImp implements Stock {
 	public boolean setDailyChange(double dailyChange) {
 		
 		this.dailyChange = dailyChange;
+		
+		return true;
+	}
+
+	@Override
+	public double getDailyMax() {
+
+		return dailyMax;
+	}
+
+	@Override
+	public boolean setDailyMax(double dailyMax) {
+		
+		this.dailyMax = dailyMax;
+		
+		return true;
+	}
+
+	@Override
+	public double getDailyMin() {
+
+		return dailyMin;
+	}
+
+	@Override
+	public boolean setDailyMin(double dailyMin) {
+
+		this.dailyMin = dailyMin;
+		
+		return true;
+	}
+
+	@Override
+	public double getVolume() {
+		
+		return volume;
+	}
+
+	@Override
+	public boolean setVolume(double volume) {
+		
+		this.volume = volume;
 		
 		return true;
 	}

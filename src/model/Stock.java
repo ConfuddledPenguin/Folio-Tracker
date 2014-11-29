@@ -5,12 +5,14 @@ import java.util.List;
 
 public interface Stock {
 
-	public boolean addShares(int noShares, double initialValue);
+	public Shares addShares(int noShares, double initialValue);
 	public boolean removeShares(Object o);
 	
 	public String getTicker();
 	
 	public String getName();
+	
+	public String getExchange();
 	
 	public List<Shares> getShares();
 	
@@ -33,4 +35,13 @@ public interface Stock {
 	
 	public double getDailyChange();
 	public boolean setDailyChange(double dailyChange);
+	
+	public double getDailyMax();
+	public boolean setDailyMax(double dailyMax);
+	
+	public double getDailyMin();
+	public boolean setDailyMin(double dailyMin);
+	
+	public double getVolume();
+	public boolean setVolume(double volume);
 }
