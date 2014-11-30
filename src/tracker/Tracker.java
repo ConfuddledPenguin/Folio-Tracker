@@ -73,10 +73,12 @@ public class Tracker {
 			name = quoter.getName();
 			exchange = quoter.getExchange();
 			currentValue = quoter.getLatest();
-		} catch (IOException | WebsiteDataException | NoSuchTickerException
+		} catch (IOException | WebsiteDataException
 				| MethodException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch(NoSuchTickerException e){
+			System.out.println("Stock does not exist");
 		}
 		
 		//finally create new stock

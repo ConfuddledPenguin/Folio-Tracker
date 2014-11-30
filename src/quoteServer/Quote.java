@@ -131,7 +131,7 @@ public class Quote implements IQuote {
 			// strip the file of any punctuation
 			String s = removePunc(str);
 			// Want to see what data we are getting back!! Uncomment below!
-			//System.out.println(s);
+			System.out.println(s);
 
 			// add the elements to an array with , as a deliminator
 			_shareDataList = Arrays.asList(s.split(","));
