@@ -63,11 +63,13 @@ public class UserInterface {
 		createMenu(frame);
 		mainPanel = new JPanel(new BorderLayout());
 		mainPanel.setPreferredSize(new Dimension(650, 500));
-		frame.add(mainPanel);
 		createTabs();
 		createAddSharesPane();
 		createFolioValueLabel();
 		createTickerTable();
+		frame.add(mainPanel);
+		frame.revalidate();
+		frame.repaint();
 
 	}
 
