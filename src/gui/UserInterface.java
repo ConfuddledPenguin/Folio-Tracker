@@ -98,9 +98,9 @@ public class UserInterface {
 		addShares.setPreferredSize(d);
 		addShares.setBackground(Color.gray);
 		tickerSymbol = new JLabel("Ticker Symbol:");
-	    noOfShares = new JLabel("Number Of Shares:");
-	    tickerText = new JTextField(20);
-	    noOfSharesText = new JTextField(4);
+		noOfShares = new JLabel("Number Of Shares:");
+		tickerText = new JTextField(20);
+		noOfSharesText = new JTextField(4);
 		addFolio = new JButton("Add");
 		addShares.add(tickerSymbol);
 		addShares.add(tickerText);
@@ -123,15 +123,15 @@ public class UserInterface {
 
 	// rows will be added dynamically, just implemented the layout
 	private void createTickerTable() {
-     //create table
-      DefaultTableModel model = new DefaultTableModel(); 
-      JTable tickerTable = new JTable(model);
-      //add columns to the table
-      for(int i=0; i<columnNames.length;i++){
-    	  model.addColumn(columnNames[i]);
-      }
-      tickerTable.setBackground(Color.WHITE);
-      mainPanel.add(new JScrollPane(tickerTable), BorderLayout.CENTER);
-      
+		// create table
+		DefaultTableModel model = new DefaultTableModel();
+		JTable tickerTable = new JTable(model);
+		// add columns to the table
+		for (int i = 0; i < columnNames.length; i++) {
+			model.addColumn(columnNames[i]);
+		}
+		tickerTable.setBackground(Color.WHITE);
+		mainPanel.add(new JScrollPane(tickerTable), BorderLayout.CENTER);
+
 	}
 }
