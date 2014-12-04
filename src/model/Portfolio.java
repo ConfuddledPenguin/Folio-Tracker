@@ -3,7 +3,7 @@ package model;
 import java.util.List;
 
 /**
- * An interface for the Portfolio
+ * An interface for the Portfolio.
  *
  */
 public interface Portfolio {
@@ -55,18 +55,6 @@ public interface Portfolio {
 	public double getTotalValue();
 	
 	/**
-	 * Set the total Value of the stock
-	 * 
-	 * @effects this.totalValue = totalValue
-	 * @modifies this
-	 * 
-	 * @param totalValue the totalValue of the portfolio
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setTotalValue(double totalValue);
-	
-	/**
 	 * returns the Net gain in this portfolio
 	 * 
 	 * @effects returns this.netGain
@@ -74,18 +62,6 @@ public interface Portfolio {
 	 * @return the net gain
 	 */
 	public double getNetGain();
-	
-	/**
-	 * Sets the net gain of this portfolio
-	 * 
-	 * @effects this.netGain = netGain
-	 * @modifes this
-	 * 
-	 * @param netGain The net gain of the portfolio
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setNetGain(double netGain);
 	
 	/**
 	 * Returns the name of the portfolio

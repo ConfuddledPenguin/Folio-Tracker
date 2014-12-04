@@ -11,12 +11,8 @@ class PortfolioImp implements Portfolio {
 	
 	//The name of the portfolio
 	private String name;
-	//The total value of the portfolio
-	private double totalValue = 0;
-	//The net gain of this portfolio
-	private double netGain = 0;
 	//The stocks held in this portfolio
-	List<Stock> stocks;
+	List<StockImp> stocks;
 	
 	/**
 	 * The constructor for the PortfolioImp
@@ -29,7 +25,7 @@ class PortfolioImp implements Portfolio {
 	public PortfolioImp(String name) {
 		  this.name = name;
 		  
-		  stocks = new ArrayList<Stock>();
+		  stocks = new ArrayList<StockImp>();
 	}
 
 
@@ -49,7 +45,7 @@ class PortfolioImp implements Portfolio {
 	@Override
 	public Stock newStock(String ticker, String name, String exchange, double currentValue) {
 		
-		Stock s = new StockImp(ticker, name, exchange, currentValue);
+		StockImp s = new StockImp(ticker, name, exchange, currentValue);
 		
 		stocks.add(s);
 		
@@ -83,16 +79,28 @@ class PortfolioImp implements Portfolio {
 	 */
 
 	/**
-	 * Returns the name of the portfolio
+	 * Returns a List of the stocks
 	 * 
-	 * @effects returns this.name
+	 * @effects returns this.stock
 	 * 
-	 * @return The portfolios name
+	 * @return The stock
 	 */
 	@Override
 	public List<Stock> getStocks() {
 		
 		return new ArrayList<Stock>(stocks);
+	}
+	
+	/**
+	 * Returns a List of the stockImps
+	 * 
+	 * @effects returns this.stockImps
+	 * 
+	 * @return The stockImps
+	 */
+	List<StockImp> getStockImps(){
+		
+		return new ArrayList<StockImp>(stocks);
 	}
 
 	/**
@@ -105,25 +113,14 @@ class PortfolioImp implements Portfolio {
 	@Override
 	public double getTotalValue() {
 		
+		double totalValue =0;
+		
+		for(StockImp s: stocks){
+			
+			totalValue += s.getHoldingValue();
+		}
+		
 		return totalValue;
-	}
-
-	/**
-	 * Set the total Value of the stock
-	 * 
-	 * @effects this.totalValue = totalValue
-	 * @modifies this
-	 * 
-	 * @param totalValue the totalValue of the portfolio
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	@Override
-	public boolean setTotalValue(double totalValue) {
-		
-		this.totalValue = totalValue;
-		
-		return true;
 	}
 
 	/**
@@ -136,26 +133,16 @@ class PortfolioImp implements Portfolio {
 	@Override
 	public double getNetGain() {
 		
+		double netGain = 0;
+		
+		for(StockImp s: stocks){
+			
+			netGain += s.getNetGain();
+		}
+		
 		return netGain;
 	}
 
-	/**
-	 * Sets the net gain of this portfolio
-	 * 
-	 * @effects this.netGain = netGain
-	 * @modifes this
-	 * 
-	 * @param netGain The net gain of the portfolio
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	@Override
-	public boolean setNetGain(double netGain) {
-		
-		this.netGain = netGain;
-		
-		return true;
-	}
 
 	/**
 	 * Returns the name of the portfolio

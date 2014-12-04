@@ -1,11 +1,22 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * An implementation of the Stock interface
- *
+ * An implementation of the stock interface
+ * 
+ * A stock represents all of the information associated with a
+ * Publicly traded stock that this application is interested
+ * in.
+ * 
+ * This is mainly:
+ * <ul>
+ * 	<li>The stock ticker</li>
+ * 	<li>The stocks name</li>
+ * 	<li>The stocks value</li>
+ * 	<li>The shares of the stock held</li>
+ *  <li>The holding value</li>
+ *  <li>etc...</li>
+ * </ul>
  */
 class StockImp implements Stock {
 
@@ -19,10 +30,8 @@ class StockImp implements Stock {
 	private double currentValue;
 	//The number of stocks held
 	private int noShares = 0;
-	//The total value of the shares held
-	private double holdingValue =0;
-	//The net gain
-	private double netGain = 0;
+	//The total spend
+	private double totalSpent = 0;
 	//The closing price of the stock
 	private double closingPrice = 0;
 	//The opening price of the stock
@@ -35,49 +44,65 @@ class StockImp implements Stock {
 	private double dailyMin = 0;
 	//The volume of shares available
 	private double volume = 0;
-	//The shares objects
-	private List<SharesImp> shares;
 	
-	
+	/**
+	 * Constructor for the StockImp object
+	 * 
+	 * @effects initialises the object
+	 * @modifies this
+	 * 
+	 * @param ticker The stock ticker
+	 * @param name The stocks name
+	 * @param exchange The stocks exchange
+	 * @param currentValue The stocks current value
+	 */
 	public StockImp(String ticker, String name, String exchange, double currentValue) {
 		this.ticker = ticker;
 		this.name = name;
 		this.exchange = exchange;
 		this.currentValue = currentValue;
-		
-		shares = new ArrayList<SharesImp>();
 	}
 	
-	public Shares addShares(int noShares, double initialValue) {
+	/**
+	 * Adds shares to the stock
+	 * 
+	 * @effects Adds the shares to this.shares
+	 * @modifies this
+	 * 
+	 * @param noShares The number of shares
+	 * @param initialValue The value the shares where purchased at
+	 * 
+	 * @return true if successful, false otherwise
+	 */
+	public boolean addShares(int noShares, double initialValue) {
 		
-		SharesImp s = new SharesImp(noShares, initialValue);
-		shares.add(s);
+		this.noShares += noShares;
+		this.totalSpent += initialValue;
 		
-		return s;
+		return true;
 	}
 	
-	public boolean removeShares(Object o){
+	/**
+	 * Removes shares from a stock
+	 * 
+	 * @effects Removes o from this.shares
+	 * @modifies this
+	 * 
+	 * @param noShares The shares to be removed
+	 */
+	public boolean removeShares(int noShares){
 		
-		if ( o instanceof Shares){
-			
-			shares.remove( (Shares) o);
-			return true;
-		}
+		double value = noShares * currentValue;
 		
-		return false;
+		totalSpent -= value;
+		
+		return true;
 	}
 	
 	/*-----------------------------------------------------------------------
 	 * Below lies the land of the getters and setters. It is better not to
 	 * voyage very deep into this land
 	 */
-	
-
-	public List<Shares> getShares(){
-		
-		return new ArrayList<Shares>(shares);
-		
-	}
 
 	/**
 	 * Returns the stock ticker
@@ -106,6 +131,16 @@ class StockImp implements Stock {
 		return name;
 	}
 
+	/**
+	 * Returns the total spent
+	 * 
+	 * @return the total
+	 */
+	public double getTotalSpent(){
+		
+		return totalSpent;
+	}
+	
 	/**
 	 * Returns the name of the exchange
 	 * 
@@ -139,7 +174,6 @@ class StockImp implements Stock {
 	 * 
 	 * @return the current value
 	 */
-	@Override
 	public boolean setCurrentValue(double currentValue) {
 		
 		this.currentValue = currentValue;
@@ -157,24 +191,7 @@ class StockImp implements Stock {
 	@Override
 	public double getHoldingValue() {
 		
-		return holdingValue;
-	}
-
-	/**
-	 * Sets the holding value
-	 * 
-	 * @effects this.holdingValue = holdingValue
-	 * @modifies this
-	 * 
-	 * @param holdingValue
-	 * @return true if successful, false otherwise
-	 */
-	@Override
-	public boolean setHoldingValue(double holdingValue) {
-		
-		this.holdingValue = holdingValue;
-		
-		return true;
+		return noShares * currentValue;
 	}
 
 	/**
@@ -200,30 +217,7 @@ class StockImp implements Stock {
 	@Override
 	public double getNetGain() {
 
-		return netGain;
-	}
-
-	/**
-	 * Sets the net gain of the stock
-	 * 
-	 * @effects this.netGain = netGain
-	 * @modifies this
-	 * 
-	 * @param netGain the net gain
-	 * @return true if successful, false otherwise
-	 *//**
-	 * Returns the closing price
-	 * 
-	 * @effects returns this.closingPrice
-	 * 
-	 * @return the closing price
-	 */
-	@Override
-	public boolean setNetGain(double netGain) {
-		
-		this.netGain = netGain;
-		
-		return true;
+		return currentValue - totalSpent;
 	}
 
 	/**
@@ -281,7 +275,6 @@ class StockImp implements Stock {
 	 * 
 	 * @return true if successful, otherwise false
 	 */
-	@Override
 	public boolean setOpeningPrice(double openingPrice) {
 		
 		this.openingPrice = openingPrice;
@@ -312,7 +305,6 @@ class StockImp implements Stock {
 	 * 
 	 * @return true if successful, otherwise false
 	 */
-	@Override
 	public boolean setDailyChange(double dailyChange) {
 		
 		this.dailyChange = dailyChange;
@@ -343,7 +335,6 @@ class StockImp implements Stock {
 	 * 
 	 * @return true if successful, otherwise false
 	 */
-	@Override
 	public boolean setDailyMax(double dailyMax) {
 		
 		this.dailyMax = dailyMax;
@@ -374,7 +365,6 @@ class StockImp implements Stock {
 	 * 
 	 * @return true if successful, otherwise false
 	 */
-	@Override
 	public boolean setDailyMin(double dailyMin) {
 
 		this.dailyMin = dailyMin;
@@ -405,7 +395,6 @@ class StockImp implements Stock {
 	 * 
 	 * @return true if successful, otherwise false
 	 */
-	@Override
 	public boolean setVolume(double volume) {
 		
 		this.volume = volume;

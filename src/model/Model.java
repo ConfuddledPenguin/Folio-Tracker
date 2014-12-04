@@ -3,7 +3,7 @@ package model;
 import java.util.List;
 
 /**
- * Interface for the Model
+ * An interface for the Model.
  * 
  */
 public interface Model {

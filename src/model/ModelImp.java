@@ -10,7 +10,7 @@ import java.util.List;
 public class ModelImp implements Model {
 
 	
-	private List<Portfolio> portfolios;
+	private List<PortfolioImp> portfolios;
 	
 	/**
 	 * The constructor for this object
@@ -20,7 +20,10 @@ public class ModelImp implements Model {
 	 */
 	public ModelImp() {
 	
-		portfolios = new ArrayList<Portfolio>();
+		portfolios = new ArrayList<PortfolioImp>();
+		
+		Thread updater = new Thread(new ModelUpdater(this));
+		updater.start();
 	}
 
 	/**
@@ -38,7 +41,7 @@ public class ModelImp implements Model {
 	@Override
 	public Portfolio createPortfolio(String name) {
 		
-		Portfolio p = new PortfolioImp(name);
+		PortfolioImp p = new PortfolioImp(name);
 		
 		portfolios.add(p);
 		
@@ -83,6 +86,18 @@ public class ModelImp implements Model {
 	public List<Portfolio> getPortfolios() {
 		
 		return new ArrayList<Portfolio>(portfolios);
+	}
+	
+	/**
+	 * Returns a list of the portfolios
+	 * 
+	 * @effects returns List<Portfolio> portfolios
+	 * 
+	 * @return A List of portfolios
+	 */
+	List<PortfolioImp> getPortfolioImps() {
+		
+		return new ArrayList<PortfolioImp>(portfolios);
 	}
 	
 }

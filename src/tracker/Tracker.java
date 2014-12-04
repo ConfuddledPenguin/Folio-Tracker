@@ -63,6 +63,7 @@ public class Tracker {
 		//The stock info
 		//The ticker
 		String ticker = "MS";
+//		String ticker = "RBS.l";
 		//Get rest of info from quoter
 		IQuote quoter = new Quote(Driver.USE_PROXY);
 		String name = "";

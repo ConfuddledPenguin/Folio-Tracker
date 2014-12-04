@@ -1,15 +1,46 @@
 package model;
 
-import java.util.List;
-
 /**
- * An interface for the Stock object
- *
+ * An interface for the Stock object.
+ * 
+ * A stock represents all of the information associated with a
+ * Publicly traded stock that this application is interested
+ * in.
+ * 
+ * This is mainly:
+ * <ul>
+ * 	<li>The stock ticker</li>
+ * 	<li>The stocks name</li>
+ * 	<li>The stocks value</li>
+ * 	<li>The shares of the stock held</li>
+ *  <li>The holding value</li>
+ *  <li>etc...</li>
+ * </ul>
  */
 public interface Stock {
 
-	public Shares addShares(int noShares, double initialValue);
-	public boolean removeShares(Object o);
+	/**
+	 * Adds shares to the stock
+	 * 
+	 * @effects Adds the shares to this.shares
+	 * @modifies this
+	 * 
+	 * @param noShares The number of shares
+	 * @param initialValue The value the shares where purchased at
+	 * 
+	 * @return true if successful, false otherwise
+	 */
+	public boolean addShares(int noShares, double initialValue);
+	
+	/**
+	 * Removes shares from a stock
+	 * 
+	 * @effects Removes o from this.shares
+	 * @modifies this
+	 * 
+	 * @param noShares The shares to be removed
+	 */
+	public boolean removeShares(int noShares);
 	
 	/**
 	 * Returns the stock ticker
@@ -30,6 +61,13 @@ public interface Stock {
 	public String getName();
 	
 	/**
+	 * Returns the total spent
+	 * 
+	 * @return the total
+	 */
+	public double getTotalSpent();
+	
+	/**
 	 * Returns the name of the exchange
 	 * 
 	 * @effects returns this.exchange
@@ -37,15 +75,6 @@ public interface Stock {
 	 * @return the exchange
 	 */
 	public String getExchange();
-	
-	/**
-	 * Returns the shares.
-	 * 
-	 * @effects this.shares
-	 * 
-	 * @return the shares
-	 */
-	public List<Shares> getShares();
 	
 	/**
 	 * Returns the current value
@@ -57,18 +86,6 @@ public interface Stock {
 	public double getCurrentValue();
 	
 	/**
-	 * Sets the current value
-	 * 
-	 * @effects this.currentValue = currentValue
-	 * @modifies this
-	 * 
-	 * @param currentValue The current value
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setCurrentValue(double currentValue);
-	
-	/**
 	 * Returns the holding value
 	 * 
 	 * @effects returns this.holdingValue
@@ -76,17 +93,6 @@ public interface Stock {
 	 * @return the holding value
 	 */
 	public double getHoldingValue();
-	
-	/**
-	 * Sets the holding value
-	 * 
-	 * @effects this.holdingValue = holdingValue
-	 * @modifies this
-	 * 
-	 * @param holdingValue
-	 * @return true if successful, false otherwise
-	 */
-	public boolean setHoldingValue(double holdingValue);
 	
 	/**
 	 * Returns the number of shares held
@@ -105,17 +111,6 @@ public interface Stock {
 	 * @return the net gain
 	 */
 	public double getNetGain();
-	
-	/**
-	 * Sets the net gain of the stock
-	 * 
-	 * @effects this.netGain = netGain
-	 * @modifies this
-	 * 
-	 * @param netGain the net gain
-	 * @return true if successful, false otherwise
-	 */
-	public boolean setNetGain(double netGain);
 	
 	/**
 	 * Returns the closing price
@@ -147,18 +142,6 @@ public interface Stock {
 	public double getOpeningPrice();
 	
 	/**
-	 * Sets the opening price
-	 * 
-	 * @effects this.openingPrice = openingPrice
-	 * @modifies this
-	 * 
-	 * @param openingPrice the opening price
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setOpeningPrice(double openingPrice);
-	
-	/**
 	 * Returns the daily change
 	 * 
 	 * @effects returns this.dailyChange
@@ -166,18 +149,6 @@ public interface Stock {
 	 * @return the daily change 
 	 */
 	public double getDailyChange();
-	
-	/**
-	 * Sets the daily change
-	 * 
-	 * @effects this.dailyChange = dailyChange
-	 * @modifies this
-	 * 
-	 * @param dailyChnage the change
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setDailyChange(double dailyChange);
 	
 	/**
 	 * Returns the daily max
@@ -188,17 +159,6 @@ public interface Stock {
 	 */
 	public double getDailyMax();
 	
-	/**
-	 * Sets the daily max
-	 * 
-	 * @effects this.dailyMax = dailyMax
-	 * @modifies this
-	 * 
-	 * @param dailyMax the daily max
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setDailyMax(double dailyMax);
 	
 	/**
 	 * Returns the daily min
@@ -208,18 +168,7 @@ public interface Stock {
 	 * @return the dailyMin
 	 */
 	public double getDailyMin();
-	
-	/**
-	 * Sets the daily min
-	 * 
-	 * @effects this.dailyMin = dailyMin
-	 * @modifies this
-	 * 
-	 * @param dailyMin the daily min
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setDailyMin(double dailyMin);
+
 	
 	/**
 	 * Returns the volume of available shares
@@ -229,16 +178,5 @@ public interface Stock {
 	 * @return the volume
 	 */
 	public double getVolume();
-	
-	/**
-	 * Sets the volume of available shares
-	 * 
-	 * @effects this.volume = volume
-	 * @modifies this
-	 * 
-	 * @param volume the volume
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setVolume(double volume);
+
 }
