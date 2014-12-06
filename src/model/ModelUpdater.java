@@ -1,87 +1,56 @@
 package model;
 
-import java.io.IOException;
-import java.util.List;
+import quoteServer.IQuote;
+import quoteServer.Quote;
 
-import quoteServer.*;
-import tracker.Driver;
-
-public class ModelUpdater implements Runnable{
+/**
+ * The ModelUpdater is designed to be ran in a separate thread
+ * from the rest of the application. It handles the timing of
+ * the automated updates that update the model with new
+ * information from yahoo.
+ *
+ */
+class ModelUpdater implements Runnable{
 	
-	ModelImp model;
-	IQuote quoter;
+	TrackerImp model;
 	
-	public ModelUpdater(Model model){
+	/**
+	 * The constructor for the ModelUpdater.
+	 * 
+	 * @effects initialises this
+	 * @modifies this
+	 * 
+	 * @param model The model we are to handle the updating
+	 * for
+	 */
+	ModelUpdater(Tracker model){
 		
+		if(model instanceof TrackerImp){
 		
-		
-		if(model instanceof ModelImp){
-		
-			this.model = (ModelImp) model;
-			
-			quoter = new Quote(Driver.USE_PROXY);
+			this.model = (TrackerImp) model;
 		}
+		
+		//TODO - deal with case
 	}
 	
+	/**
+	 * The run method called upon on the thread starting.
+	 * This handles the timing of the updates
+	 * 
+	 * @effects waits for model.refreshRate, then calls
+	 * model.update
+	 */
 	public void run(){
-		update();
-	}
-	
-	public void update(){
 		
-		List<PortfolioImp> folios = model.getPortfolioImps();
+		while(true){
 		
-		//update every portfolio in the model
-		for(PortfolioImp p: folios){
-			
-			updatePortfolio(p);
+			try {
+				Thread.sleep(model.getRefreshRate());
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			model.update();
 		}
-	}
-	
-	public void updatePortfolio(PortfolioImp p){
-		
-		List<StockImp> stocks =  p.getStockImps();
-		
-		//update every stock
-		for(StockImp s: stocks){
-			
-			updateStock(s);
-		}
-	}
-	
-	public void updateStock(StockImp s){
-		
-		String ticker = s.getTicker();
-		
-		//Get Stock info
-		try {
-			quoter.setValues(ticker);				//give quoter stock ticker
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (WebsiteDataException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (NoSuchTickerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MethodException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		//update the stock
-		try {
-			s.setCurrentValue(quoter.getLatest());  //Update latest price
-			s.setOpeningPrice(quoter.getOpen());	//update opening price
-			s.setClosingPrice(quoter.getClose());	//update close price
-			s.setDailyChange(quoter.getChange());	//update Daily change
-			s.setVolume(quoter.getVolume());		//update volume
-			s.setDailyMax(quoter.getRangeMax());	//update daily max
-			s.setDailyMin(quoter.getRangeMin());	//update daily min
-		} catch (MethodException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	//update latest price
 	}
 }

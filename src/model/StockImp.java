@@ -1,5 +1,14 @@
 package model;
 
+import java.io.IOException;
+import java.util.Observable;
+
+import quoteServer.IQuote;
+import quoteServer.MethodException;
+import quoteServer.NoSuchTickerException;
+import quoteServer.Quote;
+import quoteServer.WebsiteDataException;
+
 
 /**
  * An implementation of the stock interface
@@ -18,7 +27,7 @@ package model;
  *  <li>etc...</li>
  * </ul>
  */
-class StockImp implements Stock {
+class StockImp extends Observable implements Stock {
 
 	//The stock ticker
 	private String ticker;
@@ -27,23 +36,23 @@ class StockImp implements Stock {
 	//The Stock exchange wheres its listed
 	private String exchange;
 	//The current value of the stock
-	private double currentValue;
+	private volatile double currentValue;
 	//The number of stocks held
 	private int noShares = 0;
 	//The total spend
-	private double totalSpent = 0;
+	private volatile double totalSpent = 0;
 	//The closing price of the stock
-	private double closingPrice = 0;
+	private volatile double closingPrice = 0;
 	//The opening price of the stock
-	private double openingPrice = 0;
+	private volatile double openingPrice = 0;
 	//The daily change of the sock
-	private double dailyChange = 0;
+	private volatile double dailyChange = 0;
 	//The daily max
-	private double dailyMax = 0;
+	private volatile double dailyMax = 0;
 	//The daily min
-	private double dailyMin = 0;
+	private volatile double dailyMin = 0;
 	//The volume of shares available
-	private double volume = 0;
+	private volatile double volume = 0;
 	
 	/**
 	 * Constructor for the StockImp object
@@ -74,10 +83,13 @@ class StockImp implements Stock {
 	 * 
 	 * @return true if successful, false otherwise
 	 */
-	public boolean addShares(int noShares, double initialValue) {
+	public synchronized boolean addShares(int noShares, double initialValue) {
 		
 		this.noShares += noShares;
-		this.totalSpent += initialValue;
+		this.totalSpent += initialValue * noShares;
+		
+		setChanged();
+		notifyObservers();
 		
 		return true;
 	}
@@ -90,11 +102,14 @@ class StockImp implements Stock {
 	 * 
 	 * @param noShares The shares to be removed
 	 */
-	public boolean removeShares(int noShares){
+	public synchronized boolean removeShares(int noShares){
 		
 		double value = noShares * currentValue;
 		
 		totalSpent -= value;
+		
+		setChanged();
+		notifyObservers();
 		
 		return true;
 	}
@@ -116,7 +131,6 @@ class StockImp implements Stock {
 		
 		return ticker;
 	}
-
 
 	/**
 	 * Returns the name of the stock
@@ -162,23 +176,9 @@ class StockImp implements Stock {
 	 * @return the shares
 	 */
 	@Override
-	public double getCurrentValue() {
+	public synchronized double getCurrentValue() {
 		
 		return currentValue;
-	}
-
-	/**
-	 * Returns the current value
-	 * 
-	 * @effects returns thi.currentValue
-	 * 
-	 * @return the current value
-	 */
-	public boolean setCurrentValue(double currentValue) {
-		
-		this.currentValue = currentValue;
-		
-		return true;
 	}
 
 	/**
@@ -189,7 +189,7 @@ class StockImp implements Stock {
 	 * @return the holding value
 	 */
 	@Override
-	public double getHoldingValue() {
+	public synchronized double getHoldingValue() {
 		
 		return noShares * currentValue;
 	}
@@ -215,9 +215,9 @@ class StockImp implements Stock {
 	 * @return the net gain
 	 */
 	@Override
-	public double getNetGain() {
+	public synchronized double getNetGain() {
 
-		return currentValue - totalSpent;
+		return currentValue * noShares - totalSpent;
 	}
 
 	/**
@@ -230,27 +230,11 @@ class StockImp implements Stock {
 	 * @return true if successful, false otherwise
 	 */
 	@Override
-	public double getClosingPrice() {
+	public synchronized double getClosingPrice() {
 		
 		return closingPrice;
 	}
 
-	/**
-	 * Sets the closing price of the stock
-	 * 
-	 * @effects this.closingPrice = closingPrice
-	 * @modifies this
-	 * 
-	 * @param closingPrice the closing price
-	 * @return true if successful, false otherwise
-	 */
-	@Override
-	public boolean setClosingPrice(double closingPrice) {
-		
-		this.closingPrice = closingPrice;
-		
-		return true;
-	}
 
 	/**
 	 * Returns the opening price
@@ -260,27 +244,11 @@ class StockImp implements Stock {
 	 * @return the opening price 
 	 */
 	@Override
-	public double getOpeningPrice() {
+	public synchronized double getOpeningPrice() {
 		
 		return openingPrice;
 	}
 
-	/**
-	 * Sets the opening price
-	 * 
-	 * @effects this.openingPrice = openingPrice
-	 * @modifies this
-	 * 
-	 * @param openingPrice the opening price
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setOpeningPrice(double openingPrice) {
-		
-		this.openingPrice = openingPrice;
-		
-		return true;
-	}
 
 	/**
 	 * Returns the daily change
@@ -295,22 +263,6 @@ class StockImp implements Stock {
 		return dailyChange;
 	}
 
-	/**
-	 * Sets the daily change
-	 * 
-	 * @effects this.dailyChange = dailyChange
-	 * @modifies this
-	 * 
-	 * @param dailyChnage the change
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setDailyChange(double dailyChange) {
-		
-		this.dailyChange = dailyChange;
-		
-		return true;
-	}
 
 	/**
 	 * Returns the daily max
@@ -325,22 +277,6 @@ class StockImp implements Stock {
 		return dailyMax;
 	}
 
-	/**
-	 * Sets the daily max
-	 * 
-	 * @effects this.dailyMax = dailyMax
-	 * @modifies this
-	 * 
-	 * @param dailyMax the daily max
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setDailyMax(double dailyMax) {
-		
-		this.dailyMax = dailyMax;
-		
-		return true;
-	}
 
 	/**
 	 * Returns the daily min
@@ -353,23 +289,6 @@ class StockImp implements Stock {
 	public double getDailyMin() {
 
 		return dailyMin;
-	}
-
-	/**
-	 * Sets the daily min
-	 * 
-	 * @effects this.dailyMin = dailyMin
-	 * @modifies this
-	 * 
-	 * @param dailyMin the daily min
-	 * 
-	 * @return true if successful, otherwise false
-	 */
-	public boolean setDailyMin(double dailyMin) {
-
-		this.dailyMin = dailyMin;
-		
-		return true;
 	}
 
 	/**
@@ -386,19 +305,43 @@ class StockImp implements Stock {
 	}
 
 	/**
-	 * Sets the volume of available shares
+	 * Update the stock with information from the interwebs
 	 * 
-	 * @effects this.volume = volume
+	 * @effects updates this
 	 * @modifies this
-	 * 
-	 * @param volume the volume
-	 * 
-	 * @return true if successful, otherwise false
 	 */
-	public boolean setVolume(double volume) {
+	synchronized void update(){
 		
-		this.volume = volume;
+		IQuote quoter = new Quote(TrackerImp.USE_PROXY);
 		
-		return true;
+		try {
+			quoter.setValues(ticker);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (WebsiteDataException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchTickerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//update the stock
+		try {
+			currentValue = quoter.getLatest();  //Update latest price
+			openingPrice = quoter.getOpen();	//update opening price
+			closingPrice = quoter.getClose();	//update close price
+			dailyChange = quoter.getChange();	//update Daily change
+			volume = quoter.getVolume();		//update volume
+			dailyMax = quoter.getRangeMax();	//update daily max
+			dailyMin = quoter.getRangeMin();	//update daily min
+		} catch (MethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
 	}
 }

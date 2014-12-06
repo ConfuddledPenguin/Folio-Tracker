@@ -6,7 +6,7 @@ import java.util.List;
  * An interface for the Model.
  * 
  */
-public interface Model {
+public interface Tracker {
 	
 	/**
 	 * Creates a new portfolio in the model
@@ -42,4 +42,19 @@ public interface Model {
 	 * @return A List of portfolios
 	 */
 	public List<Portfolio> getPortfolios();
+	
+	/**
+	 * Updates the model
+	 * 
+	 * @effects updates the information in the model
+	 */
+	public void update();
+	
+	/**
+	 * Sets the rate at which the application checks
+	 * for the latest stock information
+	 * 
+	 * @effects model.refreshRate = refreshRate
+	 */
+	public void setRefreshRate(long refreashRate);
 }

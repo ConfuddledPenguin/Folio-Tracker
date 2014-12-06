@@ -22,7 +22,7 @@ public interface Portfolio {
 	 * 
 	 * @return The new stock object
 	 */
-	public Stock newStock(String ticker, String name, String exchange, double currentValue);
+	public Stock newStock(String ticker);
 	
 	/**
 	 * Deletes the given stock from the portfolio

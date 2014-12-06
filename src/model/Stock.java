@@ -122,17 +122,6 @@ public interface Stock {
 	public double getClosingPrice();
 	
 	/**
-	 * Sets the closing price of the stock
-	 * 
-	 * @effects this.closingPrice = closingPrice
-	 * @modifies this
-	 * 
-	 * @param closingPrice the closing price
-	 * @return true if successful, false otherwise
-	 */
-	public boolean setClosingPrice(double closingPrice);
-	
-	/**
 	 * Returns the opening price
 	 * 
 	 * @effects returns this.openingPrice
