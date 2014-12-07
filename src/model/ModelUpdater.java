@@ -1,7 +1,5 @@
 package model;
 
-import quoteServer.IQuote;
-import quoteServer.Quote;
 
 /**
  * The ModelUpdater is designed to be ran in a separate thread

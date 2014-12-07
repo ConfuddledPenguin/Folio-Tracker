@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_V14gkH02EeSSp78tz7yIxw" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_V14gkX02EeSSp78tz7yIxw" source="codegen">
         <details xmi:id="_V14gkn02EeSSp78tz7yIxw" key="codegenDirectory" value="/Folio Tracker/src"/>
-        <details xmi:id="_WeUZkH02EeSSp78tz7yIxw" key="AssociatedSourceCode" value="/Folio Tracker/src/model/ModelUpdater.java;3714048247/1;/Folio Tracker/src/model/Portfolio.java;1676848161/1;/Folio Tracker/src/tracker/Driver.java;1353337265/1;/Folio Tracker/src/model/Stock.java;2032974074/1;/Folio Tracker/src/tracker/ControllerStuffs.java;380419478/1;/Folio Tracker/src/model/Tracker.java;2075738561/1;/Folio Tracker/src/model/TrackerImp.java;1954087485/1;/Folio Tracker/src/quoteServer/MethodException.java;3755449193/1;/Folio Tracker/src/quoteServer/NoSuchTickerException.java;2271644869/1;/Folio Tracker/src/quoteServer/Quote.java;2730188426/1;/Folio Tracker/src/quoteServer/WebsiteDataException.java;1734464980/1;/Folio Tracker/src/quoteServer/IQuote.java;3151141907/1;/Folio Tracker/src/model/StockImp.java;2256633741/1;/Folio Tracker/src/model/PortfolioImp.java;151307094/1;/Folio Tracker/src/gui/UserInterface.java;2501561908/1;"/>
+        <details xmi:id="_WeUZkH02EeSSp78tz7yIxw" key="AssociatedSourceCode" value="/Folio Tracker/src/model/ModelUpdater.java;874475087/1;/Folio Tracker/src/model/Portfolio.java;3946287807/1;/Folio Tracker/src/tracker/Driver.java;1353337265/1;/Folio Tracker/src/model/Stock.java;2032974074/1;/Folio Tracker/src/tracker/ControllerStuffs.java;380419478/1;/Folio Tracker/src/model/Tracker.java;2075738561/1;/Folio Tracker/src/model/TrackerImp.java;1954087485/1;/Folio Tracker/src/quoteServer/MethodException.java;3755449193/1;/Folio Tracker/src/quoteServer/NoSuchTickerException.java;2271644869/1;/Folio Tracker/src/quoteServer/Quote.java;2730188426/1;/Folio Tracker/src/quoteServer/WebsiteDataException.java;1734464980/1;/Folio Tracker/src/quoteServer/IQuote.java;3151141907/1;/Folio Tracker/src/model/StockImp.java;2256633741/1;/Folio Tracker/src/model/PortfolioImp.java;1006777037/1;"/>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_WUjZkH02EeSSp78tz7yIxw">
@@ -798,7 +798,9 @@ information from yahoo.&#xD;
         <interfaceRealization xmi:id="_WZrKIX02EeSSp78tz7yIxw" client="_WVz90H02EeSSp78tz7yIxw" supplier="_WZqjEX02EeSSp78tz7yIxw" contract="_WZqjEX02EeSSp78tz7yIxw"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaK5YH02EeSSp78tz7yIxw" name="ModelUpdater" specification="_WZF7UH02EeSSp78tz7yIxw">
           <ownedParameter xmi:id="_WaK5YX02EeSSp78tz7yIxw" name="model" type="_WWBZMH02EeSSp78tz7yIxw"/>
-          <ownedParameter xmi:id="_WaK5Yn02EeSSp78tz7yIxw" type="_WVz90H02EeSSp78tz7yIxw" direction="return"/>
+          <ownedParameter xmi:id="_WaK5Yn02EeSSp78tz7yIxw" type="_WVz90H02EeSSp78tz7yIxw" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
           <body>if(model instanceof TrackerImp){&#xD;
 		&#xD;
@@ -842,60 +844,19 @@ information from yahoo.&#xD;
         <ownedAttribute xmi:id="_WV6EcH02EeSSp78tz7yIxw" name="netGain" isReadOnly="true">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
         </ownedAttribute>
+        <ownedAttribute xmi:id="_mRny4H05EeSSp78tz7yIxw" name="totalValue" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_mRoZ8H05EeSSp78tz7yIxw" name="name" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
         <ownedOperation xmi:id="_WV3oMH02EeSSp78tz7yIxw" name="newStock">
-          <ownedComment xmi:id="_WaRnEn02EeSSp78tz7yIxw">
-            <body>Creates and add a new stock to this portfolio&#xD;
-	 * &#xD;
-	 * @effects Creates a Stock object&#xD;
-	 * @modifies this&#xD;
-	 * &#xD;
-	 * @param ticker The ticker of the stock&#xD;
-	 * @param name The name of the stock&#xD;
-	 * @param exchange The name of the exchange&#xD;
-	 * @param currentValue The currentValue of the stock&#xD;
-	 * &#xD;
-	 * @return The new stock object</body>
-          </ownedComment>
           <ownedParameter xmi:id="_WV3oMX02EeSSp78tz7yIxw" name="ticker">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:id="_WZHJcX02EeSSp78tz7yIxw" type="_WV75oH02EeSSp78tz7yIxw" direction="return"/>
         </ownedOperation>
-        <ownedOperation xmi:id="_WV5dYX02EeSSp78tz7yIxw" name="getTotalValue">
-          <ownedComment xmi:id="_WaRnFn02EeSSp78tz7yIxw">
-            <body>Returns the total value of the portfolio&#xD;
-	 * &#xD;
-	 * @effects returns this.totalValue&#xD;
-	 * &#xD;
-	 * @return The total Value of the stock</body>
-          </ownedComment>
-          <ownedParameter xmi:id="_WV5dYn02EeSSp78tz7yIxw" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:id="_WV6EcX02EeSSp78tz7yIxw" name="GetName">
-          <ownedComment xmi:id="_WaRnF302EeSSp78tz7yIxw">
-            <body>Returns the name of the portfolio&#xD;
-	 * &#xD;
-	 * @effects returns this.name&#xD;
-	 * &#xD;
-	 * @return The portfolios name</body>
-          </ownedComment>
-          <ownedParameter xmi:id="_WV6rgH02EeSSp78tz7yIxw" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-        </ownedOperation>
         <ownedOperation xmi:id="_WZrxMn02EeSSp78tz7yIxw" name="deleteStock">
-          <ownedComment xmi:id="_WaRnE302EeSSp78tz7yIxw">
-            <body>Deletes the given stock from the portfolio&#xD;
-	 * &#xD;
-	 * @effects Deletes the given stock from the portfolio&#xD;
-	 * @modifies this&#xD;
-	 * &#xD;
-	 * @param o The Stock to be deleted&#xD;
-	 * &#xD;
-	 * @return true if successful, false otherwise</body>
-          </ownedComment>
           <ownedParameter xmi:id="_WZrxM302EeSSp78tz7yIxw" name="o" type="_WZrxMH02EeSSp78tz7yIxw"/>
           <ownedParameter xmi:id="_WZrxNH02EeSSp78tz7yIxw" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
@@ -1741,7 +1702,9 @@ This is mainly:&#xD;
           <ownedParameter xmi:id="_WaPK2H02EeSSp78tz7yIxw" name="name">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:id="_WaPK2X02EeSSp78tz7yIxw" type="_WWyOMH02EeSSp78tz7yIxw" direction="return"/>
+          <ownedParameter xmi:id="_WaPK2X02EeSSp78tz7yIxw" type="_WWyOMH02EeSSp78tz7yIxw" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
           <body>this.name = name;&#xD;
 		  &#xD;
@@ -1752,7 +1715,9 @@ This is mainly:&#xD;
           <ownedParameter xmi:id="_WaPK2302EeSSp78tz7yIxw" name="ticker">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:id="_WaPK3H02EeSSp78tz7yIxw" type="_WV75oH02EeSSp78tz7yIxw" direction="return"/>
+          <ownedParameter xmi:id="_WaPK3H02EeSSp78tz7yIxw" type="_WV75oH02EeSSp78tz7yIxw" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
           <body>IQuote quoter = new Quote(TrackerImp.USE_PROXY);&#xD;
 		String name = &quot;&quot;;&#xD;
@@ -1781,6 +1746,7 @@ This is mainly:&#xD;
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaPK3X02EeSSp78tz7yIxw" name="deleteStock" specification="_WZ0UEX02EeSSp78tz7yIxw">
           <ownedParameter xmi:id="_WaPK3n02EeSSp78tz7yIxw" name="o" type="_WZrxMH02EeSSp78tz7yIxw"/>
           <ownedParameter xmi:id="_WaPK3302EeSSp78tz7yIxw" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
           <language>java</language>
@@ -1794,6 +1760,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaPx4H02EeSSp78tz7yIxw" name="getStocks" specification="_WW0qcH02EeSSp78tz7yIxw">
           <ownedParameter xmi:id="_WaPx4X02EeSSp78tz7yIxw" type="_WV75oH02EeSSp78tz7yIxw" isOrdered="true" direction="return">
+            <name xsi:nil="true"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WaPx4n02EeSSp78tz7yIxw" value="*"/>
           </ownedParameter>
           <language>java</language>
@@ -1802,6 +1769,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaPx4302EeSSp78tz7yIxw" name="getStockImps" specification="_WW1Rgn02EeSSp78tz7yIxw">
           <ownedParameter xmi:id="_WaPx5H02EeSSp78tz7yIxw" type="_WWky0H02EeSSp78tz7yIxw" isOrdered="true" direction="return">
+            <name xsi:nil="true"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WaPx5X02EeSSp78tz7yIxw" value="*"/>
           </ownedParameter>
           <language>java</language>
@@ -1810,6 +1778,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaPx5n02EeSSp78tz7yIxw" name="getTotalValue" specification="_WW14kH02EeSSp78tz7yIxw">
           <ownedParameter xmi:id="_WaPx5302EeSSp78tz7yIxw" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -1818,14 +1787,16 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaPx6H02EeSSp78tz7yIxw" name="getNetGain" specification="_WW2foH02EeSSp78tz7yIxw">
           <ownedParameter xmi:id="_WaPx6X02EeSSp78tz7yIxw" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
           <body>return netGain;&#xD;
 	</body>
         </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaPx6n02EeSSp78tz7yIxw" name="GetName" specification="_WW2fp302EeSSp78tz7yIxw">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaPx6n02EeSSp78tz7yIxw" name="getName" specification="_WW2fp302EeSSp78tz7yIxw">
           <ownedParameter xmi:id="_WaPx6302EeSSp78tz7yIxw" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <language>java</language>
@@ -1842,6 +1813,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaPx7302EeSSp78tz7yIxw" name="noStocks" specification="_WW3Gs302EeSSp78tz7yIxw">
           <ownedParameter xmi:id="_WaPx8H02EeSSp78tz7yIxw" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
           <language>java</language>
@@ -1944,8 +1916,8 @@ This is mainly:&#xD;
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:id="_WW2fp302EeSSp78tz7yIxw" name="GetName" method="_WaPx6n02EeSSp78tz7yIxw">
-          <ownedParameter xmi:id="_WW2fqH02EeSSp78tz7yIxw" direction="return">
+        <ownedOperation xmi:id="_WW2fp302EeSSp78tz7yIxw" name="getName" method="_WaPx6n02EeSSp78tz7yIxw">
+          <ownedParameter xmi:id="_oN1n8H05EeSSp78tz7yIxw" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
@@ -2132,206 +2104,7 @@ This is mainly:&#xD;
         <packagedElement xmi:type="uml:Interface" xmi:id="_WZkccX02EeSSp78tz7yIxw" name="SwingConstants"/>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_WVWDwH02EeSSp78tz7yIxw" name="gui">
-      <packagedElement xmi:type="uml:Class" xmi:id="_WW5i8H02EeSSp78tz7yIxw" name="UserInterface">
-        <ownedAttribute xmi:id="_WaGn8H02EeSSp78tz7yIxw" name="frame" visibility="private" type="_WZhZIX02EeSSp78tz7yIxw" association="_WaY71H02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaGn8n02EeSSp78tz7yIxw" name="menus" visibility="private" type="_WZiAM302EeSSp78tz7yIxw" association="_WaZi4X02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaGn9H02EeSSp78tz7yIxw" name="file" visibility="private" type="_WZiAMX02EeSSp78tz7yIxw" association="_WaZi5H02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaHPAH02EeSSp78tz7yIxw" name="folio" visibility="private" type="_WZiAMX02EeSSp78tz7yIxw" association="_WaaJ8X02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaHPAn02EeSSp78tz7yIxw" name="closeFolio" visibility="private" type="_WZinQX02EeSSp78tz7yIxw" association="_WaaJ9H02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaHPBH02EeSSp78tz7yIxw" name="newFolio" visibility="private" type="_WZinQX02EeSSp78tz7yIxw" association="_WaaxAX02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaHPBn02EeSSp78tz7yIxw" name="deleteFolio" visibility="private" type="_WZinQX02EeSSp78tz7yIxw" association="_WaaxBH02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaH2EX02EeSSp78tz7yIxw" name="mainPanel" visibility="private" type="_WZinQ302EeSSp78tz7yIxw" association="_WabYEX02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaH2E302EeSSp78tz7yIxw" name="tabs" visibility="private" type="_WZjOU302EeSSp78tz7yIxw" association="_WabYFH02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaH2FX02EeSSp78tz7yIxw" name="addShares" visibility="private" type="_WZinQ302EeSSp78tz7yIxw" association="_Wab_IX02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaIdIX02EeSSp78tz7yIxw" name="folioValue" visibility="private" type="_WZhZI302EeSSp78tz7yIxw" association="_Wab_JH02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaIdI302EeSSp78tz7yIxw" name="noOfShares" visibility="private" type="_WZhZI302EeSSp78tz7yIxw" association="_WacmMX02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaIdJX02EeSSp78tz7yIxw" name="tickerText" visibility="private" type="_WZj1Y302EeSSp78tz7yIxw" association="_WacmNH02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaJEMX02EeSSp78tz7yIxw" name="noOfSharesText" visibility="private" type="_WZj1Y302EeSSp78tz7yIxw" association="_WadNQX02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaJEM302EeSSp78tz7yIxw" name="tickerSymbol" visibility="private" type="_WZhZI302EeSSp78tz7yIxw" association="_WadNRH02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaJENX02EeSSp78tz7yIxw" name="addFolio" visibility="private" type="_WZgyE302EeSSp78tz7yIxw" association="_Wad0UX02EeSSp78tz7yIxw"/>
-        <ownedAttribute xmi:id="_WaJrQX02EeSSp78tz7yIxw" name="columnNames" visibility="package">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WaJrQn02EeSSp78tz7yIxw" value="*"/>
-          <defaultValue xmi:type="uml:LiteralString" xmi:id="_WaJrRH02EeSSp78tz7yIxw" value="{ &quot;Ticker Symbol&quot;, &quot;Stock Name&quot;, &quot;Number Of Shares&quot;,&#xD;&#xA;&#x9;&#x9;&#x9;&quot;Price Per Share&quot;, &quot;Value Of Holding&quot; }"/>
-        </ownedAttribute>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaQY8n02EeSSp78tz7yIxw" name="main" specification="_WW6xEH02EeSSp78tz7yIxw">
-          <ownedParameter xmi:id="_WaQY8302EeSSp78tz7yIxw" name="args">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WaQY9H02EeSSp78tz7yIxw" value="*"/>
-          </ownedParameter>
-          <language>java</language>
-          <body>new UserInterface();&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaQY9X02EeSSp78tz7yIxw" name="UserInterface" specification="_WW7YIX02EeSSp78tz7yIxw">
-          <ownedParameter xmi:id="_WaQY9n02EeSSp78tz7yIxw" type="_WW5i8H02EeSSp78tz7yIxw" direction="return"/>
-          <language>java</language>
-          <body>makeFrame();&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaQY9302EeSSp78tz7yIxw" name="makeFrame" specification="_WW7YJX02EeSSp78tz7yIxw">
-          <language>java</language>
-          <body>// create a new frame&#xD;
-		frame = new JFrame(&quot;Folio Tracker&quot;);&#xD;
-		frame.setSize(650, 600);&#xD;
-		// frame.setResizable(false);&#xD;
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
-		frame.setVisible(true);&#xD;
-		// centre the GUI according to the screen size&#xD;
-		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();&#xD;
-		frame.setLocation(d.width / 2 - frame.getWidth() / 2, d.height / 2&#xD;
-				- frame.getHeight() / 2);&#xD;
-		// add a menu bar to the frame&#xD;
-		createMenu(frame);&#xD;
-		mainPanel = new JPanel(new BorderLayout());&#xD;
-		mainPanel.setPreferredSize(new Dimension(650, 500));&#xD;
-		createTabs();&#xD;
-		createAddSharesPane();&#xD;
-		createFolioValueLabel();&#xD;
-		createTickerTable();&#xD;
-		frame.add(mainPanel);&#xD;
-		frame.revalidate();&#xD;
-		frame.repaint();&#xD;
-&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaQY-H02EeSSp78tz7yIxw" name="createMenu" specification="_WZ3XYH02EeSSp78tz7yIxw">
-          <ownedParameter xmi:id="_WaQY-X02EeSSp78tz7yIxw" name="frame" type="_WZhZIX02EeSSp78tz7yIxw"/>
-          <language>java</language>
-          <body>menus = new JMenuBar();&#xD;
-		file = new JMenu(&quot;File&quot;);&#xD;
-		folio = new JMenu(&quot;Folio&quot;);&#xD;
-		closeFolio = new JMenuItem(&quot;Close Folio&quot;);&#xD;
-		newFolio = new JMenuItem(&quot;Create Folio&quot;);&#xD;
-		deleteFolio = new JMenuItem(&quot;Delete Folio&quot;);&#xD;
-		menus.add(file);&#xD;
-		menus.add(folio);&#xD;
-		file.add(newFolio);&#xD;
-		folio.add(closeFolio);&#xD;
-		folio.add(deleteFolio);&#xD;
-		frame.setJMenuBar(menus);&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaQY-n02EeSSp78tz7yIxw" name="createTabs" specification="_WW7YJn02EeSSp78tz7yIxw">
-          <language>java</language>
-          <body>tabs = new JTabbedPane();&#xD;
-		mainPanel.add(tabs, BorderLayout.CENTER);&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaQY-302EeSSp78tz7yIxw" name="createAddSharesPane" specification="_WW7_MH02EeSSp78tz7yIxw">
-          <language>java</language>
-          <body>addShares = new JPanel(new FlowLayout());&#xD;
-		Dimension d = new Dimension(650, 50);&#xD;
-		addShares.setPreferredSize(d);&#xD;
-		addShares.setBackground(Color.gray);&#xD;
-		tickerSymbol = new JLabel(&quot;Ticker Symbol:&quot;);&#xD;
-		noOfShares = new JLabel(&quot;Number Of Shares:&quot;);&#xD;
-		tickerText = new JTextField(20);&#xD;
-		noOfSharesText = new JTextField(4);&#xD;
-		addFolio = new JButton(&quot;Add&quot;);&#xD;
-		addShares.add(tickerSymbol);&#xD;
-		addShares.add(tickerText);&#xD;
-		addShares.add(noOfShares);&#xD;
-		addShares.add(noOfSharesText);&#xD;
-		addShares.add(addFolio);&#xD;
-		mainPanel.add(addShares, BorderLayout.NORTH);&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaRAAH02EeSSp78tz7yIxw" name="createFolioValueLabel" specification="_WW7_MX02EeSSp78tz7yIxw">
-          <language>java</language>
-          <body>folioValue = new JLabel(&quot;test label&quot;, SwingConstants.CENTER);&#xD;
-		Dimension d = new Dimension(650, 50);&#xD;
-		folioValue.setPreferredSize(d);&#xD;
-		folioValue.setOpaque(true);&#xD;
-		folioValue.setBackground(Color.gray);&#xD;
-		mainPanel.add(folioValue, BorderLayout.SOUTH);&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WaRAAX02EeSSp78tz7yIxw" name="createTickerTable" specification="_WW7_Mn02EeSSp78tz7yIxw">
-          <language>java</language>
-          <body>// create table&#xD;
-		DefaultTableModel model = new DefaultTableModel();&#xD;
-		JTable tickerTable = new JTable(model);&#xD;
-		// add columns to the table&#xD;
-		for (int i = 0; i &lt; columnNames.length; i++) {&#xD;
-			model.addColumn(columnNames[i]);&#xD;
-		}&#xD;
-		tickerTable.setBackground(Color.WHITE);&#xD;
-		mainPanel.add(new JScrollPane(tickerTable), BorderLayout.CENTER);&#xD;
-&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedOperation xmi:id="_WW6xEH02EeSSp78tz7yIxw" name="main" isStatic="true" method="_WaQY8n02EeSSp78tz7yIxw">
-          <ownedParameter xmi:id="_WW6xEX02EeSSp78tz7yIxw" name="args">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WW7YIH02EeSSp78tz7yIxw" value="*"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:id="_WW7YIX02EeSSp78tz7yIxw" name="UserInterface" method="_WaQY9X02EeSSp78tz7yIxw">
-          <eAnnotations xmi:id="_WW7YIn02EeSSp78tz7yIxw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="_WW7YI302EeSSp78tz7yIxw" key="create"/>
-          </eAnnotations>
-          <ownedParameter xmi:id="_WW7YJH02EeSSp78tz7yIxw" type="_WW5i8H02EeSSp78tz7yIxw" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="_WW7YJX02EeSSp78tz7yIxw" name="makeFrame" visibility="private" method="_WaQY9302EeSSp78tz7yIxw"/>
-        <ownedOperation xmi:id="_WW7YJn02EeSSp78tz7yIxw" name="createTabs" visibility="private" method="_WaQY-n02EeSSp78tz7yIxw"/>
-        <ownedOperation xmi:id="_WW7_MH02EeSSp78tz7yIxw" name="createAddSharesPane" visibility="private" method="_WaQY-302EeSSp78tz7yIxw"/>
-        <ownedOperation xmi:id="_WW7_MX02EeSSp78tz7yIxw" name="createFolioValueLabel" visibility="private" method="_WaRAAH02EeSSp78tz7yIxw"/>
-        <ownedOperation xmi:id="_WW7_Mn02EeSSp78tz7yIxw" name="createTickerTable" visibility="private" method="_WaRAAX02EeSSp78tz7yIxw"/>
-        <ownedOperation xmi:id="_WZ3XYH02EeSSp78tz7yIxw" name="createMenu" visibility="private" method="_WaQY-H02EeSSp78tz7yIxw">
-          <ownedParameter xmi:id="_WZ3XYX02EeSSp78tz7yIxw" name="frame" type="_WZhZIX02EeSSp78tz7yIxw"/>
-        </ownedOperation>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WaY71H02EeSSp78tz7yIxw" name="" memberEnd="_WaY71X02EeSSp78tz7yIxw _WaGn8H02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WaY71X02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WaY71H02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WaZi4X02EeSSp78tz7yIxw" name="" memberEnd="_WaZi4n02EeSSp78tz7yIxw _WaGn8n02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WaZi4n02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WaZi4X02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WaZi5H02EeSSp78tz7yIxw" name="" memberEnd="_WaZi5X02EeSSp78tz7yIxw _WaGn9H02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WaZi5X02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WaZi5H02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WaaJ8X02EeSSp78tz7yIxw" name="" memberEnd="_WaaJ8n02EeSSp78tz7yIxw _WaHPAH02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WaaJ8n02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WaaJ8X02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WaaJ9H02EeSSp78tz7yIxw" name="" memberEnd="_WaaJ9X02EeSSp78tz7yIxw _WaHPAn02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WaaJ9X02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WaaJ9H02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WaaxAX02EeSSp78tz7yIxw" name="" memberEnd="_WaaxAn02EeSSp78tz7yIxw _WaHPBH02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WaaxAn02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WaaxAX02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WaaxBH02EeSSp78tz7yIxw" name="" memberEnd="_WaaxBX02EeSSp78tz7yIxw _WaHPBn02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WaaxBX02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WaaxBH02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WabYEX02EeSSp78tz7yIxw" name="" memberEnd="_WabYEn02EeSSp78tz7yIxw _WaH2EX02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WabYEn02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WabYEX02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WabYFH02EeSSp78tz7yIxw" name="" memberEnd="_WabYFX02EeSSp78tz7yIxw _WaH2E302EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WabYFX02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WabYFH02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_Wab_IX02EeSSp78tz7yIxw" name="" memberEnd="_Wab_In02EeSSp78tz7yIxw _WaH2FX02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_Wab_In02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_Wab_IX02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_Wab_JH02EeSSp78tz7yIxw" name="" memberEnd="_Wab_JX02EeSSp78tz7yIxw _WaIdIX02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_Wab_JX02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_Wab_JH02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WacmMX02EeSSp78tz7yIxw" name="" memberEnd="_WacmMn02EeSSp78tz7yIxw _WaIdI302EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WacmMn02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WacmMX02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WacmNH02EeSSp78tz7yIxw" name="" memberEnd="_WacmNX02EeSSp78tz7yIxw _WaIdJX02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WacmNX02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WacmNH02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WadNQX02EeSSp78tz7yIxw" name="" memberEnd="_WadNQn02EeSSp78tz7yIxw _WaJEMX02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WadNQn02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WadNQX02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WadNRH02EeSSp78tz7yIxw" name="" memberEnd="_WadNRX02EeSSp78tz7yIxw _WaJEM302EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_WadNRX02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_WadNRH02EeSSp78tz7yIxw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_Wad0UX02EeSSp78tz7yIxw" name="" memberEnd="_Wad0Un02EeSSp78tz7yIxw _WaJENX02EeSSp78tz7yIxw">
-        <ownedEnd xmi:id="_Wad0Un02EeSSp78tz7yIxw" name="" type="_WW5i8H02EeSSp78tz7yIxw" association="_Wad0UX02EeSSp78tz7yIxw"/>
-      </packagedElement>
-    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_WVWDwH02EeSSp78tz7yIxw" name="gui"/>
     <profileApplication xmi:id="_V15usH02EeSSp78tz7yIxw">
       <eAnnotations xmi:id="_V15usX02EeSSp78tz7yIxw" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
@@ -2506,24 +2279,6 @@ This is mainly:&#xD;
   <UMLLabProfile:LegacyStyledElement xmi:id="_WaFZ1X02EeSSp78tz7yIxw" base_Element="_WaFZ0X02EeSSp78tz7yIxw"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_WaGA4H02EeSSp78tz7yIxw" base_Element="_WaFZ1n02EeSSp78tz7yIxw"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_WaGA4302EeSSp78tz7yIxw" base_Element="_WaGA4X02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaGn8X02EeSSp78tz7yIxw" base_Element="_WaGn8H02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaGn8302EeSSp78tz7yIxw" base_Element="_WaGn8n02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaGn9X02EeSSp78tz7yIxw" base_Element="_WaGn9H02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaHPAX02EeSSp78tz7yIxw" base_Element="_WaHPAH02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaHPA302EeSSp78tz7yIxw" base_Element="_WaHPAn02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaHPBX02EeSSp78tz7yIxw" base_Element="_WaHPBH02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaH2EH02EeSSp78tz7yIxw" base_Element="_WaHPBn02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaH2En02EeSSp78tz7yIxw" base_Element="_WaH2EX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaH2FH02EeSSp78tz7yIxw" base_Element="_WaH2E302EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaIdIH02EeSSp78tz7yIxw" base_Element="_WaH2FX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaIdIn02EeSSp78tz7yIxw" base_Element="_WaIdIX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaIdJH02EeSSp78tz7yIxw" base_Element="_WaIdI302EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaJEMH02EeSSp78tz7yIxw" base_Element="_WaIdJX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaJEMn02EeSSp78tz7yIxw" base_Element="_WaJEMX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaJENH02EeSSp78tz7yIxw" base_Element="_WaJEM302EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaJrQH02EeSSp78tz7yIxw" base_Element="_WaJENX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Array xmi:id="_WaJrQ302EeSSp78tz7yIxw" base_Element="_WaJrQX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_WaJrRX02EeSSp78tz7yIxw" base_Element="_WaJrQX02EeSSp78tz7yIxw"/>
   <uml:OpaqueBehavior xmi:id="_WaLgdX02EeSSp78tz7yIxw" name="getPortfolios" specification="_WZ7o0H02EeSSp78tz7yIxw">
     <ownedParameter xmi:id="_WaLgdn02EeSSp78tz7yIxw" type="_WV3BIH02EeSSp78tz7yIxw" isOrdered="true" direction="return">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WaLgd302EeSSp78tz7yIxw" value="*"/>
@@ -2552,20 +2307,4 @@ This is mainly:&#xD;
   <UMLLabProfile:Reference xmi:id="_WaYUw302EeSSp78tz7yIxw" base_Element="_WaYUwX02EeSSp78tz7yIxw"/>
   <UMLLabProfile:Reference xmi:id="_WaY70H02EeSSp78tz7yIxw" base_Element="_WaYUxH02EeSSp78tz7yIxw"/>
   <UMLLabProfile:Reference xmi:id="_WaY70302EeSSp78tz7yIxw" base_Element="_WaY70X02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WaZi4H02EeSSp78tz7yIxw" base_Element="_WaY71H02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WaZi4302EeSSp78tz7yIxw" base_Element="_WaZi4X02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WaaJ8H02EeSSp78tz7yIxw" base_Element="_WaZi5H02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WaaJ8302EeSSp78tz7yIxw" base_Element="_WaaJ8X02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WaaxAH02EeSSp78tz7yIxw" base_Element="_WaaJ9H02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WaaxA302EeSSp78tz7yIxw" base_Element="_WaaxAX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WabYEH02EeSSp78tz7yIxw" base_Element="_WaaxBH02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WabYE302EeSSp78tz7yIxw" base_Element="_WabYEX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_Wab_IH02EeSSp78tz7yIxw" base_Element="_WabYFH02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_Wab_I302EeSSp78tz7yIxw" base_Element="_Wab_IX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WacmMH02EeSSp78tz7yIxw" base_Element="_Wab_JH02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WacmM302EeSSp78tz7yIxw" base_Element="_WacmMX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WadNQH02EeSSp78tz7yIxw" base_Element="_WacmNH02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_WadNQ302EeSSp78tz7yIxw" base_Element="_WadNQX02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_Wad0UH02EeSSp78tz7yIxw" base_Element="_WadNRH02EeSSp78tz7yIxw"/>
-  <UMLLabProfile:Reference xmi:id="_Wad0U302EeSSp78tz7yIxw" base_Element="_Wad0UX02EeSSp78tz7yIxw"/>
 </xmi:XMI>

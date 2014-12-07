@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class sellSharesGUI {
+public class sellShareGUI {
 	private JFrame frame;
 	private JPanel mainPanel;
 	private JPanel noOfShares;
@@ -23,10 +23,10 @@ public class sellSharesGUI {
 
 	public static void main(String[] args) {
 
-		new sellSharesGUI();
+		new sellShareGUI();
 	}
 
-	public sellSharesGUI() {
+	public sellShareGUI() {
 		makeFrame();
 	}
 

@@ -70,5 +70,5 @@ public interface Portfolio {
 	 * 
 	 * @return The portfolios name
 	 */
-	public String GetName();
+	public String getName();
 }

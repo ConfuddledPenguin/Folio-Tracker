@@ -11,7 +11,6 @@ import quoteServer.MethodException;
 import quoteServer.NoSuchTickerException;
 import quoteServer.Quote;
 import quoteServer.WebsiteDataException;
-import tracker.Driver;
 
 /**
  * A implementation of the portfolio interface
@@ -168,7 +167,7 @@ class PortfolioImp implements Portfolio, Observer {
 	 * @return The portfolios name
 	 */
 	@Override
-	public String GetName() {
+	public String getName() {
 
 		return name;
 	}
