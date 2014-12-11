@@ -38,6 +38,7 @@ public class TrackerImp implements Tracker {
 
 	private long refreshRate = DEFUALT_REFREASH_RATE;
 	
+	
 	/**
 	 * The constructor for this object
 	 * 
@@ -117,7 +118,7 @@ public class TrackerImp implements Tracker {
 	 * @effects for all portfolio in this.portfolios call
 	 * portfolio.update
 	 */
-	public void update(){
+	public void updateTracker(){
 		
 		for(PortfolioImp p: portfolios){
 			
@@ -183,4 +184,5 @@ public class TrackerImp implements Tracker {
 		
 		return total;
 	}
+
 }

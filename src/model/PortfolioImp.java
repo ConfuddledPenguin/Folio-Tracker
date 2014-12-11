@@ -36,9 +36,10 @@ class PortfolioImp implements Portfolio, Observer {
 	 * @param name The name for the portfolio
 	 */
 	public PortfolioImp(String name) {
-		  this.name = name;
 		  
-		  stocks = new ArrayList<StockImp>();
+		this.name = name;
+		  
+		stocks = new ArrayList<StockImp>();
 	}
 
 
@@ -99,7 +100,6 @@ class PortfolioImp implements Portfolio, Observer {
 			
 			return stocks.remove( (Stock) o);
 		}
-		
 		return false;
 	}
 	

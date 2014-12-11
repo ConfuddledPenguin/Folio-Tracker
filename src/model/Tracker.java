@@ -48,7 +48,7 @@ public interface Tracker {
 	 * 
 	 * @effects updates the information in the model
 	 */
-	public void update();
+	public void updateTracker();
 	
 	/**
 	 * Sets the rate at which the application checks

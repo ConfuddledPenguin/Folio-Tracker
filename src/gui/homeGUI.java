@@ -3,9 +3,12 @@ package gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Toolkit;
-import javax.swing.JButton;
+import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -15,119 +18,203 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
+import tracker.*;
+import model.*;
+
 
 public class homeGUI {
+
+	//This frame in which we are drawing things
 	private JFrame frame;
-	private JMenuBar menus;
-	private JMenu file;
-	private JMenu folio;
-	private JMenuItem closeFolio;
-	private JMenuItem newFolio;
-	private JMenuItem deleteFolio;
-	private JPanel mainPanel;
 	private JTabbedPane tabs;
-	private JPanel addShares;
-	private JLabel folioValue;
-	private JTextField tickerText;
-	private JLabel tickerSymbol;
-	private JButton addFolio;
-	String[] columnNames = { "Ticker Symbol", "Stock Name", "Number Of Shares",
-			"Price Per Share", "Value Of Holding" };
-
-	public static void main(String[] args) {
-
-		new homeGUI();
-	}
-
-	public homeGUI() {
-		makeFrame();
-	}
-
-	private void makeFrame() {
-		// create a new frame
+	
+	private List<DefaultTableModel> models;
+	
+	//The Tracker of folios
+	private Tracker tracker;
+	
+	private Portfolio currentPortfolio;
+	
+	/**
+	 * Constructor for the UI. This creates the initial view
+	 * 
+	 * @param tracker the model
+	 */
+	public homeGUI(Tracker tracker){
+		
+		this.tracker = tracker;
+		models = new ArrayList<DefaultTableModel>();
+		
 		frame = new JFrame("Folio Tracker");
-		frame.setSize(650, 600);
 		// frame.setResizable(false);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
+		
+		buildMenu();
+		buildPortfolio();
+		
+		frame.pack();
+		
 		// centre the GUI according to the screen size
+		frame.setSize(650, 600);
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		frame.setLocation(d.width / 2 - frame.getWidth() / 2, d.height / 2
 				- frame.getHeight() / 2);
-		// add a menu bar to the frame
-		createMenu(frame);
-		mainPanel = new JPanel(new BorderLayout());
-		mainPanel.setPreferredSize(new Dimension(650, 500));
-		createTabs();
-		createAddSharesPane();
-		createFolioValueLabel();
-		createTickerTable();
-		frame.add(mainPanel);
-		frame.revalidate();
+		
+		frame.setVisible(true);
 		frame.repaint();
-
+		
+		
+		//THIS WILL BE REMOVED
+		//TODO REMOVE once auto refreash is done
+		while(true){
+			try {
+				Thread.sleep(30000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			update();
+		}
 	}
-
-	private void createMenu(JFrame frame) {
-		menus = new JMenuBar();
-		file = new JMenu("File");
-		folio = new JMenu("Folio");
-		closeFolio = new JMenuItem("Close Folio");
-		newFolio = new JMenuItem("Create Folio");
-		deleteFolio = new JMenuItem("Delete Folio");
-		menus.add(file);
-		menus.add(folio);
+	
+	/**
+	 * Build the Menu bar
+	 */
+	public void buildMenu(){
+		
+		JMenuBar menus = new JMenuBar();
+		
+		JMenu file = new JMenu("File");
+		JMenuItem newFolio = new JMenuItem("Create Folio");
+		newFolio.addActionListener(new AddPortfolioListener(this, tracker));
 		file.add(newFolio);
+		
+		menus.add(file);
+		
+		JMenu folio = new JMenu("Folio");
+		JMenuItem closeFolio = new JMenuItem("Close Folio");
+		JMenuItem deleteFolio = new JMenuItem("Delete Folio");
+		JMenuItem addStock = new JMenuItem("Add Stock");
+		
+		addStock.addActionListener(new AddStockListener(this, tracker));
+		
 		folio.add(closeFolio);
 		folio.add(deleteFolio);
+		folio.add(addStock);
+		
+		menus.add(folio);
 		frame.setJMenuBar(menus);
 	}
-
-	// will only appear once there are tabs to create (I think)
-	private void createTabs() {
+	
+	/**
+	 * Build the portfolio view
+	 */
+	public void buildPortfolio(){
+		
 		tabs = new JTabbedPane();
-		mainPanel.add(tabs, BorderLayout.CENTER);
+		
+		addPortfolios();
 	}
-
-	private void createAddSharesPane() {
-		addShares = new JPanel(new FlowLayout());
-		Dimension d = new Dimension(650, 50);
-		addShares.setPreferredSize(d);
-		addShares.setBackground(Color.gray);
-		tickerSymbol = new JLabel("Ticker Symbol:");
-		tickerText = new JTextField(20);
-		addFolio = new JButton("Add");
-		addShares.add(tickerSymbol);
-		addShares.add(tickerText);
-		addShares.add(addFolio);
-		mainPanel.add(addShares, BorderLayout.NORTH);
+	
+	private void rebuildPortfolio(){
+		
+		tabs.removeAll();
+		addPortfolios();
 	}
-
-	// parameter will have to be passed in here and obviously the label content
-	// will be changed
-	private void createFolioValueLabel() {
-		folioValue = new JLabel("test label", SwingConstants.CENTER);
-		Dimension d = new Dimension(650, 50);
-		folioValue.setPreferredSize(d);
-		folioValue.setOpaque(true);
-		folioValue.setBackground(Color.gray);
-		mainPanel.add(folioValue, BorderLayout.SOUTH);
+	
+	private void addPortfolios(){
+		for(Portfolio p: tracker.getPortfolios()){
+			
+			JPanel portfolioPanel = new JPanel();
+			
+			portfolioPanel.setLayout(new BorderLayout());
+			
+			//Add tabs
+			
+			portfolioPanel.add(new JScrollPane(createTickerTable(p)));
+			
+			tabs.addTab(p.getName(), portfolioPanel);
+			
+			frame.add(tabs);
+		
+			//Add value display
+			
+			JPanel value = new JPanel();
+			
+			value.setLayout(new BorderLayout());
+			
+			value.add(new JLabel("Total value: $" + p.getTotalValue()), BorderLayout.WEST);
+			value.add(new JLabel("NetGain: $" + p.getNetGain()), BorderLayout.EAST);
+			
+			portfolioPanel.add(value, BorderLayout.SOUTH);
+		}
 	}
-
-	// rows will be added dynamically, just implemented the layout
-	private void createTickerTable() {
-		// create table
+	
+	/**
+	 * Create the ticker table
+	 * 
+	 * @return
+	 */
+	public JTable createTickerTable(Portfolio p){
+		
 		DefaultTableModel model = new DefaultTableModel();
-		JTable tickerTable = new JTable(model);
-		// add columns to the table
+		models.add(model);
+		JTable table = new PortfolioTable(buildTableModel(p, model));
+		
+		table.setBackground(Color.WHITE);
+		
+		return table;
+	}
+	
+	
+	
+	private TableModel buildTableModel(Portfolio p, DefaultTableModel model){
+		
+		String[] columnNames = { "Ticker Symbol", "Stock Name", "Number Of Shares",
+				"Current Price", "Value Of Holding" };
+		
+		Vector<Vector<Object>> data = new Vector<Vector<Object>>();
+		
+		for (int i = 0; i < p.getStocks().size(); i++ ){
+			
+			Stock s = p.getStocks().get(i);
+			
+			Vector<Object> v = new Vector<Object>();
+			
+			v.addElement(s.getTicker());
+			v.addElement(s.getName());
+			v.addElement(s.getNumberOfShares());
+			v.addElement(s.getCurrentValue());
+			v.addElement(s.getHoldingValue());
+			
+			data.addElement(v);
+		}
+		
 		for (int i = 0; i < columnNames.length; i++) {
 			model.addColumn(columnNames[i]);
 		}
-		tickerTable.setBackground(Color.WHITE);
-		mainPanel.add(new JScrollPane(tickerTable), BorderLayout.CENTER);
-
+		
+		for(Vector<Object> d: data){
+			model.addRow(d);
+		}
+		
+		return model;
+	}
+	
+	public Portfolio getCurrentPortfolio(){
+		
+		return tracker.getPortfolios().get(tabs.getSelectedIndex());
+	}
+	
+	public void update(){
+		
+		System.out.println("repaint");
+		int index = tabs.getSelectedIndex();
+		rebuildPortfolio();
+		tabs.setSelectedIndex(index);		
+		frame.repaint();
 	}
 }

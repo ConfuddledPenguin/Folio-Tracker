@@ -10,7 +10,7 @@ package model;
  */
 class ModelUpdater implements Runnable{
 	
-	TrackerImp model;
+	TrackerImp tracker;
 	
 	/**
 	 * The constructor for the ModelUpdater.
@@ -25,7 +25,7 @@ class ModelUpdater implements Runnable{
 		
 		if(model instanceof TrackerImp){
 		
-			this.model = (TrackerImp) model;
+			this.tracker = (TrackerImp) model;
 		}
 		
 		//TODO - deal with case
@@ -43,12 +43,12 @@ class ModelUpdater implements Runnable{
 		while(true){
 		
 			try {
-				Thread.sleep(model.getRefreshRate());
+				Thread.sleep(tracker.getRefreshRate());
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			model.update();
+			tracker.updateTracker();
 		}
 	}
 }

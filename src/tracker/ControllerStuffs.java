@@ -1,5 +1,6 @@
 package tracker;
 
+import gui.homeGUI;
 import model.Portfolio;
 import model.Stock;
 import model.Tracker;
@@ -7,16 +8,22 @@ import model.TrackerImp;
 
 public class ControllerStuffs {
 	
-	Tracker model;
+	Tracker tracker;
+	homeGUI ui;
 	
 	public ControllerStuffs(){
 		
-		model = new TrackerImp();
+		//create new model
+		tracker = new TrackerImp();
+		
+		addPortfolio();	
+		
 		//create new gui passing it this and the model
+		ui = new homeGUI(tracker);
 		
 		
 		//Calling example code
-		addPortfolio();		
+			
 	}
 	
 	/*--------------------------------------------------------------
@@ -29,9 +36,9 @@ public class ControllerStuffs {
 	 */
 	public void addPortfolio(){
 		
-		model.createPortfolio("Example");
-		Portfolio p = model.getPortfolios().get(0); // we know there is only one
-		
+		tracker.createPortfolio("Example");
+		Portfolio p = tracker.getPortfolios().get(0); // we know there is only one
+		tracker.createPortfolio("2");
 		//add a new stock
 		addStock(p);
 	}
