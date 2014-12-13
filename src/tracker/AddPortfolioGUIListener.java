@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 import model.Tracker;
 
-public class AddPortfolioGUIListener implements ActionListener {
+class AddPortfolioGUIListener implements ActionListener {
 
 	private Tracker tracker;
 	private AddPortfolioGUI ui;
@@ -24,5 +24,4 @@ public class AddPortfolioGUIListener implements ActionListener {
 		tracker.createPortfolio(ui.getName());
 		ui.close();
 	}
-
 }

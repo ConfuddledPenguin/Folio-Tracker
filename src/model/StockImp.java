@@ -1,7 +1,6 @@
 package model;
 
 import java.io.IOException;
-import java.util.Observable;
 
 import quoteServer.IQuote;
 import quoteServer.MethodException;
@@ -27,13 +26,16 @@ import quoteServer.WebsiteDataException;
  *  <li>etc...</li>
  * </ul>
  */
-class StockImp extends Observable implements Stock {
+class StockImp implements Stock {
 
+	private IQuote quoter;
+	private TrackerImp tracker;
+	
 	//The stock ticker
 	private String ticker;
 	//The stock name
 	private String name;
-	//The Stock exchange wheres its listed
+	//The Stock exchange where its listed
 	private String exchange;
 	//The current value of the stock
 	private volatile double currentValue;
@@ -64,12 +66,29 @@ class StockImp extends Observable implements Stock {
 	 * @param name The stocks name
 	 * @param exchange The stocks exchange
 	 * @param currentValue The stocks current value
+	 * 
+	 * @throws NoSuchTickerException 
+	 * @throws IOException 
 	 */
-	public StockImp(String ticker, String name, String exchange, double currentValue) {
+	public StockImp(String ticker, TrackerImp tracker) throws NoSuchTickerException, IOException {
 		this.ticker = ticker;
-		this.name = name;
-		this.exchange = exchange;
-		this.currentValue = currentValue;
+		this.tracker = tracker;
+		
+		quoter  = new Quote(TrackerImp.USE_PROXY);
+		try {
+			quoter.setValues(ticker);
+			name = quoter.getName();
+			exchange = quoter.getExchange();
+			currentValue = quoter.getLatest();
+		} catch (IOException e){
+			throw e;
+		} catch (WebsiteDataException e){
+			//TODO
+		} catch (MethodException e) {
+			//TODO
+		} catch(NoSuchTickerException e){
+			throw new NoSuchTickerException("Ticker " + ticker + " doesnt exist");
+		}
 	}
 	
 	/**
@@ -88,8 +107,7 @@ class StockImp extends Observable implements Stock {
 		this.noShares += noShares;
 		this.totalSpent += initialValue * noShares;
 		
-		setChanged();
-		notifyObservers();
+		tracker.modelChanged();
 		
 		return true;
 	}
@@ -108,10 +126,64 @@ class StockImp extends Observable implements Stock {
 		
 		totalSpent -= value;
 		
-		setChanged();
-		notifyObservers();
+		tracker.modelChanged();
 		
 		return true;
+	}
+	
+	/**
+	 * Update the stock with information from the interwebs
+	 * 
+	 * @effects updates this
+	 * @modifies this
+	 */
+	synchronized void update(){
+		
+		//update the stock
+		try {
+			currentValue = quoter.getLatest();  //Update latest price
+			openingPrice = quoter.getOpen();	//update opening price
+			closingPrice = quoter.getClose();	//update close price
+			dailyChange = quoter.getChange();	//update Daily change
+			volume = quoter.getVolume();		//update volume
+			dailyMax = quoter.getRangeMax();	//update daily max
+			dailyMin = quoter.getRangeMin();	//update daily min
+		} catch (MethodException e) {
+			/*
+			 * Do nothing
+			 * 
+			 * This is called every so often, if we fail we can
+			 * ignore it as it will be updated next time round
+			 */
+		}	
+	}
+	
+	/*----------------------------------------------------------------------
+	 * Package methods
+	 */
+	
+	/**
+	 * Set the totalSpent on this stock
+	 * 
+	 * @effects this.totalSpent = totalSpent
+	 * @modifies this
+	 * 
+	 * @param totalSpent the amount spent
+	 */
+	void setTotalSpent(double totalSpent) {
+		this.totalSpent = totalSpent;
+	}
+	
+	/**
+	 * Set the noShares on this stock
+	 * 
+	 * @effects this.noShares = noShares
+	 * @modifies this
+	 * 
+	 * @param noShares the number of shares
+	 */
+	void setNoShares(int noShares) {
+		this.noShares = noShares;
 	}
 	
 	/*-----------------------------------------------------------------------
@@ -302,46 +374,5 @@ class StockImp extends Observable implements Stock {
 	public double getVolume() {
 		
 		return volume;
-	}
-
-	/**
-	 * Update the stock with information from the interwebs
-	 * 
-	 * @effects updates this
-	 * @modifies this
-	 */
-	synchronized void update(){
-		
-		IQuote quoter = new Quote(TrackerImp.USE_PROXY);
-		
-		try {
-			quoter.setValues(ticker);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (WebsiteDataException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (NoSuchTickerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MethodException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		//update the stock
-		try {
-			currentValue = quoter.getLatest();  //Update latest price
-			openingPrice = quoter.getOpen();	//update opening price
-			closingPrice = quoter.getClose();	//update close price
-			dailyChange = quoter.getChange();	//update Daily change
-			volume = quoter.getVolume();		//update volume
-			dailyMax = quoter.getRangeMax();	//update daily max
-			dailyMin = quoter.getRangeMin();	//update daily min
-		} catch (MethodException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
 	}
 }

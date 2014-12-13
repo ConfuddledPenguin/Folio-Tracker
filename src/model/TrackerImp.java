@@ -1,13 +1,16 @@
 package model;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * An implementation of the Model interface
  * 
  */
-public class TrackerImp implements Tracker {
+public class TrackerImp extends Observable implements Tracker {
 
 	/**
 	 * This controls whether the uni proxy is used when accessing 
@@ -68,11 +71,22 @@ public class TrackerImp implements Tracker {
 	@Override
 	public Portfolio createPortfolio(String name) {
 		
-		PortfolioImp p = new PortfolioImp(name);
+		PortfolioImp p = new PortfolioImp(name, this);
 		
 		portfolios.add(p);
 		
+		modelChanged();
+		
 		return p;
+	}
+	
+	public Portfolio loadPortfolio(File inputFile){
+		
+		PortfolioLoader pl = new PortfolioLoader(this);
+		
+		modelChanged();
+		
+		return pl.loadPortfolio(inputFile);
 	}
 
 	/**
@@ -88,9 +102,10 @@ public class TrackerImp implements Tracker {
 	@Override
 	public boolean deletePortfolio(Object o) {
 		
-		if ( o instanceof Portfolio){
+		if ( o instanceof Portfolio && o != null){
 		
 			portfolios.remove( (Portfolio) o);
+			modelChanged();
 			return true;
 		}
 		
@@ -109,46 +124,47 @@ public class TrackerImp implements Tracker {
 		
 		return new ArrayList<Portfolio>(portfolios);
 	}
-	
-	/**
-	 * This updates the model, including all portfolios
-	 * and stock within it with the latest information
-	 * from the web.
-	 * 
-	 * @effects for all portfolio in this.portfolios call
-	 * portfolio.update
-	 */
-	public void updateTracker(){
-		
-		for(PortfolioImp p: portfolios){
-			
-			p.update();
-		}
-	}
 
 	/**
 	 * Sets the rate at which the application checks
 	 * for the latest stock information
+	 * @throws IllegalRefreashRate 
 	 * 
 	 * @effects model.refreshRate = refreshRate
 	 * @modifies this
 	 */
 	@Override
-	public void setRefreshRate(long refreashRate) {
+	public void setRefreshRate(long refreashRate) throws IllegalRefreashRate {
 		
 		if(refreashRate < MIN_REFRESH_RATE){
-			//TODO handle case - refreash is to low
+			throw new IllegalRefreashRate("Refreash rate must be greater than minimum refreash rate", MIN_REFRESH_RATE);
 		}
 		
 		//Calculate how much time is needed between refreshes in mins
-		double legalRefreashRateInMins = 60 / (2000 / noStocks());
+		//it is plus 100 to ensure room to grow in the future.
+		double legalRefreashRateInMins = 60 / (2000 / (noStocks()));
 		long legalRefreashRate = (long) (legalRefreashRateInMins * 60 * 1000);
 		
 		if(refreashRate < legalRefreashRate){
-			//TODO handle case - refresh rate could get IP banned
+			throw new IllegalRefreashRate("Rate must be greater than " + MIN_REFRESH_RATE + "to avoid the API banhammer", MIN_REFRESH_RATE);
 		}
 		
 		this.refreshRate = refreashRate;
+	}
+	
+	/**
+	 * Adds an observer to the set of observers for this object, 
+	 * provided that it is not the same as some observer already
+	 * in the set. The order in which notifications will be 
+	 * delivered to multiple observers is not specified. See 
+	 * the class comment.
+	 * 
+	 * @param o The observer to add
+	 */
+	@Override
+	public void addObserver(Observer o) {
+		
+		super.addObserver(o);
 	}
 	
 	/*-----------------------------------------------------------------------
@@ -184,5 +200,31 @@ public class TrackerImp implements Tracker {
 		
 		return total;
 	}
-
+	
+	/**
+	 * Lets the observers know if the model has changed
+	 * 
+	 * @effects notifies observers
+	 */
+	void modelChanged(){
+		
+		setChanged();
+		notifyObservers();
+	}
+	
+	/**
+	 * This updates the model, including all portfolios
+	 * and stock within it with the latest information
+	 * from the web.
+	 * 
+	 * @effects for all portfolio in this.portfolios call
+	 * portfolio.update
+	 */
+	void updateTracker(){
+		
+		for(PortfolioImp p: portfolios){
+			
+			p.update();
+		}
+	}
 }

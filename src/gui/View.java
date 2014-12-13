@@ -1,5 +1,8 @@
 package gui;
 
+import model.Portfolio;
+import model.Stock;
+
 public interface View {
 
 	/**
@@ -9,7 +12,11 @@ public interface View {
 			
 	public void showError();
 	
-	public void showAddStockGUI();
+	public boolean showDeleteStockGUI();
+	
+	public boolean showDeletePortfolioGUI();
+	
+	public void showAddStockGUI(Portfolio portfolio);
 	
 	public void showAddPortfolio();
 	
@@ -19,5 +26,9 @@ public interface View {
 	
 	public void showBuySharesGUI();
 	
-	public void showbuySharesGUI();	
+	public void showSellSharesGUI();
+	
+	public Portfolio getCurrentPortfolio();
+	
+	public Stock getCurrentStock();
 }

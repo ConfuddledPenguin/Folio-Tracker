@@ -1,14 +1,16 @@
 package tracker;
 
+import java.io.IOException;
+
+import quoteServer.NoSuchTickerException;
 import gui.View;
 import gui.ViewImp;
-import gui.homeGUI;
 import model.Portfolio;
 import model.Stock;
 import model.Tracker;
 import model.TrackerImp;
 
-public class Controller {
+public class Controller{
 	
 	private Tracker tracker;
 	private View view;
@@ -19,6 +21,7 @@ public class Controller {
 		tracker = new TrackerImp();
 		
 		//Calling example code
+		//remove this at some point
 		addPortfolio();	
 		
 		//create new gui passing it this and the model
@@ -34,7 +37,7 @@ public class Controller {
 	 * An example of how to add a portfolio to the model
 	 * and how to manipulate it
 	 */
-	public void addPortfolio(){
+	private void addPortfolio(){
 		
 		tracker.createPortfolio("Example");
 		Portfolio p = tracker.getPortfolios().get(0); // we know there is only one
@@ -49,12 +52,26 @@ public class Controller {
 	 * 
 	 * @param p the portfolio we are to add a stock to
 	 */
-	public void addStock(Portfolio p){
+	private void addStock(Portfolio p){
 		
-		Stock s = p.newStock("MS");
+		Stock s = null;
+		try {
+			s = p.newStock("MS");
+		} catch (NoSuchTickerException e) {
+			System.err.println("Error ticker does not exist");
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.err.println("Error talking to server");
+			e.printStackTrace();
+		}
 		
 		s.addShares(2000, 12.0);
-		s = p.newStock("RBS.l");
+		try {
+			s = p.newStock("RBS.l");
+		} catch (NoSuchTickerException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		s.addShares(3000, 18.00);
 	}
 }

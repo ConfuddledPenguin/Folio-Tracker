@@ -12,17 +12,17 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class newTickerDisplayGUI {
+public class TickerDisplayGUI {
 
 	private JFrame frame;
 	private JPanel mainPanel;
 
 	public static void main(String[] args) {
 
-		new newTickerDisplayGUI();
+		new TickerDisplayGUI();
 	}
 
-	public newTickerDisplayGUI() {
+	public TickerDisplayGUI() {
 		makeFrame();
 	}
 

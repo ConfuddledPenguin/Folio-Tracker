@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 import model.Portfolio;
 
-public class AddStockGUIListener implements ActionListener {
+class AddStockGUIListener implements ActionListener {
 
 	private Portfolio portfolio;
 	private AddStockGUI ui;

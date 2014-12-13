@@ -1,6 +1,8 @@
 package model;
 
+import java.io.File;
 import java.util.List;
+import java.util.Observer;
 
 /**
  * An interface for the Model.
@@ -21,6 +23,8 @@ public interface Tracker {
 	 * @return The portfolio created
 	 */
 	public Portfolio createPortfolio(String name);
+	
+	public Portfolio loadPortfolio(File inputFile);
 	
 	/**
 	 * Deletes a given portfolio
@@ -44,17 +48,22 @@ public interface Tracker {
 	public List<Portfolio> getPortfolios();
 	
 	/**
-	 * Updates the model
-	 * 
-	 * @effects updates the information in the model
-	 */
-	public void updateTracker();
-	
-	/**
 	 * Sets the rate at which the application checks
 	 * for the latest stock information
 	 * 
 	 * @effects model.refreshRate = refreshRate
 	 */
-	public void setRefreshRate(long refreashRate);
+	public void setRefreshRate(long refreashRate) throws IllegalRefreashRate;
+	
+	/**
+	 * Adds an observer to the set of observers for this object, 
+	 * provided that it is not the same as some observer already
+	 * in the set. The order in which notifications will be 
+	 * delivered to multiple observers is not specified. See 
+	 * the class comment.
+	 * 
+	 * @param o The observer to add
+	 */
+	public void addObserver(Observer o);
+	
 }

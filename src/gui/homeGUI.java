@@ -27,6 +27,8 @@ import model.*;
 
 public class homeGUI {
 
+	private View view;
+	
 	//This frame in which we are drawing things
 	private JFrame frame;
 	private JTabbedPane tabs;
@@ -43,9 +45,11 @@ public class homeGUI {
 	 * 
 	 * @param tracker the model
 	 */
-	public homeGUI(Tracker tracker){
+	public homeGUI(Tracker tracker, View view){
 		
 		this.tracker = tracker;
+		this.view = view;
+		
 		models = new ArrayList<DefaultTableModel>();
 		
 		frame = new JFrame("Folio Tracker");
@@ -89,7 +93,7 @@ public class homeGUI {
 		
 		JMenu file = new JMenu("File");
 		JMenuItem newFolio = new JMenuItem("Create Folio");
-		newFolio.addActionListener(new AddPortfolioListener(this, tracker));
+//		newFolio.addActionListener(new AddPortfolioListener(this, tracker));
 		file.add(newFolio);
 		
 		menus.add(file);
@@ -99,7 +103,7 @@ public class homeGUI {
 		JMenuItem deleteFolio = new JMenuItem("Delete Folio");
 		JMenuItem addStock = new JMenuItem("Add Stock");
 		
-		addStock.addActionListener(new AddStockListener(this, tracker));
+		addStock.addActionListener(new AddStockListener(view));
 		
 		folio.add(closeFolio);
 		folio.add(deleteFolio);

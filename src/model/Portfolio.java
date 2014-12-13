@@ -1,6 +1,10 @@
 package model;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+
+import quoteServer.NoSuchTickerException;
 
 /**
  * An interface for the Portfolio.
@@ -21,8 +25,10 @@ public interface Portfolio {
 	 * @param currentValue The currentValue of the stock
 	 * 
 	 * @return The new stock object
+	 * @throws IOException Error communicating with server
+	 * @throws NoSuchTickerException Ticker does not exist
 	 */
-	public Stock newStock(String ticker);
+	public Stock newStock(String ticker) throws NoSuchTickerException, IOException;
 	
 	/**
 	 * Deletes the given stock from the portfolio
@@ -71,4 +77,6 @@ public interface Portfolio {
 	 * @return The portfolios name
 	 */
 	public String getName();
+	
+	public void savePortfolio(File outputFile);
 }
