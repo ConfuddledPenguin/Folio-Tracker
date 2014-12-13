@@ -19,10 +19,10 @@ public class newTickerDisplayGUI {
 
 	public static void main(String[] args) {
 
-		new newTickerDisplayGUI();
+		new tickerDisplayGUI();
 	}
 
-	public newTickerDisplayGUI() {
+	public tickerDisplayGUI() {
 		makeFrame();
 	}
 
