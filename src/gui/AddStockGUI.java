@@ -2,7 +2,7 @@ package gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -48,23 +48,24 @@ public class AddStockGUI {
 				- frame.getHeight() / 2);
 		mainPanel = new JPanel(new BorderLayout());
 		mainPanel.setPreferredSize(new Dimension(400, 175));
-		
-		
-		JLabel label =  new JLabel("Name Of stock:");
-		mainPanel.add(label, BorderLayout.WEST);
-		
-		nameField = new JTextField();
-		mainPanel.add(nameField, BorderLayout.EAST);
-		
+		createStockPanel();
 		JButton add = new JButton("Add Stock");
-		
 		add.addActionListener( new AddStockGUIListener(this, portfolio) );
-		
 		mainPanel.add(add, BorderLayout.SOUTH);
-		
 		frame.add(mainPanel);
 		frame.revalidate();
 
+	}
+	
+	private void createStockPanel(){
+		JPanel stockPanel = new JPanel(new GridLayout(1,1));
+		stockPanel.setBorder(new EmptyBorder(50, 80, 50, 80));
+		JLabel label =  new JLabel("Name Of stock:");
+		JTextField textField = new JTextField(20);
+		stockPanel.add(label);
+		stockPanel.add(textField);
+		mainPanel.add(stockPanel, BorderLayout.CENTER);
+		
 	}
 	
 	public String getTicker(){
