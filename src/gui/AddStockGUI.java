@@ -18,18 +18,19 @@ import javax.swing.border.EmptyBorder;
 import tracker.AddStockGUIListener;
 import model.Portfolio;
 
-public class AddStockGUI {
+public class AddStockGUI implements AddNewInterface{
 	private JFrame frame;
 	private JPanel mainPanel;
 	private JTextField nameField;
 
-	private ActionListener al;
-
 	private Portfolio portfolio;
+	
+	private ActionListener addstock;
 
 	public AddStockGUI(Portfolio portfolio) {
 
 		this.portfolio = portfolio;
+		addstock = new AddStockGUIListener(this, portfolio);
 
 		makeFrame();
 	}
@@ -54,7 +55,7 @@ public class AddStockGUI {
 		mainPanel.setPreferredSize(new Dimension(400, 175));
 		createStockPanel();
 		JButton add = new JButton("Add Stock");
-		add.addActionListener(new AddStockGUIListener(this, portfolio));
+		add.addActionListener(addstock);
 		mainPanel.add(add, BorderLayout.SOUTH);
 		frame.add(mainPanel);
 		frame.revalidate();
@@ -68,9 +69,9 @@ public class AddStockGUI {
 		JPanel stockPanel = new JPanel(new GridLayout(1, 1));
 		stockPanel.setBorder(new EmptyBorder(50, 80, 50, 80));
 		JLabel label = new JLabel("Name Of stock:");
-		JTextField textField = new JTextField(20);
+		nameField = new JTextField(20);
 		stockPanel.add(label);
-		stockPanel.add(textField);
+		stockPanel.add(nameField);
 		mainPanel.add(stockPanel, BorderLayout.CENTER);
 
 	}
@@ -80,7 +81,7 @@ public class AddStockGUI {
 	 * 
 	 * @return - ticker name
 	 */
-	public String getTicker() {
+	public String getInfo() {
 		return nameField.getText();
 	}
     

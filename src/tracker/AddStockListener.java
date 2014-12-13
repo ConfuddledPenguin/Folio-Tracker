@@ -1,25 +1,24 @@
 package tracker;
 
-import gui.View;
+import gui.AddStockGUI;
+import gui.HomeGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AddStockListener implements ActionListener {
 
-	private View view;
+	private HomeGUI homeui;
 	
-	public AddStockListener(View view) {
+	public AddStockListener(HomeGUI homeui) {
 		
-		this.view = view;	
+		this.homeui = homeui;
+
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		
-		view.showAddStockGUI(view.getCurrentPortfolio());
-	}
-
-	
+		new AddStockGUI(homeui.getCurrentPortfolio());
+	}	
 }

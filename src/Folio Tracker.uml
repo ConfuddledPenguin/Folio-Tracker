@@ -4,7 +4,14 @@
     <eAnnotations xmi:id="__I2lQIHmEeSUu7Vru1fYMg" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="__I2lQYHmEeSUu7Vru1fYMg" source="codegen">
         <details xmi:id="__I2lQoHmEeSUu7Vru1fYMg" key="codegenDirectory" value="/Folio Tracker/src"/>
-        <details xmi:id="_AIkV0IHnEeSUu7Vru1fYMg" key="AssociatedSourceCode" value="/Folio Tracker/src/gui/AddPortfolioGUI.java;2567898478/1;/Folio Tracker/src/gui/AddStockGUI.java;2118948339/1;/Folio Tracker/src/gui/PortfolioTable.java;3957287999/1;/Folio Tracker/src/gui/View.java;2030278162/1;/Folio Tracker/src/gui/ViewImp.java;1155176599/1;/Folio Tracker/src/gui/addSharesGUI.java;2270892238/1;/Folio Tracker/src/model/Portfolio.java;3946287807/1;/Folio Tracker/src/gui/sellShareGUI.java;200240582/1;/Folio Tracker/src/gui/tickerDisplayGUI.java;2823206974/1;/Folio Tracker/src/model/ModelUpdater.java;175573157/1;/Folio Tracker/src/gui/homeGUI.java;1005476705/1;/Folio Tracker/src/model/PortfolioImp.java;1094104201/1;/Folio Tracker/src/model/Stock.java;2032974074/1;/Folio Tracker/src/model/StockImp.java;1364074124/1;/Folio Tracker/src/model/Tracker.java;2436555603/1;/Folio Tracker/src/model/TrackerImp.java;2557035570/1;/Folio Tracker/src/quoteServer/IQuote.java;3151141907/1;/Folio Tracker/src/quoteServer/MethodException.java;3755449193/1;/Folio Tracker/src/quoteServer/NoSuchTickerException.java;2271644869/1;/Folio Tracker/src/quoteServer/Quote.java;4105525060/1;/Folio Tracker/src/quoteServer/WebsiteDataException.java;1734464980/1;/Folio Tracker/src/tracker/AddPortfolioGUIListener.java;2178472659/1;/Folio Tracker/src/tracker/AddPortfolioListener.java;816753519/1;/Folio Tracker/src/tracker/AddStockGUIListener.java;4247685387/1;/Folio Tracker/src/tracker/AddStockListener.java;3377353936/1;/Folio Tracker/src/tracker/Driver.java;2452649355/1;"/>
+        <details xmi:id="_AIkV0IHnEeSUu7Vru1fYMg" key="AssociatedSourceCode" value="/Folio Tracker/src/gui/AddPortfolioGUI.java;2567898478/1;/Folio Tracker/src/gui/AddStockGUI.java;3283635677/1;/Folio Tracker/src/gui/PortfolioTable.java;3957287999/1;/Folio Tracker/src/gui/addSharesGUI.java;2270892238/1;/Folio Tracker/src/model/Portfolio.java;1378102814/1;/Folio Tracker/src/gui/sellShareGUI.java;200240582/1;/Folio Tracker/src/gui/tickerDisplayGUI.java;3726850401/1;/Folio Tracker/src/model/ModelUpdater.java;175573157/1;/Folio Tracker/src/model/PortfolioImp.java;1665335403/1;/Folio Tracker/src/model/Stock.java;2032974074/1;/Folio Tracker/src/model/StockImp.java;475523542/1;/Folio Tracker/src/model/Tracker.java;1682853009/1;/Folio Tracker/src/model/TrackerImp.java;1758466662/1;/Folio Tracker/src/quoteServer/IQuote.java;3151141907/1;/Folio Tracker/src/quoteServer/MethodException.java;3755449193/1;/Folio Tracker/src/quoteServer/NoSuchTickerException.java;2271644869/1;/Folio Tracker/src/quoteServer/Quote.java;4105525060/1;/Folio Tracker/src/quoteServer/WebsiteDataException.java;1734464980/1;/Folio Tracker/src/tracker/AddPortfolioGUIListener.java;2178472659/1;/Folio Tracker/src/tracker/AddPortfolioListener.java;816753519/1;/Folio Tracker/src/tracker/AddStockGUIListener.java;26567574/1;/Folio Tracker/src/tracker/AddStockListener.java;3729873201/1;/Folio Tracker/src/tracker/Driver.java;2452649355/1;"/>
+      </contents>
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_d3Cp0IL4EeSJYqWxf0Ns9A" source="preferences">
+        <contents xmi:type="ecore:EAnnotation" xmi:id="_d3Cp0YL4EeSJYqWxf0Ns9A" source="com.yattasolutions.codegen.reverse">
+          <details xmi:id="_d3Cp0oL4EeSJYqWxf0Ns9A" key="com.yattasolutions.codegen.reverse.roundtrip.ReverseEngineerNewFiles" value="true"/>
+          <details xmi:id="_d3DQ4IL4EeSJYqWxf0Ns9A" key="com.yattasolutions.codegen.reverse.roundtrip.ReverseEngineerChangedFiles" value="true"/>
+          <details xmi:id="_d3DQ4YL4EeSJYqWxf0Ns9A" key="com.yattasolutions.codegen.reverse.roundtrip.RemoveDeletedFiles" value="true"/>
+        </contents>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="__O6xAIHmEeSUu7Vru1fYMg">
@@ -46,6 +53,7 @@
         <packagedElement xmi:type="uml:Class" xmi:id="__XfeMYHmEeSUu7Vru1fYMg" name="FlowLayout"/>
         <packagedElement xmi:type="uml:Class" xmi:id="__XgFQYHmEeSUu7Vru1fYMg" name="Toolkit"/>
         <packagedElement xmi:type="uml:Class" xmi:id="__vnDQIHmEeSUu7Vru1fYMg" name="Color"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_e9150IL4EeSJYqWxf0Ns9A" name="GridLayout"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="__PD68IHmEeSUu7Vru1fYMg" name="util">
         <packagedElement xmi:type="uml:Class" xmi:id="__Xs5kIHmEeSUu7Vru1fYMg" name="Observable"/>
@@ -67,6 +75,7 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="__t82YIHmEeSUu7Vru1fYMg" name="io">
         <packagedElement xmi:type="uml:Class" xmi:id="__vqtoIHmEeSUu7Vru1fYMg" name="IOException"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_e93vAIL4EeSJYqWxf0Ns9A" name="File"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="__uGnYIHmEeSUu7Vru1fYMg" name="net">
         <packagedElement xmi:type="uml:Class" xmi:id="__v0eoIHmEeSUu7Vru1fYMg" name="URL"/>
@@ -127,14 +136,13 @@
           <ownedParameter xmi:id="__uK41IHmEeSUu7Vru1fYMg" name="e" type="__XgFQ4HmEeSUu7Vru1fYMg"/>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="__XnaAIHmEeSUu7Vru1fYMg" name="AddStockGUIListener" visibility="package">
+      <packagedElement xmi:type="uml:Class" xmi:id="__XnaAIHmEeSUu7Vru1fYMg" name="AddStockGUIListener">
         <ownedAttribute xmi:id="__wP8dIHmEeSUu7Vru1fYMg" name="portfolio" visibility="private" type="__WZ5EIHmEeSUu7Vru1fYMg" association="__wl6s4HmEeSUu7Vru1fYMg"/>
-        <ownedAttribute xmi:id="__wQjgIHmEeSUu7Vru1fYMg" name="ui" visibility="private" type="__WDTwIHmEeSUu7Vru1fYMg" association="__wmhwIHmEeSUu7Vru1fYMg"/>
+        <ownedAttribute xmi:id="__wQjgIHmEeSUu7Vru1fYMg" name="ui" visibility="private" type="_e991oIL4EeSJYqWxf0Ns9A" association="__wmhwIHmEeSUu7Vru1fYMg"/>
         <interfaceRealization xmi:id="__ub-kYHmEeSUu7Vru1fYMg" client="__XnaAIHmEeSUu7Vru1fYMg" supplier="__XgsUYHmEeSUu7Vru1fYMg" contract="__XgsUYHmEeSUu7Vru1fYMg"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wX4S4HmEeSUu7Vru1fYMg" name="AddStockGUIListener" specification="__uMG8IHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__wX4TIHmEeSUu7Vru1fYMg" name="ui" type="__WDTwIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wX4TYHmEeSUu7Vru1fYMg" name="portfolio" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wX4ToHmEeSUu7Vru1fYMg" type="__XnaAIHmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="_e-YsYIL4EeSJYqWxf0Ns9A" name="portfolio" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
+          <ownedParameter xmi:id="_e-YsYYL4EeSJYqWxf0Ns9A" type="__XnaAIHmEeSUu7Vru1fYMg" direction="return"/>
           <language>java</language>
           <body>this.portfolio = portfolio;&#xD;
 		this.ui = ui;&#xD;
@@ -143,28 +151,35 @@
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wX4T4HmEeSUu7Vru1fYMg" name="actionPerformed" specification="__uMuBYHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wX4UIHmEeSUu7Vru1fYMg" name="e" type="__XgFQ4HmEeSUu7Vru1fYMg"/>
           <language>java</language>
-          <body>portfolio.newStock(ui.getTicker());&#xD;
+          <body>try {&#xD;
+			portfolio.newStock(ui.getInfo());&#xD;
+		} catch (NoSuchTickerException e1) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e1.printStackTrace();&#xD;
+		} catch (IOException e1) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e1.printStackTrace();&#xD;
+		}&#xD;
 		ui.close();&#xD;
-		&#xD;
 	</body>
         </ownedBehavior>
         <ownedOperation xmi:id="__uMG8IHmEeSUu7Vru1fYMg" name="AddStockGUIListener" method="__wX4S4HmEeSUu7Vru1fYMg">
           <eAnnotations xmi:id="__uMuA4HmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="__uMuBIHmEeSUu7Vru1fYMg" key="create"/>
           </eAnnotations>
-          <ownedParameter xmi:id="__uMuAIHmEeSUu7Vru1fYMg" name="ui" type="__WDTwIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__uMuAYHmEeSUu7Vru1fYMg" name="portfolio" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
           <ownedParameter xmi:id="__uMuAoHmEeSUu7Vru1fYMg" type="__XnaAIHmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="__wX4TIHmEeSUu7Vru1fYMg" name="ui" type="_e991oIL4EeSJYqWxf0Ns9A"/>
+          <ownedParameter xmi:id="__uMuAYHmEeSUu7Vru1fYMg" name="portfolio" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
         </ownedOperation>
         <ownedOperation xmi:id="__uMuBYHmEeSUu7Vru1fYMg" name="actionPerformed" method="__wX4T4HmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__uMuBoHmEeSUu7Vru1fYMg" name="e" type="__XgFQ4HmEeSUu7Vru1fYMg"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__u-xJYHmEeSUu7Vru1fYMg" name="AddPortfolioListener">
-        <ownedAttribute xmi:id="__wP8coHmEeSUu7Vru1fYMg" name="ui" visibility="private" type="__WIMQIHmEeSUu7Vru1fYMg" association="__wl6sIHmEeSUu7Vru1fYMg"/>
+        <ownedAttribute xmi:id="__wP8coHmEeSUu7Vru1fYMg" name="ui" visibility="private" association="__wl6sIHmEeSUu7Vru1fYMg"/>
         <interfaceRealization xmi:id="__u_YMIHmEeSUu7Vru1fYMg" client="__u-xJYHmEeSUu7Vru1fYMg" supplier="__XgsUYHmEeSUu7Vru1fYMg" contract="__XgsUYHmEeSUu7Vru1fYMg"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wX4RoHmEeSUu7Vru1fYMg" name="AddPortfolioListener" specification="__u_YMYHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__wX4R4HmEeSUu7Vru1fYMg" name="ui" type="__WIMQIHmEeSUu7Vru1fYMg"/>
+          <ownedParameter xmi:id="__wX4R4HmEeSUu7Vru1fYMg" name="ui"/>
           <ownedParameter xmi:id="__wX4SIHmEeSUu7Vru1fYMg" type="__u-xJYHmEeSUu7Vru1fYMg" direction="return"/>
           <language>java</language>
           <body>this.ui = ui;&#xD;
@@ -180,7 +195,7 @@
           <eAnnotations xmi:id="__u_YM4HmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="__u_YNIHmEeSUu7Vru1fYMg" key="create"/>
           </eAnnotations>
-          <ownedParameter xmi:id="__u_YMoHmEeSUu7Vru1fYMg" name="ui" type="__WIMQIHmEeSUu7Vru1fYMg"/>
+          <ownedParameter xmi:id="__u_YMoHmEeSUu7Vru1fYMg" name="ui"/>
           <ownedParameter xmi:id="__u_YNYHmEeSUu7Vru1fYMg" type="__u-xJYHmEeSUu7Vru1fYMg" direction="return"/>
         </ownedOperation>
         <ownedOperation xmi:id="__u_YNoHmEeSUu7Vru1fYMg" name="actionPerformed" method="__wX4SYHmEeSUu7Vru1fYMg">
@@ -188,27 +203,28 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__u__Q4HmEeSUu7Vru1fYMg" name="AddStockListener">
-        <ownedAttribute xmi:id="__wQjgoHmEeSUu7Vru1fYMg" name="view" visibility="private" type="__WIMQIHmEeSUu7Vru1fYMg" association="__wmhw4HmEeSUu7Vru1fYMg"/>
+        <ownedAttribute xmi:id="__YlDUoHmEeSUu7Vru1fYMg" name="homeui" visibility="private" type="_e-AR4IL4EeSJYqWxf0Ns9A" association="_e-hPQIL4EeSJYqWxf0Ns9A"/>
         <interfaceRealization xmi:id="__u__RIHmEeSUu7Vru1fYMg" client="__u__Q4HmEeSUu7Vru1fYMg" supplier="__XgsUYHmEeSUu7Vru1fYMg" contract="__XgsUYHmEeSUu7Vru1fYMg"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wX4UYHmEeSUu7Vru1fYMg" name="AddStockListener" specification="__vAmUIHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__wX4UoHmEeSUu7Vru1fYMg" name="view" type="__WIMQIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wX4U4HmEeSUu7Vru1fYMg" type="__u__Q4HmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="_e-ZTcIL4EeSJYqWxf0Ns9A" type="__u__Q4HmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="_e-ZTcYL4EeSJYqWxf0Ns9A" name="homeui" type="_e-AR4IL4EeSJYqWxf0Ns9A"/>
           <language>java</language>
-          <body>this.view = view;	&#xD;
+          <body>this.homeui = homeui;&#xD;
+&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wX4VIHmEeSUu7Vru1fYMg" name="actionPerformed" specification="__vAmVYHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wYfUIHmEeSUu7Vru1fYMg" name="e" type="__XgFQ4HmEeSUu7Vru1fYMg"/>
           <language>java</language>
-          <body>view.showAddStockGUI(view.getCurrentPortfolio());&#xD;
+          <body>new AddStockGUI(homeui.getCurrentPortfolio());&#xD;
 	</body>
         </ownedBehavior>
         <ownedOperation xmi:id="__vAmUIHmEeSUu7Vru1fYMg" name="AddStockListener" method="__wX4UYHmEeSUu7Vru1fYMg">
           <eAnnotations xmi:id="__vAmUoHmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="__vAmU4HmEeSUu7Vru1fYMg" key="create"/>
           </eAnnotations>
-          <ownedParameter xmi:id="__vAmUYHmEeSUu7Vru1fYMg" name="view" type="__WIMQIHmEeSUu7Vru1fYMg"/>
           <ownedParameter xmi:id="__vAmVIHmEeSUu7Vru1fYMg" type="__u__Q4HmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="_e-LRAIL4EeSJYqWxf0Ns9A" name="homeui" type="_e-AR4IL4EeSJYqWxf0Ns9A"/>
         </ownedOperation>
         <ownedOperation xmi:id="__vAmVYHmEeSUu7Vru1fYMg" name="actionPerformed" method="__wX4VIHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__vAmVoHmEeSUu7Vru1fYMg" name="e" type="__XgFQ4HmEeSUu7Vru1fYMg"/>
@@ -246,12 +262,9 @@
       <packagedElement xmi:type="uml:Association" xmi:id="__wmhwIHmEeSUu7Vru1fYMg" name="" memberEnd="__wmhwYHmEeSUu7Vru1fYMg __wQjgIHmEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="__wmhwYHmEeSUu7Vru1fYMg" name="" type="__XnaAIHmEeSUu7Vru1fYMg" association="__wmhwIHmEeSUu7Vru1fYMg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__wmhw4HmEeSUu7Vru1fYMg" name="" memberEnd="__wmhxIHmEeSUu7Vru1fYMg __wQjgoHmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__wmhxIHmEeSUu7Vru1fYMg" name="" type="__u__Q4HmEeSUu7Vru1fYMg" association="__wmhw4HmEeSUu7Vru1fYMg"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_ZA4BQIHpEeSUu7Vru1fYMg" name="Controller">
         <ownedAttribute xmi:id="_ZA5PYIHpEeSUu7Vru1fYMg" name="tracker" visibility="private" type="__Xk9wYHmEeSUu7Vru1fYMg" association="_ZA6dhYHpEeSUu7Vru1fYMg"/>
-        <ownedAttribute xmi:id="_ZA52cIHpEeSUu7Vru1fYMg" name="view" visibility="private" type="__WIMQIHmEeSUu7Vru1fYMg" association="_ZA7EkYHpEeSUu7Vru1fYMg"/>
+        <ownedAttribute xmi:id="_ZA52cIHpEeSUu7Vru1fYMg" name="view" visibility="private" association="_ZA7EkYHpEeSUu7Vru1fYMg"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ZA52coHpEeSUu7Vru1fYMg" name="Controller" specification="_ZA4oUIHpEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="_ZA52c4HpEeSUu7Vru1fYMg" type="_ZA4BQIHpEeSUu7Vru1fYMg" direction="return">
             <name xsi:nil="true"/>
@@ -316,6 +329,9 @@
       <packagedElement xmi:type="uml:Association" xmi:id="_ZA7EkYHpEeSUu7Vru1fYMg" name="" memberEnd="_ZA7EkoHpEeSUu7Vru1fYMg _ZA52cIHpEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="_ZA7EkoHpEeSUu7Vru1fYMg" name="" type="_ZA4BQIHpEeSUu7Vru1fYMg" association="_ZA7EkYHpEeSUu7Vru1fYMg"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_e-hPQIL4EeSJYqWxf0Ns9A" name="" memberEnd="_e-hPQYL4EeSJYqWxf0Ns9A __YlDUoHmEeSUu7Vru1fYMg">
+        <ownedEnd xmi:id="_e-hPQYL4EeSJYqWxf0Ns9A" name="" type="__u__Q4HmEeSUu7Vru1fYMg" association="_e-hPQIL4EeSJYqWxf0Ns9A"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="__O8mMYHmEeSUu7Vru1fYMg" name="model">
       <packagedElement xmi:type="uml:Interface" xmi:id="__WZ5EIHmEeSUu7Vru1fYMg" name="Portfolio">
@@ -335,7 +351,7 @@
         <ownedAttribute xmi:id="__WbHNIHmEeSUu7Vru1fYMg" name="name" isReadOnly="true">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedOperation xmi:id="__WagIIHmEeSUu7Vru1fYMg" name="newStock">
+        <ownedOperation xmi:id="__WagIIHmEeSUu7Vru1fYMg" name="newStock" raisedException="__u4DdYHmEeSUu7Vru1fYMg __vqtoIHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__WagIYHmEeSUu7Vru1fYMg" name="ticker">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
@@ -346,6 +362,9 @@
           <ownedParameter xmi:id="__Ye8soHmEeSUu7Vru1fYMg" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_e-EjUIL4EeSJYqWxf0Ns9A" name="savePortfolio">
+          <ownedParameter xmi:id="_e-EjUYL4EeSJYqWxf0Ns9A" name="outputFile" type="_e93vAIL4EeSJYqWxf0Ns9A"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="__Xk9wYHmEeSUu7Vru1fYMg" name="Tracker">
@@ -372,16 +391,6 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:id="__uBu4YHmEeSUu7Vru1fYMg" name="updateTracker">
-          <ownedComment xmi:id="__waUgYHmEeSUu7Vru1fYMg">
-            <body>Updates the model&#xD;
-	 * &#xD;
-	 * @effects updates the information in the model</body>
-          </ownedComment>
-        </ownedOperation>
-        <ownedOperation xmi:id="__uBu4oHmEeSUu7Vru1fYMg" name="addObserver">
-          <ownedParameter xmi:id="__uBu44HmEeSUu7Vru1fYMg" name="o" type="__YaEMYHmEeSUu7Vru1fYMg"/>
-        </ownedOperation>
         <ownedOperation xmi:id="__uwHoIHmEeSUu7Vru1fYMg" name="createPortfolio">
           <ownedComment xmi:id="__wZtfYHmEeSUu7Vru1fYMg">
             <body>Creates a new portfolio in the model&#xD;
@@ -400,7 +409,7 @@
           </ownedParameter>
           <ownedParameter xmi:id="__uwHooHmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return"/>
         </ownedOperation>
-        <ownedOperation xmi:id="__uwusYHmEeSUu7Vru1fYMg" name="setRefreshRate">
+        <ownedOperation xmi:id="__uwusYHmEeSUu7Vru1fYMg" name="setRefreshRate" raisedException="_e-INsIL4EeSJYqWxf0Ns9A">
           <ownedComment xmi:id="__waUgoHmEeSUu7Vru1fYMg">
             <body>Sets the rate at which the application checks&#xD;
 	 * for the latest stock information&#xD;
@@ -410,6 +419,22 @@
           <ownedParameter xmi:id="__uwusoHmEeSUu7Vru1fYMg" name="refreashRate">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_e76nMIL4EeSJYqWxf0Ns9A" name="addObserver">
+          <ownedComment xmi:id="_e-cWwYL4EeSJYqWxf0Ns9A">
+            <body>Adds an observer to the set of observers for this object, &#xD;
+	 * provided that it is not the same as some observer already&#xD;
+	 * in the set. The order in which notifications will be &#xD;
+	 * delivered to multiple observers is not specified. See &#xD;
+	 * the class comment.&#xD;
+	 * &#xD;
+	 * @param o The observer to add</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_e77OQIL4EeSJYqWxf0Ns9A" name="o" type="__XtgoIHmEeSUu7Vru1fYMg"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_e-G_kIL4EeSJYqWxf0Ns9A" name="loadPortfolio">
+          <ownedParameter xmi:id="_e-G_kYL4EeSJYqWxf0Ns9A" name="inputFile" type="_e93vAIL4EeSJYqWxf0Ns9A"/>
+          <ownedParameter xmi:id="_e-HmoIL4EeSJYqWxf0Ns9A" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="__XrrcIHmEeSUu7Vru1fYMg" name="Stock">
@@ -631,22 +656,32 @@ information from yahoo.&#xD;
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:id="__wS_zIHmEeSUu7Vru1fYMg" name="tracker" type="__uwus4HmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wS_zYHmEeSUu7Vru1fYMg" type="__ukhcIHmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="__wS_zYHmEeSUu7Vru1fYMg" type="__ukhcIHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
           <body>this.name = name;&#xD;
 		this.tracker = tracker;&#xD;
 		  &#xD;
 		stocks = new ArrayList&lt;StockImp>();&#xD;
-		&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wS_zoHmEeSUu7Vru1fYMg" name="newStock" specification="__ulIgYHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wS_z4HmEeSUu7Vru1fYMg" name="ticker">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:id="__wS_0IHmEeSUu7Vru1fYMg" type="__XrrcIHmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="__wS_0IHmEeSUu7Vru1fYMg" type="__XrrcIHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
-          <body>StockImp s = new StockImp(ticker, tracker);&#xD;
+          <body>StockImp s = null;&#xD;
+		&#xD;
+		try{&#xD;
+			s = new StockImp(ticker, tracker);&#xD;
+		}catch (IOException e){&#xD;
+			s = new StockImp(ticker, tracker); // try again, if we fail again throw exception to caller&#xD;
+		}&#xD;
+		&#xD;
 		stocks.add(s);&#xD;
 		&#xD;
 		tracker.modelChanged();&#xD;
@@ -657,21 +692,24 @@ information from yahoo.&#xD;
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wS_0YHmEeSUu7Vru1fYMg" name="deleteStock" specification="__ulvloHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wS_0oHmEeSUu7Vru1fYMg" name="o" type="__YaEMYHmEeSUu7Vru1fYMg"/>
           <ownedParameter xmi:id="__wS_04HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
           <language>java</language>
-          <body>if ( o instanceof Stock){&#xD;
+          <body>if ( o instanceof Stock &amp;&amp; o != null){&#xD;
 			&#xD;
+			tracker.modelChanged();&#xD;
 			return stocks.remove( (Stock) o);&#xD;
 		}&#xD;
 		&#xD;
-		tracker.modelChanged();&#xD;
+		&#xD;
 		&#xD;
 		return false;&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wTm0IHmEeSUu7Vru1fYMg" name="getStocks" specification="__umWo4HmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wTm0YHmEeSUu7Vru1fYMg" type="__XrrcIHmEeSUu7Vru1fYMg" isOrdered="true" direction="return">
+            <name xsi:nil="true"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__wTm0oHmEeSUu7Vru1fYMg" value="*"/>
           </ownedParameter>
           <language>java</language>
@@ -680,6 +718,7 @@ information from yahoo.&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wTm04HmEeSUu7Vru1fYMg" name="getStockImps" specification="__umWq4HmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wTm1IHmEeSUu7Vru1fYMg" type="__uqBAIHmEeSUu7Vru1fYMg" isOrdered="true" direction="return">
+            <name xsi:nil="true"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__wTm1YHmEeSUu7Vru1fYMg" value="*"/>
           </ownedParameter>
           <language>java</language>
@@ -688,6 +727,7 @@ information from yahoo.&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wTm1oHmEeSUu7Vru1fYMg" name="getTotalValue" specification="__um9tIHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wTm14HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -703,6 +743,7 @@ information from yahoo.&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wTm2IHmEeSUu7Vru1fYMg" name="getNetGain" specification="__um9u4HmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wTm2YHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -718,6 +759,7 @@ information from yahoo.&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wTm2oHmEeSUu7Vru1fYMg" name="getName" specification="__unkxoHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wTm24HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <language>java</language>
@@ -726,6 +768,7 @@ information from yahoo.&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wTm3IHmEeSUu7Vru1fYMg" name="noStocks" specification="__unky4HmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wTm3YHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
           <language>java</language>
@@ -740,7 +783,16 @@ information from yahoo.&#xD;
 		}&#xD;
 	</body>
         </ownedBehavior>
-        <ownedOperation xmi:id="__ulIgYHmEeSUu7Vru1fYMg" name="newStock" method="__wS_zoHmEeSUu7Vru1fYMg">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_e-RXoIL4EeSJYqWxf0Ns9A" name="savePortfolio" specification="_e-FxcIL4EeSJYqWxf0Ns9A">
+          <ownedParameter xmi:id="_e-RXoYL4EeSJYqWxf0Ns9A" name="outputFile" type="_e93vAIL4EeSJYqWxf0Ns9A"/>
+          <language>java</language>
+          <body>PortfolioSaver ps = new PortfolioSaver();&#xD;
+		&#xD;
+		ps.savePortfolio(this, outputFile);&#xD;
+		&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="__ulIgYHmEeSUu7Vru1fYMg" name="newStock" method="__wS_zoHmEeSUu7Vru1fYMg" raisedException="__u4DdYHmEeSUu7Vru1fYMg __vqtoIHmEeSUu7Vru1fYMg">
           <eAnnotations xmi:id="__ulvkIHmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="__ulvkYHmEeSUu7Vru1fYMg" key="synchronized"/>
           </eAnnotations>
@@ -782,17 +834,11 @@ information from yahoo.&#xD;
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:id="__um9tIHmEeSUu7Vru1fYMg" name="getTotalValue" method="__wTm1oHmEeSUu7Vru1fYMg">
-          <eAnnotations xmi:id="__um9tYHmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="__um9toHmEeSUu7Vru1fYMg" key="synchronized"/>
-          </eAnnotations>
           <ownedParameter xmi:id="__um9t4HmEeSUu7Vru1fYMg" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:id="__um9u4HmEeSUu7Vru1fYMg" name="getNetGain" method="__wTm2IHmEeSUu7Vru1fYMg">
-          <eAnnotations xmi:id="__unkwIHmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="__unkwYHmEeSUu7Vru1fYMg" key="synchronized"/>
-          </eAnnotations>
           <ownedParameter xmi:id="__unkwoHmEeSUu7Vru1fYMg" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
@@ -840,6 +886,9 @@ information from yahoo.&#xD;
           </ownedParameter>
           <ownedParameter xmi:id="__vqGkoHmEeSUu7Vru1fYMg" name="tracker" type="__uwus4HmEeSUu7Vru1fYMg"/>
           <ownedParameter xmi:id="__vqGlYHmEeSUu7Vru1fYMg" type="__ukhcIHmEeSUu7Vru1fYMg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_e-FxcIL4EeSJYqWxf0Ns9A" name="savePortfolio" method="_e-RXoIL4EeSJYqWxf0Ns9A">
+          <ownedParameter xmi:id="_e-FxcYL4EeSJYqWxf0Ns9A" name="outputFile" type="_e93vAIL4EeSJYqWxf0Ns9A"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__uqBAIHmEeSUu7Vru1fYMg" name="StockImp" visibility="package">
@@ -936,28 +985,27 @@ This is mainly:&#xD;
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:id="__wUN6oHmEeSUu7Vru1fYMg" name="tracker" type="__uwus4HmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wUN64HmEeSUu7Vru1fYMg" type="__uqBAIHmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="__wUN64HmEeSUu7Vru1fYMg" type="__uqBAIHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
           <body>this.ticker = ticker;&#xD;
 		this.tracker = tracker;&#xD;
 		&#xD;
-		quoter = new Quote(TrackerImp.USE_PROXY);&#xD;
-&#xD;
+		quoter  = new Quote(TrackerImp.USE_PROXY);&#xD;
 		try {&#xD;
 			quoter.setValues(ticker);&#xD;
 			name = quoter.getName();&#xD;
 			exchange = quoter.getExchange();&#xD;
 			currentValue = quoter.getLatest();&#xD;
 		} catch (IOException e){&#xD;
-			//TODO handle&#xD;
+			throw e;&#xD;
 		} catch (WebsiteDataException e){&#xD;
-			//TODO handle&#xD;
+			//TODO&#xD;
 		} catch (MethodException e) {&#xD;
-			// TODO Auto-generated catch block&#xD;
-			e.printStackTrace();&#xD;
+			//TODO&#xD;
 		} catch(NoSuchTickerException e){&#xD;
-			System.out.println(&quot;Stock does not exist&quot;);&#xD;
-			//TODO handle&#xD;
+			throw new NoSuchTickerException(&quot;Ticker &quot; + ticker + &quot; doesnt exist&quot;);&#xD;
 		}&#xD;
 	</body>
         </ownedBehavior>
@@ -969,6 +1017,7 @@ This is mainly:&#xD;
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <ownedParameter xmi:id="__wUN74HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
           <language>java</language>
@@ -985,6 +1034,7 @@ This is mainly:&#xD;
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
           <ownedParameter xmi:id="__wUN8oHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
           <language>java</language>
@@ -1009,13 +1059,18 @@ This is mainly:&#xD;
 			dailyMax = quoter.getRangeMax();	//update daily max&#xD;
 			dailyMin = quoter.getRangeMin();	//update daily min&#xD;
 		} catch (MethodException e) {&#xD;
-			// TODO Auto-generated catch block&#xD;
-			e.printStackTrace();&#xD;
+			/*&#xD;
+			 * Do nothing&#xD;
+			 * &#xD;
+			 * This is called every so often, if we fail we can&#xD;
+			 * ignore it as it will be updated next time round&#xD;
+			 */&#xD;
 		}	&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU08IHmEeSUu7Vru1fYMg" name="getTotalSpent" specification="__ur2MoHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU08YHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -1024,6 +1079,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU08oHmEeSUu7Vru1fYMg" name="getExchange" specification="__ur2NIHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU084HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <language>java</language>
@@ -1032,6 +1088,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU09IHmEeSUu7Vru1fYMg" name="getCurrentValue" specification="__ur2OYHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU09YHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -1040,6 +1097,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU09oHmEeSUu7Vru1fYMg" name="getHoldingValue" specification="__usdRYHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU094HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -1048,6 +1106,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU0-IHmEeSUu7Vru1fYMg" name="getNumberOfShares" specification="__usdTIHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU0-YHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
           <language>java</language>
@@ -1056,6 +1115,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU0-oHmEeSUu7Vru1fYMg" name="getNetGain" specification="__utEVIHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU0-4HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -1064,6 +1124,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU0_IHmEeSUu7Vru1fYMg" name="getOpeningPrice" specification="__utrYIHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU0_YHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -1072,6 +1133,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU0_oHmEeSUu7Vru1fYMg" name="getDailyChange" specification="__utrZ4HmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU0_4HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -1080,6 +1142,7 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU1AIHmEeSUu7Vru1fYMg" name="getDailyMax" specification="__uuScIHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU1AYHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
@@ -1088,10 +1151,21 @@ This is mainly:&#xD;
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wU1AoHmEeSUu7Vru1fYMg" name="getDailyMin" specification="__uuSdYHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wU1A4HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <language>java</language>
           <body>return dailyMin;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HXr9AIHpEeSUu7Vru1fYMg" name="setTotalSpent" specification="__WO58oHmEeSUu7Vru1fYMg">
+          <language>java</language>
+          <body>this.totalSpent = totalSpent;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_e-Tz4IL4EeSJYqWxf0Ns9A" name="setNoShares" specification="__WNr14HmEeSUu7Vru1fYMg">
+          <language>java</language>
+          <body>this.noShares = noShares;&#xD;
 	</body>
         </ownedBehavior>
         <ownedOperation xmi:id="__urPIIHmEeSUu7Vru1fYMg" name="addShares" method="__wUN7IHmEeSUu7Vru1fYMg">
@@ -1216,7 +1290,7 @@ This is mainly:&#xD;
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:id="__vrUsYHmEeSUu7Vru1fYMg" name="StockImp" method="__wUN6IHmEeSUu7Vru1fYMg">
+        <ownedOperation xmi:id="__vrUsYHmEeSUu7Vru1fYMg" name="StockImp" method="__wUN6IHmEeSUu7Vru1fYMg" raisedException="__u4DdYHmEeSUu7Vru1fYMg __vqtoIHmEeSUu7Vru1fYMg">
           <eAnnotations xmi:id="__vr7wIHmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="__vr7wYHmEeSUu7Vru1fYMg" key="create"/>
           </eAnnotations>
@@ -1226,13 +1300,45 @@ This is mainly:&#xD;
 	 * @effects initialises the object&#xD;
 	 * @modifies this&#xD;
 	 * &#xD;
-	 * @param ticker The stock ticker</body>
+	 * @param ticker The stock ticker&#xD;
+	 * @param name The stocks name&#xD;
+	 * @param exchange The stocks exchange&#xD;
+	 * @param currentValue The stocks current value&#xD;
+	 * &#xD;
+	 * @throws NoSuchTickerException &#xD;
+	 * @throws IOException</body>
           </ownedComment>
           <ownedParameter xmi:id="__vrUsoHmEeSUu7Vru1fYMg" name="ticker">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:id="__vrUs4HmEeSUu7Vru1fYMg" name="tracker" type="__uwus4HmEeSUu7Vru1fYMg"/>
           <ownedParameter xmi:id="__vr7woHmEeSUu7Vru1fYMg" type="__uqBAIHmEeSUu7Vru1fYMg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__WO58oHmEeSUu7Vru1fYMg" name="setTotalSpent" visibility="package" method="_HXr9AIHpEeSUu7Vru1fYMg">
+          <ownedComment xmi:id="_e-bvsIL4EeSJYqWxf0Ns9A">
+            <body>Set the totalSpent on this stock&#xD;
+	 * &#xD;
+	 * @effects this.totalSpent = totalSpent&#xD;
+	 * @modifies this&#xD;
+	 * &#xD;
+	 * @param totalSpent the amount spent</body>
+          </ownedComment>
+          <ownedParameter xmi:id="__wS_x4HmEeSUu7Vru1fYMg" name="totalSpent">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="__WNr14HmEeSUu7Vru1fYMg" name="setNoShares" visibility="package" method="_e-Tz4IL4EeSJYqWxf0Ns9A">
+          <ownedComment xmi:id="_e-cWwIL4EeSJYqWxf0Ns9A">
+            <body>Set the noShares on this stock&#xD;
+	 * &#xD;
+	 * @effects this.noShares = noShares&#xD;
+	 * @modifies this&#xD;
+	 * &#xD;
+	 * @param noShares the number of shares</body>
+          </ownedComment>
+          <ownedParameter xmi:id="__XuuwYHmEeSUu7Vru1fYMg" name="noShares">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__uwus4HmEeSUu7Vru1fYMg" name="TrackerImp">
@@ -1252,7 +1358,7 @@ This is mainly:&#xD;
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="__wNgM4HmEeSUu7Vru1fYMg" value="(long) 18000"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="__wNgNIHmEeSUu7Vru1fYMg" name="portfolios" type="__ukhcIHmEeSUu7Vru1fYMg" isOrdered="true" isReadOnly="true" association="__wkslIHmEeSUu7Vru1fYMg">
+        <ownedAttribute xmi:id="__wNgNIHmEeSUu7Vru1fYMg" name="portfolios" visibility="private" type="__ukhcIHmEeSUu7Vru1fYMg" isOrdered="true" isReadOnly="true" association="__wkslIHmEeSUu7Vru1fYMg">
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__wNgNoHmEeSUu7Vru1fYMg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:id="__wOHRIHmEeSUu7Vru1fYMg" name="refreshRate" visibility="package" isReadOnly="true">
@@ -1261,7 +1367,9 @@ This is mainly:&#xD;
         </ownedAttribute>
         <interfaceRealization xmi:id="__uwutIHmEeSUu7Vru1fYMg" client="__uwus4HmEeSUu7Vru1fYMg" supplier="__Xk9wYHmEeSUu7Vru1fYMg" contract="__Xk9wYHmEeSUu7Vru1fYMg"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wVcA4HmEeSUu7Vru1fYMg" name="TrackerImp" specification="__uxVwIHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__wVcBIHmEeSUu7Vru1fYMg" type="__uwus4HmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="__wVcBIHmEeSUu7Vru1fYMg" type="__uwus4HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
           <body>portfolios = new ArrayList&lt;PortfolioImp>();&#xD;
 		&#xD;
@@ -1273,14 +1381,15 @@ This is mainly:&#xD;
           <ownedParameter xmi:id="__wVcBoHmEeSUu7Vru1fYMg" name="name">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:id="__wVcB4HmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="__wVcB4HmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
           <body>PortfolioImp p = new PortfolioImp(name, this);&#xD;
 		&#xD;
 		portfolios.add(p);&#xD;
 		&#xD;
-		setChanged();&#xD;
-		notifyObservers();&#xD;
+		modelChanged();&#xD;
 		&#xD;
 		return p;&#xD;
 	</body>
@@ -1288,17 +1397,16 @@ This is mainly:&#xD;
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wVcCIHmEeSUu7Vru1fYMg" name="deletePortfolio" specification="__ux80oHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wVcCYHmEeSUu7Vru1fYMg" name="o" type="__YaEMYHmEeSUu7Vru1fYMg"/>
           <ownedParameter xmi:id="__wVcCoHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
           <language>java</language>
-          <body>if ( o instanceof Portfolio){&#xD;
+          <body>if ( o instanceof Portfolio &amp;&amp; o != null){&#xD;
 		&#xD;
 			portfolios.remove( (Portfolio) o);&#xD;
+			modelChanged();&#xD;
 			return true;&#xD;
 		}&#xD;
-		&#xD;
-		setChanged();&#xD;
-		notifyObservers();&#xD;
 		&#xD;
 		return false;&#xD;
 	</body>
@@ -1309,9 +1417,6 @@ This is mainly:&#xD;
 			&#xD;
 			p.update();&#xD;
 		}&#xD;
-		&#xD;
-		setChanged();&#xD;
-		notifyObservers();&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wVcDIHmEeSUu7Vru1fYMg" name="setRefreshRate" specification="__uyj4IHmEeSUu7Vru1fYMg">
@@ -1320,32 +1425,30 @@ This is mainly:&#xD;
           </ownedParameter>
           <language>java</language>
           <body>if(refreashRate &lt; MIN_REFRESH_RATE){&#xD;
-			//TODO handle case - refreash is to low&#xD;
+			throw new IllegalRefreashRate(&quot;Refreash rate must be greater than minimum refreash rate&quot;, MIN_REFRESH_RATE);&#xD;
 		}&#xD;
 		&#xD;
 		//Calculate how much time is needed between refreshes in mins&#xD;
-		double legalRefreashRateInMins = 60 / (2000 / noStocks());&#xD;
+		//it is plus 100 to ensure room to grow in the future.&#xD;
+		double legalRefreashRateInMins = 60 / (2000 / (noStocks()));&#xD;
 		long legalRefreashRate = (long) (legalRefreashRateInMins * 60 * 1000);&#xD;
 		&#xD;
 		if(refreashRate &lt; legalRefreashRate){&#xD;
-			//TODO handle case - refresh rate could get IP banned&#xD;
+			throw new IllegalRefreashRate(&quot;Rate must be greater than &quot; + MIN_REFRESH_RATE + &quot;to avoid the API banhammer&quot;, MIN_REFRESH_RATE);&#xD;
 		}&#xD;
 		&#xD;
 		this.refreshRate = refreashRate;&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wWDEIHmEeSUu7Vru1fYMg" name="addObserver" specification="__uyj5YHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__wWDEYHmEeSUu7Vru1fYMg" name="o" type="__YaEMYHmEeSUu7Vru1fYMg"/>
+          <ownedParameter xmi:id="_e-XeQIL4EeSJYqWxf0Ns9A" name="o" type="__XtgoIHmEeSUu7Vru1fYMg"/>
           <language>java</language>
-          <body>if( o != null || o instanceof Observer){&#xD;
-			super.addObserver((Observer) o);&#xD;
-		}else{&#xD;
-			//TODO&#xD;
-		}&#xD;
+          <body>super.addObserver(o);&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wWDEoHmEeSUu7Vru1fYMg" name="noStocks" specification="__uzK8IHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__wWDE4HmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
           <language>java</language>
@@ -1362,6 +1465,26 @@ This is mainly:&#xD;
           <language>java</language>
           <body>setChanged();&#xD;
 		notifyObservers();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wS_wYHmEeSUu7Vru1fYMg" name="loadPortfolio" specification="__ujTWYHmEeSUu7Vru1fYMg">
+          <ownedParameter xmi:id="_e-W3MIL4EeSJYqWxf0Ns9A" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="_e-W3MYL4EeSJYqWxf0Ns9A" name="inputFile" type="_e93vAIL4EeSJYqWxf0Ns9A"/>
+          <language>java</language>
+          <body>PortfolioLoader pl = new PortfolioLoader(this);&#xD;
+		&#xD;
+		modelChanged();&#xD;
+		&#xD;
+		return pl.loadPortfolio(inputFile);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wVcAIHmEeSUu7Vru1fYMg" name="getPortfolios" specification="__wNgN4HmEeSUu7Vru1fYMg">
+          <ownedParameter xmi:id="__wVcAYHmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" isOrdered="true" direction="return">
+            <name xsi:nil="true"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__wVcAoHmEeSUu7Vru1fYMg" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return new ArrayList&lt;Portfolio>(portfolios);&#xD;
 	</body>
         </ownedBehavior>
         <ownedOperation xmi:id="__uxVwIHmEeSUu7Vru1fYMg" name="TrackerImp" method="__wVcA4HmEeSUu7Vru1fYMg">
@@ -1388,7 +1511,7 @@ This is mainly:&#xD;
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:id="__ux82IHmEeSUu7Vru1fYMg" name="updateTracker" method="__wVcC4HmEeSUu7Vru1fYMg">
+        <ownedOperation xmi:id="__ux82IHmEeSUu7Vru1fYMg" name="updateTracker" visibility="package" method="__wVcC4HmEeSUu7Vru1fYMg">
           <ownedComment xmi:id="__waUhYHmEeSUu7Vru1fYMg">
             <body>This updates the model, including all portfolios&#xD;
 	 * and stock within it with the latest information&#xD;
@@ -1398,13 +1521,13 @@ This is mainly:&#xD;
 	 * portfolio.update</body>
           </ownedComment>
         </ownedOperation>
-        <ownedOperation xmi:id="__uyj4IHmEeSUu7Vru1fYMg" name="setRefreshRate" method="__wVcDIHmEeSUu7Vru1fYMg">
+        <ownedOperation xmi:id="__uyj4IHmEeSUu7Vru1fYMg" name="setRefreshRate" method="__wVcDIHmEeSUu7Vru1fYMg" raisedException="_e-INsIL4EeSJYqWxf0Ns9A">
           <ownedParameter xmi:id="__uyj4YHmEeSUu7Vru1fYMg" name="refreashRate">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:id="__uyj5YHmEeSUu7Vru1fYMg" name="addObserver" method="__wWDEIHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__uyj5oHmEeSUu7Vru1fYMg" name="o" type="__YaEMYHmEeSUu7Vru1fYMg"/>
+          <ownedParameter xmi:id="__uyj5oHmEeSUu7Vru1fYMg" name="o" type="__XtgoIHmEeSUu7Vru1fYMg"/>
         </ownedOperation>
         <ownedOperation xmi:id="__uzK8IHmEeSUu7Vru1fYMg" name="noStocks" visibility="package" method="__wWDEoHmEeSUu7Vru1fYMg">
           <ownedComment xmi:id="__waUhoHmEeSUu7Vru1fYMg">
@@ -1419,7 +1542,22 @@ This is mainly:&#xD;
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:id="__uzK8oHmEeSUu7Vru1fYMg" name="modelChanged" visibility="package" method="__wWDFIHmEeSUu7Vru1fYMg"/>
+        <ownedOperation xmi:id="__uzK8oHmEeSUu7Vru1fYMg" name="modelChanged" visibility="package" method="__wWDFIHmEeSUu7Vru1fYMg">
+          <ownedComment xmi:id="_e-c90IL4EeSJYqWxf0Ns9A">
+            <body>Lets the observers know if the model has changed&#xD;
+	 * &#xD;
+	 * @effects notifies observers</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="__ujTWYHmEeSUu7Vru1fYMg" name="loadPortfolio" visibility="public" method="__wS_wYHmEeSUu7Vru1fYMg">
+          <ownedParameter xmi:id="_e7_fsIL4EeSJYqWxf0Ns9A" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="_e-Jb0IL4EeSJYqWxf0Ns9A" name="inputFile" type="_e93vAIL4EeSJYqWxf0Ns9A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__wNgN4HmEeSUu7Vru1fYMg" name="getPortfolios" method="__wVcAIHmEeSUu7Vru1fYMg">
+          <ownedParameter xmi:id="__wOHQIHmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" isOrdered="true" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__wOHQYHmEeSUu7Vru1fYMg" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="__wZtf4HmEeSUu7Vru1fYMg" name="" memberEnd="__uXGEIHmEeSUu7Vru1fYMg __waUgIHmEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="__waUgIHmEeSUu7Vru1fYMg" name="" type="__Xk9wYHmEeSUu7Vru1fYMg" association="__wZtf4HmEeSUu7Vru1fYMg"/>
@@ -1442,6 +1580,7 @@ This is mainly:&#xD;
       <packagedElement xmi:type="uml:Association" xmi:id="__wkslIHmEeSUu7Vru1fYMg" name="" memberEnd="__wkslYHmEeSUu7Vru1fYMg __wNgNIHmEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="__wkslYHmEeSUu7Vru1fYMg" name="" type="__uwus4HmEeSUu7Vru1fYMg" association="__wkslIHmEeSUu7Vru1fYMg"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_e-INsIL4EeSJYqWxf0Ns9A" name="IllegalRefreashRate"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="__O90UIHmEeSUu7Vru1fYMg" name="gui">
       <packagedElement xmi:type="uml:Class" xmi:id="__WAQcIHmEeSUu7Vru1fYMg" name="AddPortfolioGUI">
@@ -1526,14 +1665,17 @@ This is mainly:&#xD;
         <ownedAttribute xmi:id="__YkcQIHmEeSUu7Vru1fYMg" name="frame" visibility="private" type="__XihgIHmEeSUu7Vru1fYMg" association="__Y3-Q4HmEeSUu7Vru1fYMg"/>
         <ownedAttribute xmi:id="__YkcQoHmEeSUu7Vru1fYMg" name="mainPanel" visibility="private" type="__XjIkYHmEeSUu7Vru1fYMg" association="__Y4lUoHmEeSUu7Vru1fYMg"/>
         <ownedAttribute xmi:id="__YlDUIHmEeSUu7Vru1fYMg" name="nameField" visibility="private" type="__XjvoYHmEeSUu7Vru1fYMg" association="__Y5MYYHmEeSUu7Vru1fYMg"/>
-        <ownedAttribute xmi:id="__YlDUoHmEeSUu7Vru1fYMg" name="al" visibility="private" type="__XgsUYHmEeSUu7Vru1fYMg" association="__Y5zcYHmEeSUu7Vru1fYMg"/>
         <ownedAttribute xmi:id="__YlDVIHmEeSUu7Vru1fYMg" name="portfolio" visibility="private" type="__WZ5EIHmEeSUu7Vru1fYMg" association="__Y6agYHmEeSUu7Vru1fYMg"/>
+        <ownedAttribute xmi:id="__WKBcIHmEeSUu7Vru1fYMg" name="addstock" visibility="private" type="__XgsUYHmEeSUu7Vru1fYMg" isReadOnly="true" association="_e-jrgIL4EeSJYqWxf0Ns9A"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__YtmMYHmEeSUu7Vru1fYMg" name="AddStockGUI" specification="__XoBEIHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__YtmMoHmEeSUu7Vru1fYMg" name="portfolio" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__YtmM4HmEeSUu7Vru1fYMg" type="__WDTwIHmEeSUu7Vru1fYMg" direction="return"/>
+          <ownedParameter xmi:id="__YtmM4HmEeSUu7Vru1fYMg" type="__WDTwIHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
           <language>java</language>
           <body>this.portfolio = portfolio;&#xD;
-		&#xD;
+		addstock = new AddStockGUIListener(this, portfolio);&#xD;
+&#xD;
 		makeFrame();&#xD;
 	</body>
         </ownedBehavior>
@@ -1544,7 +1686,7 @@ This is mainly:&#xD;
 		frame.setResizable(false);&#xD;
 		// allow the frame to be in front of the home GUI&#xD;
 		frame.setAlwaysOnTop(true);&#xD;
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
+		// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
 		frame.setVisible(true);&#xD;
 		// centre the GUI according to the screen size&#xD;
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();&#xD;
@@ -1552,27 +1694,18 @@ This is mainly:&#xD;
 				- frame.getHeight() / 2);&#xD;
 		mainPanel = new JPanel(new BorderLayout());&#xD;
 		mainPanel.setPreferredSize(new Dimension(400, 175));&#xD;
-		&#xD;
-		&#xD;
-		JLabel label =  new JLabel(&quot;Name Of stock:&quot;);&#xD;
-		mainPanel.add(label, BorderLayout.WEST);&#xD;
-		&#xD;
-		nameField = new JTextField();&#xD;
-		mainPanel.add(nameField, BorderLayout.EAST);&#xD;
-		&#xD;
+		createStockPanel();&#xD;
 		JButton add = new JButton(&quot;Add Stock&quot;);&#xD;
-		&#xD;
-		add.addActionListener( new AddStockGUIListener(this, portfolio) );&#xD;
-		&#xD;
+		add.addActionListener(addstock);&#xD;
 		mainPanel.add(add, BorderLayout.SOUTH);&#xD;
-		&#xD;
 		frame.add(mainPanel);&#xD;
 		frame.revalidate();&#xD;
 &#xD;
 	</body>
         </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__YtmNYHmEeSUu7Vru1fYMg" name="getTicker" specification="__WEh4YHmEeSUu7Vru1fYMg">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__YtmNYHmEeSUu7Vru1fYMg" name="getInfo" specification="__WEh4YHmEeSUu7Vru1fYMg">
           <ownedParameter xmi:id="__YtmNoHmEeSUu7Vru1fYMg" direction="return">
+            <name xsi:nil="true"/>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <language>java</language>
@@ -1584,19 +1717,50 @@ This is mainly:&#xD;
           <body>frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));&#xD;
 	</body>
         </ownedBehavior>
-        <ownedOperation xmi:id="__WEh4IHmEeSUu7Vru1fYMg" name="makeFrame" visibility="private" method="__YtmNIHmEeSUu7Vru1fYMg"/>
-        <ownedOperation xmi:id="__WEh4YHmEeSUu7Vru1fYMg" name="getTicker" method="__YtmNYHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__WEh4oHmEeSUu7Vru1fYMg" direction="return">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__Yu0UIHmEeSUu7Vru1fYMg" name="createStockPanel" specification="__WNExYHmEeSUu7Vru1fYMg">
+          <language>java</language>
+          <body>JPanel stockPanel = new JPanel(new GridLayout(1, 1));&#xD;
+		stockPanel.setBorder(new EmptyBorder(50, 80, 50, 80));&#xD;
+		JLabel label = new JLabel(&quot;Name Of stock:&quot;);&#xD;
+		nameField = new JTextField(20);&#xD;
+		stockPanel.add(label);&#xD;
+		stockPanel.add(nameField);&#xD;
+		mainPanel.add(stockPanel, BorderLayout.CENTER);&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="__WEh4IHmEeSUu7Vru1fYMg" name="makeFrame" visibility="private" method="__YtmNIHmEeSUu7Vru1fYMg">
+          <ownedComment xmi:id="_e-ahkIL4EeSJYqWxf0Ns9A">
+            <body>Creates the initial frame before adding a button to the bottom and the&#xD;
+	 * stock panel to the center</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="__WEh4YHmEeSUu7Vru1fYMg" name="getInfo" method="__YtmNYHmEeSUu7Vru1fYMg">
+          <ownedComment xmi:id="__wZGZIHmEeSUu7Vru1fYMg">
+            <body>Simple getter method to return the ticker name&#xD;
+	 * &#xD;
+	 * @return - ticker name</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_e8dZwIL4EeSJYqWxf0Ns9A" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:id="__WEh44HmEeSUu7Vru1fYMg" name="close" method="__YtmN4HmEeSUu7Vru1fYMg"/>
+        <ownedOperation xmi:id="__WEh44HmEeSUu7Vru1fYMg" name="close" method="__YtmN4HmEeSUu7Vru1fYMg">
+          <ownedComment xmi:id="__wZGYoHmEeSUu7Vru1fYMg">
+            <body>Method to close the JFrame</body>
+          </ownedComment>
+        </ownedOperation>
         <ownedOperation xmi:id="__XoBEIHmEeSUu7Vru1fYMg" name="AddStockGUI" method="__YtmMYHmEeSUu7Vru1fYMg">
           <eAnnotations xmi:id="__XoBEoHmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="__XoBE4HmEeSUu7Vru1fYMg" key="create"/>
           </eAnnotations>
           <ownedParameter xmi:id="__XoBEYHmEeSUu7Vru1fYMg" name="portfolio" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
           <ownedParameter xmi:id="__XoBFIHmEeSUu7Vru1fYMg" type="__WDTwIHmEeSUu7Vru1fYMg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="__WNExYHmEeSUu7Vru1fYMg" name="createStockPanel" visibility="private" method="__Yu0UIHmEeSUu7Vru1fYMg">
+          <ownedComment xmi:id="_e-ahkYL4EeSJYqWxf0Ns9A">
+            <body>Build the stock Panel consisting of a label and text field</body>
+          </ownedComment>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__WGXEIHmEeSUu7Vru1fYMg" name="PortfolioTable">
@@ -1639,134 +1803,6 @@ This is mainly:&#xD;
           </eAnnotations>
           <ownedParameter xmi:id="__YXA4IHmEeSUu7Vru1fYMg" name="tm" type="__XpPMIHmEeSUu7Vru1fYMg"/>
           <ownedParameter xmi:id="__YXA44HmEeSUu7Vru1fYMg" type="__WGXEIHmEeSUu7Vru1fYMg" direction="return"/>
-        </ownedOperation>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Interface" xmi:id="__WIMQIHmEeSUu7Vru1fYMg" name="View">
-        <ownedAttribute xmi:id="__WJaZYHmEeSUu7Vru1fYMg" name="currentPortfolio" type="__WZ5EIHmEeSUu7Vru1fYMg" isReadOnly="true" association="__Y0T4IHmEeSUu7Vru1fYMg"/>
-        <ownedAttribute xmi:id="__WKBcIHmEeSUu7Vru1fYMg" name="currentStock" type="__XrrcIHmEeSUu7Vru1fYMg" isReadOnly="true" association="__Y068YHmEeSUu7Vru1fYMg"/>
-        <ownedOperation xmi:id="__WIMQYHmEeSUu7Vru1fYMg" name="showHomeGUI">
-          <ownedComment xmi:id="__YxQkIHmEeSUu7Vru1fYMg">
-            <body>Shows the Home userinterface</body>
-          </ownedComment>
-        </ownedOperation>
-        <ownedOperation xmi:id="__WIzUIHmEeSUu7Vru1fYMg" name="showError"/>
-        <ownedOperation xmi:id="__WIzUYHmEeSUu7Vru1fYMg" name="showDeleteStockGUI">
-          <ownedParameter xmi:id="__WIzUoHmEeSUu7Vru1fYMg" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:id="__WIzU4HmEeSUu7Vru1fYMg" name="showDeletePortfolioGUI">
-          <ownedParameter xmi:id="__WIzVIHmEeSUu7Vru1fYMg" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:id="__WJaYIHmEeSUu7Vru1fYMg" name="showAddPortfolio"/>
-        <ownedOperation xmi:id="__WJaYYHmEeSUu7Vru1fYMg" name="showAddShareGUI"/>
-        <ownedOperation xmi:id="__WJaYoHmEeSUu7Vru1fYMg" name="showTickerDisplayGUI"/>
-        <ownedOperation xmi:id="__WJaY4HmEeSUu7Vru1fYMg" name="showBuySharesGUI"/>
-        <ownedOperation xmi:id="__WJaZIHmEeSUu7Vru1fYMg" name="showSellSharesGUI"/>
-        <ownedOperation xmi:id="__XsSgIHmEeSUu7Vru1fYMg" name="showAddStockGUI">
-          <ownedParameter xmi:id="__XsSgYHmEeSUu7Vru1fYMg" name="portfolio" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
-        </ownedOperation>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="__WKogIHmEeSUu7Vru1fYMg" name="ViewImp">
-        <ownedAttribute xmi:id="__YlqYYHmEeSUu7Vru1fYMg" name="tracker" visibility="private" type="__Xk9wYHmEeSUu7Vru1fYMg" association="__Y7BkYHmEeSUu7Vru1fYMg"/>
-        <interfaceRealization xmi:id="__XuHsYHmEeSUu7Vru1fYMg" client="__WKogIHmEeSUu7Vru1fYMg" supplier="__WIMQIHmEeSUu7Vru1fYMg" contract="__WIMQIHmEeSUu7Vru1fYMg"/>
-        <interfaceRealization xmi:id="__YXn8IHmEeSUu7Vru1fYMg" client="__WKogIHmEeSUu7Vru1fYMg" supplier="__XtgoIHmEeSUu7Vru1fYMg" contract="__XtgoIHmEeSUu7Vru1fYMg"/>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__YuNR4HmEeSUu7Vru1fYMg" name="ViewImp" specification="__YY2EIHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__YuNSIHmEeSUu7Vru1fYMg" name="tracker" type="__Xk9wYHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__YuNSoHmEeSUu7Vru1fYMg" type="__WKogIHmEeSUu7Vru1fYMg" direction="return">
-            <name xsi:nil="true"/>
-          </ownedParameter>
-          <language>java</language>
-          <body>this.tracker = tracker;&#xD;
-		&#xD;
-		tracker.addObserver((Observer) this); &#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__YuNS4HmEeSUu7Vru1fYMg" name="showHomeGUI" specification="__WLPkIHmEeSUu7Vru1fYMg">
-          <language>java</language>
-          <body>new homeGUI(tracker, this);&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__Yu0UIHmEeSUu7Vru1fYMg" name="showDeleteStockGUI" specification="__WNExYHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__Yu0UYHmEeSUu7Vru1fYMg" direction="return">
-            <name xsi:nil="true"/>
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-          </ownedParameter>
-          <language>java</language>
-          <body>return false;&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__Yu0UoHmEeSUu7Vru1fYMg" name="showDeletePortfolioGUI" specification="__WNr0oHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__Yu0U4HmEeSUu7Vru1fYMg" direction="return">
-            <name xsi:nil="true"/>
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-          </ownedParameter>
-          <language>java</language>
-          <body>return false;&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__Yu0VIHmEeSUu7Vru1fYMg" name="update" specification="__YarQYHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__Yu0VYHmEeSUu7Vru1fYMg" name="o" type="__Xs5kIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__Yu0VoHmEeSUu7Vru1fYMg" name="arg" type="__YaEMYHmEeSUu7Vru1fYMg"/>
-          <language>java</language>
-          <body>System.out.println(&quot;UDATE VIEW NOW&quot;);&#xD;
-		&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HXrV8IHpEeSUu7Vru1fYMg" name="getCurrentPortfolio" specification="__WOS44HmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="_HXrV8YHpEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return">
-            <name xsi:nil="true"/>
-          </ownedParameter>
-          <language>java</language>
-          <body>return null;&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HXr9AIHpEeSUu7Vru1fYMg" name="getCurrentStock" specification="__WO58oHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="_HXr9AYHpEeSUu7Vru1fYMg" type="__XrrcIHmEeSUu7Vru1fYMg" direction="return">
-            <name xsi:nil="true"/>
-          </ownedParameter>
-          <language>java</language>
-          <body>return null;&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedOperation xmi:id="__WLPkIHmEeSUu7Vru1fYMg" name="showHomeGUI" method="__YuNS4HmEeSUu7Vru1fYMg"/>
-        <ownedOperation xmi:id="__WL2oIHmEeSUu7Vru1fYMg" name="showError"/>
-        <ownedOperation xmi:id="__WL2pIHmEeSUu7Vru1fYMg" name="showAddPortfolio"/>
-        <ownedOperation xmi:id="__WMdsIHmEeSUu7Vru1fYMg" name="showAddShareGUI"/>
-        <ownedOperation xmi:id="__WMdtIHmEeSUu7Vru1fYMg" name="showTickerDisplayGUI"/>
-        <ownedOperation xmi:id="__WNEwYHmEeSUu7Vru1fYMg" name="showBuySharesGUI"/>
-        <ownedOperation xmi:id="__WNExYHmEeSUu7Vru1fYMg" name="showDeleteStockGUI" method="__Yu0UIHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__WNExoHmEeSUu7Vru1fYMg" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:id="__WNr0oHmEeSUu7Vru1fYMg" name="showDeletePortfolioGUI" method="__Yu0UoHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__WNr04HmEeSUu7Vru1fYMg" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:id="__WNr14HmEeSUu7Vru1fYMg" name="showSellSharesGUI"/>
-        <ownedOperation xmi:id="__WOS44HmEeSUu7Vru1fYMg" name="getCurrentPortfolio" method="_HXrV8IHpEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__XvV04HmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="__WO58oHmEeSUu7Vru1fYMg" name="getCurrentStock" method="_HXr9AIHpEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__YZdIIHmEeSUu7Vru1fYMg" type="__XrrcIHmEeSUu7Vru1fYMg" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="__XuuwIHmEeSUu7Vru1fYMg" name="showAddStockGUI">
-          <ownedParameter xmi:id="__XuuwYHmEeSUu7Vru1fYMg" name="portfolio" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="__YY2EIHmEeSUu7Vru1fYMg" name="ViewImp" method="__YuNR4HmEeSUu7Vru1fYMg">
-          <eAnnotations xmi:id="__YY2E4HmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="__YY2FIHmEeSUu7Vru1fYMg" key="create"/>
-          </eAnnotations>
-          <ownedParameter xmi:id="__YY2EYHmEeSUu7Vru1fYMg" name="tracker" type="__Xk9wYHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__YY2FYHmEeSUu7Vru1fYMg" type="__WKogIHmEeSUu7Vru1fYMg" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="__YarQYHmEeSUu7Vru1fYMg" name="update" method="__Yu0VIHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__YarQoHmEeSUu7Vru1fYMg" name="o" type="__Xs5kIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__YarQ4HmEeSUu7Vru1fYMg" name="arg" type="__YaEMYHmEeSUu7Vru1fYMg"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__WRWMIHmEeSUu7Vru1fYMg" name="addSharesGUI">
@@ -1961,12 +1997,6 @@ This is mainly:&#xD;
         <ownedOperation xmi:id="__WmGVIHmEeSUu7Vru1fYMg" name="numberOfSharesPane" visibility="private" method="__YwCd4HmEeSUu7Vru1fYMg"/>
         <ownedOperation xmi:id="__WmGVYHmEeSUu7Vru1fYMg" name="sellButtonPane" visibility="private" method="__YwpgIHmEeSUu7Vru1fYMg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__Y0T4IHmEeSUu7Vru1fYMg" name="" memberEnd="__Y0T4YHmEeSUu7Vru1fYMg __WJaZYHmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__Y0T4YHmEeSUu7Vru1fYMg" name="" type="__WIMQIHmEeSUu7Vru1fYMg" association="__Y0T4IHmEeSUu7Vru1fYMg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__Y068YHmEeSUu7Vru1fYMg" name="" memberEnd="__Y068oHmEeSUu7Vru1fYMg __WKBcIHmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__Y068oHmEeSUu7Vru1fYMg" name="" type="__WIMQIHmEeSUu7Vru1fYMg" association="__Y068YHmEeSUu7Vru1fYMg"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="__Y1iAYHmEeSUu7Vru1fYMg" name="" memberEnd="__Y1iAoHmEeSUu7Vru1fYMg __YinEIHmEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="__Y1iAoHmEeSUu7Vru1fYMg" name="" type="__WAQcIHmEeSUu7Vru1fYMg" association="__Y1iAYHmEeSUu7Vru1fYMg"/>
       </packagedElement>
@@ -1991,14 +2021,8 @@ This is mainly:&#xD;
       <packagedElement xmi:type="uml:Association" xmi:id="__Y5MYYHmEeSUu7Vru1fYMg" name="" memberEnd="__Y5MYoHmEeSUu7Vru1fYMg __YlDUIHmEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="__Y5MYoHmEeSUu7Vru1fYMg" name="" type="__WDTwIHmEeSUu7Vru1fYMg" association="__Y5MYYHmEeSUu7Vru1fYMg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__Y5zcYHmEeSUu7Vru1fYMg" name="" memberEnd="__Y5zcoHmEeSUu7Vru1fYMg __YlDUoHmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__Y5zcoHmEeSUu7Vru1fYMg" name="" type="__WDTwIHmEeSUu7Vru1fYMg" association="__Y5zcYHmEeSUu7Vru1fYMg"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="__Y6agYHmEeSUu7Vru1fYMg" name="" memberEnd="__Y6agoHmEeSUu7Vru1fYMg __YlDVIHmEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="__Y6agoHmEeSUu7Vru1fYMg" name="" type="__WDTwIHmEeSUu7Vru1fYMg" association="__Y6agYHmEeSUu7Vru1fYMg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__Y7BkYHmEeSUu7Vru1fYMg" name="" memberEnd="__Y7BkoHmEeSUu7Vru1fYMg __YlqYYHmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__Y7BkoHmEeSUu7Vru1fYMg" name="" type="__WKogIHmEeSUu7Vru1fYMg" association="__Y7BkYHmEeSUu7Vru1fYMg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="__Y7oo4HmEeSUu7Vru1fYMg" name="" memberEnd="__Y7opIHmEeSUu7Vru1fYMg __Ym4gIHmEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="__Y7opIHmEeSUu7Vru1fYMg" name="" type="__WRWMIHmEeSUu7Vru1fYMg" association="__Y7oo4HmEeSUu7Vru1fYMg"/>
@@ -2180,224 +2204,6 @@ This is mainly:&#xD;
         <ownedOperation xmi:id="__ug3EIHmEeSUu7Vru1fYMg" name="createValuePanel" visibility="private" method="__wSYsYHmEeSUu7Vru1fYMg"/>
         <ownedOperation xmi:id="__ug3EYHmEeSUu7Vru1fYMg" name="createGainPanel" visibility="private" method="__wSYsoHmEeSUu7Vru1fYMg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="__uisQIHmEeSUu7Vru1fYMg" name="homeGUI">
-        <ownedAttribute xmi:id="__wGLc4HmEeSUu7Vru1fYMg" name="view" visibility="private" type="__WIMQIHmEeSUu7Vru1fYMg" association="__wiQUYHmEeSUu7Vru1fYMg"/>
-        <ownedAttribute xmi:id="__wGygYHmEeSUu7Vru1fYMg" name="frame" visibility="private" type="__XihgIHmEeSUu7Vru1fYMg" association="__wiQVIHmEeSUu7Vru1fYMg"/>
-        <ownedAttribute xmi:id="__wGyg4HmEeSUu7Vru1fYMg" name="tabs" visibility="private" type="__voRY4HmEeSUu7Vru1fYMg" association="__wi3YYHmEeSUu7Vru1fYMg"/>
-        <ownedAttribute xmi:id="__wGyhYHmEeSUu7Vru1fYMg" name="models" visibility="private" type="__vo4cYHmEeSUu7Vru1fYMg" isOrdered="true" association="__wi3ZIHmEeSUu7Vru1fYMg">
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__wGyhoHmEeSUu7Vru1fYMg" value="*"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:id="__wHZkIHmEeSUu7Vru1fYMg" name="tracker" visibility="private" type="__Xk9wYHmEeSUu7Vru1fYMg" association="__wjecIHmEeSUu7Vru1fYMg"/>
-        <ownedAttribute xmi:id="__wHZkoHmEeSUu7Vru1fYMg" name="currentPortfolio" type="__WZ5EIHmEeSUu7Vru1fYMg" isReadOnly="true" association="__wjec4HmEeSUu7Vru1fYMg"/>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wSYuYHmEeSUu7Vru1fYMg" name="homeGUI" specification="__ujTUIHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__wSYuoHmEeSUu7Vru1fYMg" name="tracker" type="__Xk9wYHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wSYu4HmEeSUu7Vru1fYMg" name="view" type="__WIMQIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wSYvIHmEeSUu7Vru1fYMg" type="__uisQIHmEeSUu7Vru1fYMg" direction="return"/>
-          <language>java</language>
-          <body>this.tracker = tracker;&#xD;
-		this.view = view;&#xD;
-		&#xD;
-		models = new ArrayList&lt;DefaultTableModel>();&#xD;
-		&#xD;
-		frame = new JFrame(&quot;Folio Tracker&quot;);&#xD;
-		// frame.setResizable(false);&#xD;
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		&#xD;
-		&#xD;
-		buildMenu();&#xD;
-		buildPortfolio();&#xD;
-		&#xD;
-		frame.pack();&#xD;
-		&#xD;
-		// centre the GUI according to the screen size&#xD;
-		frame.setSize(650, 600);&#xD;
-		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();&#xD;
-		frame.setLocation(d.width / 2 - frame.getWidth() / 2, d.height / 2&#xD;
-				- frame.getHeight() / 2);&#xD;
-		&#xD;
-		frame.setVisible(true);&#xD;
-		frame.repaint();&#xD;
-		&#xD;
-		&#xD;
-		//THIS WILL BE REMOVED&#xD;
-		//TODO REMOVE once auto refreash is done&#xD;
-		while(true){&#xD;
-			try {&#xD;
-				Thread.sleep(30000);&#xD;
-			} catch (InterruptedException e) {&#xD;
-				// TODO Auto-generated catch block&#xD;
-				e.printStackTrace();&#xD;
-			}&#xD;
-			update();&#xD;
-		}&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wSYvYHmEeSUu7Vru1fYMg" name="buildMenu" specification="__ujTVoHmEeSUu7Vru1fYMg">
-          <language>java</language>
-          <body>JMenuBar menus = new JMenuBar();&#xD;
-		&#xD;
-		JMenu file = new JMenu(&quot;File&quot;);&#xD;
-		JMenuItem newFolio = new JMenuItem(&quot;Create Folio&quot;);&#xD;
-//		newFolio.addActionListener(new AddPortfolioListener(this, tracker));&#xD;
-		file.add(newFolio);&#xD;
-		&#xD;
-		menus.add(file);&#xD;
-		&#xD;
-		JMenu folio = new JMenu(&quot;Folio&quot;);&#xD;
-		JMenuItem closeFolio = new JMenuItem(&quot;Close Folio&quot;);&#xD;
-		JMenuItem deleteFolio = new JMenuItem(&quot;Delete Folio&quot;);&#xD;
-		JMenuItem addStock = new JMenuItem(&quot;Add Stock&quot;);&#xD;
-		&#xD;
-		addStock.addActionListener(new AddStockListener(view));&#xD;
-		&#xD;
-		folio.add(closeFolio);&#xD;
-		folio.add(deleteFolio);&#xD;
-		folio.add(addStock);&#xD;
-		&#xD;
-		menus.add(folio);&#xD;
-		frame.setJMenuBar(menus);&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wSYvoHmEeSUu7Vru1fYMg" name="buildPortfolio" specification="__ujTV4HmEeSUu7Vru1fYMg">
-          <language>java</language>
-          <body>tabs = new JTabbedPane();&#xD;
-		&#xD;
-		addPortfolios();&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wS_wIHmEeSUu7Vru1fYMg" name="rebuildPortfolio" specification="__ujTWIHmEeSUu7Vru1fYMg">
-          <language>java</language>
-          <body>tabs.removeAll();&#xD;
-		addPortfolios();&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wS_wYHmEeSUu7Vru1fYMg" name="addPortfolios" specification="__ujTWYHmEeSUu7Vru1fYMg">
-          <language>java</language>
-          <body>for(Portfolio p: tracker.getPortfolios()){&#xD;
-			&#xD;
-			JPanel portfolioPanel = new JPanel();&#xD;
-			&#xD;
-			portfolioPanel.setLayout(new BorderLayout());&#xD;
-			&#xD;
-			//Add tabs&#xD;
-			&#xD;
-			portfolioPanel.add(new JScrollPane(createTickerTable(p)));&#xD;
-			&#xD;
-			tabs.addTab(p.getName(), portfolioPanel);&#xD;
-			&#xD;
-			frame.add(tabs);&#xD;
-		&#xD;
-			//Add value display&#xD;
-			&#xD;
-			JPanel value = new JPanel();&#xD;
-			&#xD;
-			value.setLayout(new BorderLayout());&#xD;
-			&#xD;
-			value.add(new JLabel(&quot;Total value: $&quot; + p.getTotalValue()), BorderLayout.WEST);&#xD;
-			value.add(new JLabel(&quot;NetGain: $&quot; + p.getNetGain()), BorderLayout.EAST);&#xD;
-			&#xD;
-			portfolioPanel.add(value, BorderLayout.SOUTH);&#xD;
-		}&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wS_woHmEeSUu7Vru1fYMg" name="createTickerTable" specification="__uj6YIHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__wS_w4HmEeSUu7Vru1fYMg" name="p" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wS_xIHmEeSUu7Vru1fYMg" type="__YVywIHmEeSUu7Vru1fYMg" direction="return"/>
-          <language>java</language>
-          <body>DefaultTableModel model = new DefaultTableModel();&#xD;
-		models.add(model);&#xD;
-		JTable table = new PortfolioTable(buildTableModel(p, model));&#xD;
-		&#xD;
-		table.setBackground(Color.WHITE);&#xD;
-		&#xD;
-		return table;&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wS_xYHmEeSUu7Vru1fYMg" name="buildTableModel" specification="__v7MUIHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__wS_xoHmEeSUu7Vru1fYMg" name="p" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wS_x4HmEeSUu7Vru1fYMg" name="model" type="__vo4cYHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__wS_yIHmEeSUu7Vru1fYMg" type="__XpPMIHmEeSUu7Vru1fYMg" direction="return"/>
-          <language>java</language>
-          <body>String[] columnNames = { &quot;Ticker Symbol&quot;, &quot;Stock Name&quot;, &quot;Number Of Shares&quot;,&#xD;
-				&quot;Current Price&quot;, &quot;Value Of Holding&quot; };&#xD;
-		&#xD;
-		Vector&lt;Vector&lt;Object>> data = new Vector&lt;Vector&lt;Object>>();&#xD;
-		&#xD;
-		for (int i = 0; i &lt; p.getStocks().size(); i++ ){&#xD;
-			&#xD;
-			Stock s = p.getStocks().get(i);&#xD;
-			&#xD;
-			Vector&lt;Object> v = new Vector&lt;Object>();&#xD;
-			&#xD;
-			v.addElement(s.getTicker());&#xD;
-			v.addElement(s.getName());&#xD;
-			v.addElement(s.getNumberOfShares());&#xD;
-			v.addElement(s.getCurrentValue());&#xD;
-			v.addElement(s.getHoldingValue());&#xD;
-			&#xD;
-			data.addElement(v);&#xD;
-		}&#xD;
-		&#xD;
-		for (int i = 0; i &lt; columnNames.length; i++) {&#xD;
-			model.addColumn(columnNames[i]);&#xD;
-		}&#xD;
-		&#xD;
-		for(Vector&lt;Object> d: data){&#xD;
-			model.addRow(d);&#xD;
-		}&#xD;
-		&#xD;
-		return model;&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wS_yYHmEeSUu7Vru1fYMg" name="update" specification="__uj6Y4HmEeSUu7Vru1fYMg">
-          <language>java</language>
-          <body>System.out.println(&quot;repaint&quot;);&#xD;
-		int index = tabs.getSelectedIndex();&#xD;
-		rebuildPortfolio();&#xD;
-		tabs.setSelectedIndex(index);		&#xD;
-		frame.repaint();&#xD;
-	</body>
-        </ownedBehavior>
-        <ownedOperation xmi:id="__ujTUIHmEeSUu7Vru1fYMg" name="homeGUI" method="__wSYuYHmEeSUu7Vru1fYMg">
-          <eAnnotations xmi:id="__ujTU4HmEeSUu7Vru1fYMg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-            <details xmi:id="__ujTVIHmEeSUu7Vru1fYMg" key="create"/>
-          </eAnnotations>
-          <ownedComment xmi:id="__wZGYYHmEeSUu7Vru1fYMg">
-            <body>Constructor for the UI. This creates the initial view&#xD;
-	 * &#xD;
-	 * @param tracker the model</body>
-          </ownedComment>
-          <ownedParameter xmi:id="__ujTUYHmEeSUu7Vru1fYMg" name="tracker" type="__Xk9wYHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__ujTUoHmEeSUu7Vru1fYMg" name="view" type="__WIMQIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__ujTVYHmEeSUu7Vru1fYMg" type="__uisQIHmEeSUu7Vru1fYMg" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="__ujTVoHmEeSUu7Vru1fYMg" name="buildMenu" method="__wSYvYHmEeSUu7Vru1fYMg">
-          <ownedComment xmi:id="__wZGYoHmEeSUu7Vru1fYMg">
-            <body>Build the Menu bar</body>
-          </ownedComment>
-        </ownedOperation>
-        <ownedOperation xmi:id="__ujTV4HmEeSUu7Vru1fYMg" name="buildPortfolio" method="__wSYvoHmEeSUu7Vru1fYMg">
-          <ownedComment xmi:id="__wZGY4HmEeSUu7Vru1fYMg">
-            <body>Build the portfolio view</body>
-          </ownedComment>
-        </ownedOperation>
-        <ownedOperation xmi:id="__ujTWIHmEeSUu7Vru1fYMg" name="rebuildPortfolio" visibility="private" method="__wS_wIHmEeSUu7Vru1fYMg"/>
-        <ownedOperation xmi:id="__ujTWYHmEeSUu7Vru1fYMg" name="addPortfolios" visibility="private" method="__wS_wYHmEeSUu7Vru1fYMg"/>
-        <ownedOperation xmi:id="__uj6YIHmEeSUu7Vru1fYMg" name="createTickerTable" method="__wS_woHmEeSUu7Vru1fYMg">
-          <ownedComment xmi:id="__wZGZIHmEeSUu7Vru1fYMg">
-            <body>Create the ticker table&#xD;
-	 * &#xD;
-	 * @return</body>
-          </ownedComment>
-          <ownedParameter xmi:id="__uj6YYHmEeSUu7Vru1fYMg" name="p" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__uj6YoHmEeSUu7Vru1fYMg" type="__YVywIHmEeSUu7Vru1fYMg" direction="return"/>
-        </ownedOperation>
-        <ownedOperation xmi:id="__uj6Y4HmEeSUu7Vru1fYMg" name="update" method="__wS_yYHmEeSUu7Vru1fYMg"/>
-        <ownedOperation xmi:id="__v7MUIHmEeSUu7Vru1fYMg" name="buildTableModel" visibility="private" method="__wS_xYHmEeSUu7Vru1fYMg">
-          <ownedParameter xmi:id="__v7MUYHmEeSUu7Vru1fYMg" name="p" type="__WZ5EIHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__v7MUoHmEeSUu7Vru1fYMg" name="model" type="__vo4cYHmEeSUu7Vru1fYMg"/>
-          <ownedParameter xmi:id="__v7MU4HmEeSUu7Vru1fYMg" type="__XpPMIHmEeSUu7Vru1fYMg" direction="return"/>
-        </ownedOperation>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="__wdX0IHmEeSUu7Vru1fYMg" name="" memberEnd="__wdX0YHmEeSUu7Vru1fYMg __wDIIIHmEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="__wdX0YHmEeSUu7Vru1fYMg" name="" type="__ufB4IHmEeSUu7Vru1fYMg" association="__wdX0IHmEeSUu7Vru1fYMg"/>
       </packagedElement>
@@ -2443,23 +2249,117 @@ This is mainly:&#xD;
       <packagedElement xmi:type="uml:Association" xmi:id="__whpQYHmEeSUu7Vru1fYMg" name="" memberEnd="__whpQoHmEeSUu7Vru1fYMg __wFkZ4HmEeSUu7Vru1fYMg">
         <ownedEnd xmi:id="__whpQoHmEeSUu7Vru1fYMg" name="" type="__ufB4IHmEeSUu7Vru1fYMg" association="__whpQYHmEeSUu7Vru1fYMg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__wiQUYHmEeSUu7Vru1fYMg" name="" memberEnd="__wiQUoHmEeSUu7Vru1fYMg __wGLc4HmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__wiQUoHmEeSUu7Vru1fYMg" name="" type="__uisQIHmEeSUu7Vru1fYMg" association="__wiQUYHmEeSUu7Vru1fYMg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_e8eA0IL4EeSJYqWxf0Ns9A" name="TickerDisplayGUI">
+        <ownedAttribute xmi:id="__wGygYHmEeSUu7Vru1fYMg" name="frame" visibility="private" type="__XihgIHmEeSUu7Vru1fYMg" association="_e-kSkIL4EeSJYqWxf0Ns9A"/>
+        <ownedAttribute xmi:id="__wGyhYHmEeSUu7Vru1fYMg" name="mainPanel" visibility="private" type="__XjIkYHmEeSUu7Vru1fYMg" isOrdered="true" association="_e-idYYL4EeSJYqWxf0Ns9A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_e-QJgIL4EeSJYqWxf0Ns9A" name="main" specification="_e8fO8IL4EeSJYqWxf0Ns9A">
+          <ownedParameter xmi:id="_e-QJgYL4EeSJYqWxf0Ns9A" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e-QJgoL4EeSJYqWxf0Ns9A" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>new TickerDisplayGUI();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_e-QJg4L4EeSJYqWxf0Ns9A" name="TickerDisplayGUI" specification="_e8f2AIL4EeSJYqWxf0Ns9A">
+          <ownedParameter xmi:id="_e-QJhIL4EeSJYqWxf0Ns9A" type="_e8eA0IL4EeSJYqWxf0Ns9A" direction="return"/>
+          <language>java</language>
+          <body>makeFrame();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wSYuYHmEeSUu7Vru1fYMg" name="makeFrame" specification="__ujTUIHmEeSUu7Vru1fYMg">
+          <language>java</language>
+          <body>// create a new frame&#xD;
+		frame = new JFrame(&quot;Editing Portfolio 'tickerName' for 'portfolioName&quot;);&#xD;
+		frame.setSize(500, 300);&#xD;
+		// frame.setResizable(false);&#xD;
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
+		frame.setVisible(true);&#xD;
+		frame.setResizable(false);&#xD;
+		// centre the GUI according to the screen size&#xD;
+		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();&#xD;
+		frame.setLocation(d.width / 2 - frame.getWidth() / 2, d.height / 2&#xD;
+				- frame.getHeight() / 2);&#xD;
+		mainPanel = new JPanel(new BorderLayout());&#xD;
+		mainPanel.setPreferredSize(new Dimension(500, 300));&#xD;
+		createTickerPanel();&#xD;
+		createButtonPanel();&#xD;
+		frame.add(mainPanel);&#xD;
+		frame.revalidate();&#xD;
+		frame.repaint();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__wS_woHmEeSUu7Vru1fYMg" name="createTickerPanel" specification="__uj6YIHmEeSUu7Vru1fYMg">
+          <language>java</language>
+          <body>JPanel tickerPanel = new JPanel(new GridLayout(6, 0, 10, 0));&#xD;
+		tickerPanel.setBorder(new EmptyBorder(10, 180, 0, 0));&#xD;
+		JLabel tickerSymbolLabel = new JLabel(&quot;Ticker Symbol: +tickerSymbol&quot;);&#xD;
+		JLabel stockNameLabel = new JLabel(&quot;Stock Name: +stockName&quot;);&#xD;
+		JLabel currentValueLabel = new JLabel(&quot;Current Value: +currentValue&quot;);&#xD;
+		JLabel dailyChangeLabel = new JLabel(&quot;Daily Change: +dailyChange&quot;);&#xD;
+		JLabel totalGainLabel = new JLabel(&quot;Total Gain: +totalGain&quot;);&#xD;
+		JLabel totalSpend = new JLabel(&quot;Total Spend: + totalSpend&quot;);&#xD;
+		tickerPanel.add(tickerSymbolLabel);&#xD;
+		tickerPanel.add(stockNameLabel);&#xD;
+		tickerPanel.add(currentValueLabel);&#xD;
+		tickerPanel.add(dailyChangeLabel);&#xD;
+		tickerPanel.add(totalGainLabel);&#xD;
+		tickerPanel.add(totalSpend);&#xD;
+		mainPanel.add(tickerPanel, BorderLayout.CENTER);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_e-QwkIL4EeSJYqWxf0Ns9A" name="createButtonPanel" specification="_e8gdEIL4EeSJYqWxf0Ns9A">
+          <language>java</language>
+          <body>JPanel buttonPanel = new JPanel(new FlowLayout());&#xD;
+		buttonPanel.setBorder(new EmptyBorder(10, 0, 20, 0));&#xD;
+		JButton buyShares = new JButton(&quot;Buy Shares&quot;);&#xD;
+		JButton sellShares = new JButton(&quot;Sell Shares&quot;);&#xD;
+		buttonPanel.add(buyShares);&#xD;
+		buttonPanel.add(sellShares);&#xD;
+		mainPanel.add(buttonPanel, BorderLayout.SOUTH);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="__ujTUIHmEeSUu7Vru1fYMg" name="makeFrame" visibility="private" method="__wSYuYHmEeSUu7Vru1fYMg">
+          <ownedComment xmi:id="_e-bIoIL4EeSJYqWxf0Ns9A">
+            <body>creates the frame which displays the ticker information as well as&#xD;
+	 * buttons that allow the user to sell and buy shares for that ticker</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="__uj6YIHmEeSUu7Vru1fYMg" name="createTickerPanel" visibility="private" method="__wS_woHmEeSUu7Vru1fYMg">
+          <ownedComment xmi:id="__wZGYYHmEeSUu7Vru1fYMg">
+            <body>creates the panel which displays all the information for that ticker.&#xD;
+	 * This panel is then centered in the main frame.</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_e8fO8IL4EeSJYqWxf0Ns9A" name="main" isStatic="true" method="_e-QJgIL4EeSJYqWxf0Ns9A">
+          <ownedParameter xmi:id="_e8fO8YL4EeSJYqWxf0Ns9A" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e8fO8oL4EeSJYqWxf0Ns9A" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_e8f2AIL4EeSJYqWxf0Ns9A" name="TickerDisplayGUI" method="_e-QJg4L4EeSJYqWxf0Ns9A">
+          <eAnnotations xmi:id="_e8f2AYL4EeSJYqWxf0Ns9A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_e8f2AoL4EeSJYqWxf0Ns9A" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_e8f2A4L4EeSJYqWxf0Ns9A" type="_e8eA0IL4EeSJYqWxf0Ns9A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_e8gdEIL4EeSJYqWxf0Ns9A" name="createButtonPanel" visibility="private" method="_e-QwkIL4EeSJYqWxf0Ns9A">
+          <ownedComment xmi:id="_e-bIoYL4EeSJYqWxf0Ns9A">
+            <body>Creates the panel which consists of the add and sell shares buttons. This&#xD;
+	 * panel is set to the south in the main frame</body>
+          </ownedComment>
+        </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__wiQVIHmEeSUu7Vru1fYMg" name="" memberEnd="__wiQVYHmEeSUu7Vru1fYMg __wGygYHmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__wiQVYHmEeSUu7Vru1fYMg" name="" type="__uisQIHmEeSUu7Vru1fYMg" association="__wiQVIHmEeSUu7Vru1fYMg"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_e991oIL4EeSJYqWxf0Ns9A" name="AddNewInterface"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_e-AR4IL4EeSJYqWxf0Ns9A" name="HomeGUI"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_e-idYYL4EeSJYqWxf0Ns9A" name="" memberEnd="_e-idYoL4EeSJYqWxf0Ns9A __wGyhYHmEeSUu7Vru1fYMg">
+        <ownedEnd xmi:id="_e-idYoL4EeSJYqWxf0Ns9A" name="" type="_e8eA0IL4EeSJYqWxf0Ns9A" association="_e-idYYL4EeSJYqWxf0Ns9A"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__wi3YYHmEeSUu7Vru1fYMg" name="" memberEnd="__wi3YoHmEeSUu7Vru1fYMg __wGyg4HmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__wi3YoHmEeSUu7Vru1fYMg" name="" type="__uisQIHmEeSUu7Vru1fYMg" association="__wi3YYHmEeSUu7Vru1fYMg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_e-jrgIL4EeSJYqWxf0Ns9A" name="" memberEnd="_e-jrgYL4EeSJYqWxf0Ns9A __WKBcIHmEeSUu7Vru1fYMg">
+        <ownedEnd xmi:id="_e-jrgYL4EeSJYqWxf0Ns9A" name="" type="__WDTwIHmEeSUu7Vru1fYMg" association="_e-jrgIL4EeSJYqWxf0Ns9A"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__wi3ZIHmEeSUu7Vru1fYMg" name="" memberEnd="__wi3ZYHmEeSUu7Vru1fYMg __wGyhYHmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__wi3ZYHmEeSUu7Vru1fYMg" name="" type="__uisQIHmEeSUu7Vru1fYMg" association="__wi3ZIHmEeSUu7Vru1fYMg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__wjecIHmEeSUu7Vru1fYMg" name="" memberEnd="__wjecYHmEeSUu7Vru1fYMg __wHZkIHmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__wjecYHmEeSUu7Vru1fYMg" name="" type="__uisQIHmEeSUu7Vru1fYMg" association="__wjecIHmEeSUu7Vru1fYMg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="__wjec4HmEeSUu7Vru1fYMg" name="" memberEnd="__wjedIHmEeSUu7Vru1fYMg __wHZkoHmEeSUu7Vru1fYMg">
-        <ownedEnd xmi:id="__wjedIHmEeSUu7Vru1fYMg" name="" type="__uisQIHmEeSUu7Vru1fYMg" association="__wjec4HmEeSUu7Vru1fYMg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_e-kSkIL4EeSJYqWxf0Ns9A" name="" memberEnd="_e-kSkYL4EeSJYqWxf0Ns9A __wGygYHmEeSUu7Vru1fYMg">
+        <ownedEnd xmi:id="_e-kSkYL4EeSJYqWxf0Ns9A" name="" type="_e8eA0IL4EeSJYqWxf0Ns9A" association="_e-kSkIL4EeSJYqWxf0Ns9A"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="__t82YYHmEeSUu7Vru1fYMg" name="quoteServer">
@@ -3227,50 +3127,6 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:Annotations xmi:id="__WHlMYHmEeSUu7Vru1fYMg" base_Element="__WG-IIHmEeSUu7Vru1fYMg">
     <annotations xmi:id="__WHlMoHmEeSUu7Vru1fYMg" name="Override"/>
   </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WLPkYHmEeSUu7Vru1fYMg" base_Element="__WLPkIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WLPkoHmEeSUu7Vru1fYMg" base_Element="__WLPkIHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WLPk4HmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WL2oYHmEeSUu7Vru1fYMg" base_Element="__WL2oIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WL2ooHmEeSUu7Vru1fYMg" base_Element="__WL2oIHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WL2o4HmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WL2pYHmEeSUu7Vru1fYMg" base_Element="__WL2pIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WL2poHmEeSUu7Vru1fYMg" base_Element="__WL2pIHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WL2p4HmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WMdsYHmEeSUu7Vru1fYMg" base_Element="__WMdsIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WMdsoHmEeSUu7Vru1fYMg" base_Element="__WMdsIHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WMds4HmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WMdtYHmEeSUu7Vru1fYMg" base_Element="__WMdtIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WMdtoHmEeSUu7Vru1fYMg" base_Element="__WMdtIHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WNEwIHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WNEwoHmEeSUu7Vru1fYMg" base_Element="__WNEwYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WNEw4HmEeSUu7Vru1fYMg" base_Element="__WNEwYHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WNExIHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WNEx4HmEeSUu7Vru1fYMg" base_Element="__WNExYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WNr0IHmEeSUu7Vru1fYMg" base_Element="__WNExYHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WNr0YHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WNr1IHmEeSUu7Vru1fYMg" base_Element="__WNr0oHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WNr1YHmEeSUu7Vru1fYMg" base_Element="__WNr0oHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WNr1oHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WOS4IHmEeSUu7Vru1fYMg" base_Element="__WNr14HmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WOS4YHmEeSUu7Vru1fYMg" base_Element="__WNr14HmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WOS4oHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WOS5IHmEeSUu7Vru1fYMg" base_Element="__WOS44HmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WO58IHmEeSUu7Vru1fYMg" base_Element="__WOS44HmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WO58YHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__WO584HmEeSUu7Vru1fYMg" base_Element="__WO58oHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__WO59IHmEeSUu7Vru1fYMg" base_Element="__WO58oHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__WO59YHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
   <UMLLabProfile:Array xmi:id="__WjDAIHmEeSUu7Vru1fYMg" dimensions="1" base_Element="__WcVUYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Xe3IIHmEeSUu7Vru1fYMg" base_Element="__XeQEIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__XfeMIHmEeSUu7Vru1fYMg" base_Element="__Xe3IYHmEeSUu7Vru1fYMg"/>
@@ -3288,17 +3144,9 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:Reference xmi:id="__XrEYIHmEeSUu7Vru1fYMg" base_Element="__XpPMIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Xs5kYHmEeSUu7Vru1fYMg" base_Element="__Xs5kIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__XtgoYHmEeSUu7Vru1fYMg" base_Element="__XtgoIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__XvV0IHmEeSUu7Vru1fYMg" base_Element="__XuuwIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__XvV0YHmEeSUu7Vru1fYMg" base_Element="__XuuwIHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__XvV0oHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
   <UMLLabProfile:Reference xmi:id="__X0OUIHmEeSUu7Vru1fYMg" base_Element="__XznQIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__YWZ0IHmEeSUu7Vru1fYMg" base_Element="__YVywIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__YarQIHmEeSUu7Vru1fYMg" base_Element="__YaEMYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__YarRIHmEeSUu7Vru1fYMg" base_Element="__YarQYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__YbSUIHmEeSUu7Vru1fYMg" base_Element="__YarQYHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__YbSUYHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YinEYHmEeSUu7Vru1fYMg" base_Element="__YinEIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YjOIYHmEeSUu7Vru1fYMg" base_Element="__YjOIIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YjOI4HmEeSUu7Vru1fYMg" base_Element="__YjOIoHmEeSUu7Vru1fYMg"/>
@@ -3307,9 +3155,7 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YkcQYHmEeSUu7Vru1fYMg" base_Element="__YkcQIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YkcQ4HmEeSUu7Vru1fYMg" base_Element="__YkcQoHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YlDUYHmEeSUu7Vru1fYMg" base_Element="__YlDUIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__YlDU4HmEeSUu7Vru1fYMg" base_Element="__YlDUoHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YlqYIHmEeSUu7Vru1fYMg" base_Element="__YlDVIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__YmRcIHmEeSUu7Vru1fYMg" base_Element="__YlqYYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__Ym4gYHmEeSUu7Vru1fYMg" base_Element="__Ym4gIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YnfkYHmEeSUu7Vru1fYMg" base_Element="__YnfkIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__Ynfk4HmEeSUu7Vru1fYMg" base_Element="__YnfkoHmEeSUu7Vru1fYMg"/>
@@ -3327,8 +3173,6 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YrxAIHmEeSUu7Vru1fYMg" base_Element="__YrJ84HmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YrxAoHmEeSUu7Vru1fYMg" base_Element="__YrxAYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__YrxBIHmEeSUu7Vru1fYMg" base_Element="__YrxA4HmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__Y068IHmEeSUu7Vru1fYMg" base_Element="__Y0T4IHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__Y1iAIHmEeSUu7Vru1fYMg" base_Element="__Y068YHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Y2JEIHmEeSUu7Vru1fYMg" base_Element="__Y1iAYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Y2wIIHmEeSUu7Vru1fYMg" base_Element="__Y2JEYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Y3XMIHmEeSUu7Vru1fYMg" base_Element="__Y2wIYHmEeSUu7Vru1fYMg"/>
@@ -3337,9 +3181,7 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:Reference xmi:id="__Y4lUYHmEeSUu7Vru1fYMg" base_Element="__Y3-Q4HmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Y5MYIHmEeSUu7Vru1fYMg" base_Element="__Y4lUoHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Y5zcIHmEeSUu7Vru1fYMg" base_Element="__Y5MYYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__Y6agIHmEeSUu7Vru1fYMg" base_Element="__Y5zcYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Y7BkIHmEeSUu7Vru1fYMg" base_Element="__Y6agYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__Y7Bk4HmEeSUu7Vru1fYMg" base_Element="__Y7BkYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Y8PsIHmEeSUu7Vru1fYMg" base_Element="__Y7oo4HmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Y82wIHmEeSUu7Vru1fYMg" base_Element="__Y8PsYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__Y82w4HmEeSUu7Vru1fYMg" base_Element="__Y82wYHmEeSUu7Vru1fYMg"/>
@@ -3438,9 +3280,7 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
     <annotations xmi:id="__uyj5IHmEeSUu7Vru1fYMg" name="Override"/>
   </UMLLabProfile:Annotations>
   <UMLLabProfile:LegacyStyledElement xmi:id="__uyj54HmEeSUu7Vru1fYMg" base_Element="__uyj5YHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Annotations xmi:id="__uyj6IHmEeSUu7Vru1fYMg" base_Element="__uyj5YHmEeSUu7Vru1fYMg">
-    <annotations xmi:id="__uyj6YHmEeSUu7Vru1fYMg" name="Override"/>
-  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Annotations xmi:id="__uyj6IHmEeSUu7Vru1fYMg" base_Element="__uyj5YHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__u__QIHmEeSUu7Vru1fYMg" base_Element="__u_YNoHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Annotations xmi:id="__u__QYHmEeSUu7Vru1fYMg" base_Element="__u_YNoHmEeSUu7Vru1fYMg">
     <annotations xmi:id="__u__QoHmEeSUu7Vru1fYMg" name="Override"/>
@@ -3482,16 +3322,6 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:LegacyStyledElement xmi:id="__wFkZoHmEeSUu7Vru1fYMg" base_Element="__wFkZYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__wGLcIHmEeSUu7Vru1fYMg" base_Element="__wFkZ4HmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__wGLcoHmEeSUu7Vru1fYMg" base_Element="__wGLcYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__wGygIHmEeSUu7Vru1fYMg" base_Element="__wGLc4HmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__wGygoHmEeSUu7Vru1fYMg" base_Element="__wGygYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__wGyhIHmEeSUu7Vru1fYMg" base_Element="__wGyg4HmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__wGyh4HmEeSUu7Vru1fYMg" base_Element="__wGyhYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__wHZkYHmEeSUu7Vru1fYMg" base_Element="__wHZkIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__wHZk4HmEeSUu7Vru1fYMg" base_Element="__wHZkoHmEeSUu7Vru1fYMg">
-    <associatedElement xmi:type="uml:Operation" xmi:id="__wHZlIHmEeSUu7Vru1fYMg" name="getCurrentPortfolio" method="__wSYt4HmEeSUu7Vru1fYMg">
-      <ownedParameter xmi:id="__wHZlYHmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return"/>
-    </associatedElement>
-  </UMLLabProfile:LegacyStyledElement>
   <UMLLabProfile:LegacyStyledElement xmi:id="__wIAoYHmEeSUu7Vru1fYMg" base_Element="__wIAoIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__wIAo4HmEeSUu7Vru1fYMg" base_Element="__wIAooHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__wInsIHmEeSUu7Vru1fYMg" base_Element="__wIApIHmEeSUu7Vru1fYMg"/>
@@ -3548,13 +3378,7 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:Annotations xmi:id="__wM5IIHmEeSUu7Vru1fYMg" base_Element="__wMSGoHmEeSUu7Vru1fYMg">
     <annotations xmi:id="__wM5IYHmEeSUu7Vru1fYMg" name="Override"/>
   </UMLLabProfile:Annotations>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__wNgNYHmEeSUu7Vru1fYMg" base_Element="__wNgNIHmEeSUu7Vru1fYMg">
-    <associatedElement xmi:type="uml:Operation" xmi:id="__wNgN4HmEeSUu7Vru1fYMg" name="getPortfolios" method="__wVcAIHmEeSUu7Vru1fYMg">
-      <ownedParameter xmi:id="__wOHQIHmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" isOrdered="true" direction="return">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__wOHQYHmEeSUu7Vru1fYMg" value="*"/>
-      </ownedParameter>
-    </associatedElement>
-  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:LegacyStyledElement xmi:id="__wNgNYHmEeSUu7Vru1fYMg" base_Element="__wNgNIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Annotations xmi:id="__wOHQoHmEeSUu7Vru1fYMg" base_Element="__wNgN4HmEeSUu7Vru1fYMg">
     <annotations xmi:id="__wOHQ4HmEeSUu7Vru1fYMg" name="Override"/>
   </UMLLabProfile:Annotations>
@@ -3565,8 +3389,7 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:LegacyStyledElement xmi:id="__wP8c4HmEeSUu7Vru1fYMg" base_Element="__wP8coHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__wP8dYHmEeSUu7Vru1fYMg" base_Element="__wP8dIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__wQjgYHmEeSUu7Vru1fYMg" base_Element="__wQjgIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="__wQjg4HmEeSUu7Vru1fYMg" base_Element="__wQjgoHmEeSUu7Vru1fYMg"/>
-  <uml:OpaqueBehavior xmi:id="__wSYt4HmEeSUu7Vru1fYMg" name="getCurrentPortfolio" specification="__wHZlIHmEeSUu7Vru1fYMg">
+  <uml:OpaqueBehavior xmi:id="__wSYt4HmEeSUu7Vru1fYMg" name="getCurrentPortfolio">
     <ownedParameter xmi:id="__wSYuIHmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" direction="return"/>
     <language>java</language>
     <body>return tracker.getPortfolios().get(tabs.getSelectedIndex());&#xD;
@@ -3574,6 +3397,7 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="__wUN4IHmEeSUu7Vru1fYMg" name="getTicker" specification="__wJOwoHmEeSUu7Vru1fYMg">
     <ownedParameter xmi:id="__wUN4YHmEeSUu7Vru1fYMg" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
     <language>java</language>
@@ -3582,6 +3406,7 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="__wUN4oHmEeSUu7Vru1fYMg" name="getName" specification="__wJ10IHmEeSUu7Vru1fYMg">
     <ownedParameter xmi:id="__wUN44HmEeSUu7Vru1fYMg" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
     <language>java</language>
@@ -3590,6 +3415,7 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="__wUN5IHmEeSUu7Vru1fYMg" name="getClosingPrice" specification="__wLD9YHmEeSUu7Vru1fYMg">
     <ownedParameter xmi:id="__wUN5YHmEeSUu7Vru1fYMg" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
     </ownedParameter>
     <language>java</language>
@@ -3598,18 +3424,11 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="__wUN5oHmEeSUu7Vru1fYMg" name="getVolume" specification="__wMSGoHmEeSUu7Vru1fYMg">
     <ownedParameter xmi:id="__wUN54HmEeSUu7Vru1fYMg" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
     </ownedParameter>
     <language>java</language>
     <body>return volume;&#xD;
-	</body>
-  </uml:OpaqueBehavior>
-  <uml:OpaqueBehavior xmi:id="__wVcAIHmEeSUu7Vru1fYMg" name="getPortfolios" specification="__wNgN4HmEeSUu7Vru1fYMg">
-    <ownedParameter xmi:id="__wVcAYHmEeSUu7Vru1fYMg" type="__WZ5EIHmEeSUu7Vru1fYMg" isOrdered="true" direction="return">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__wVcAoHmEeSUu7Vru1fYMg" value="*"/>
-    </ownedParameter>
-    <language>java</language>
-    <body>return new ArrayList&lt;Portfolio>(portfolios);&#xD;
 	</body>
   </uml:OpaqueBehavior>
   <UMLLabProfile:Reference xmi:id="__wd-4IHmEeSUu7Vru1fYMg" base_Element="__wdX0IHmEeSUu7Vru1fYMg"/>
@@ -3628,12 +3447,6 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:Reference xmi:id="__whpQIHmEeSUu7Vru1fYMg" base_Element="__whCNoHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__whpQ4HmEeSUu7Vru1fYMg" base_Element="__whpQYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__wiQUIHmEeSUu7Vru1fYMg" base_Element="__whpRIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__wiQU4HmEeSUu7Vru1fYMg" base_Element="__wiQUYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__wi3YIHmEeSUu7Vru1fYMg" base_Element="__wiQVIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__wi3Y4HmEeSUu7Vru1fYMg" base_Element="__wi3YYHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__wi3ZoHmEeSUu7Vru1fYMg" base_Element="__wi3ZIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__wjecoHmEeSUu7Vru1fYMg" base_Element="__wjecIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__wjedYHmEeSUu7Vru1fYMg" base_Element="__wjec4HmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__wkFgIHmEeSUu7Vru1fYMg" base_Element="__wjedoHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__wkFg4HmEeSUu7Vru1fYMg" base_Element="__wkFgYHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__wkskIHmEeSUu7Vru1fYMg" base_Element="__wkFhIHmEeSUu7Vru1fYMg"/>
@@ -3644,9 +3457,22 @@ All rights reserved. Copyright: 21 Nov 2008 15:06:18</body>
   <UMLLabProfile:Reference xmi:id="__wl6soHmEeSUu7Vru1fYMg" base_Element="__wl6sIHmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__wl6tYHmEeSUu7Vru1fYMg" base_Element="__wl6s4HmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="__wmhwoHmEeSUu7Vru1fYMg" base_Element="__wmhwIHmEeSUu7Vru1fYMg"/>
-  <UMLLabProfile:Reference xmi:id="__wmhxYHmEeSUu7Vru1fYMg" base_Element="__wmhw4HmEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_ZA5PYYHpEeSUu7Vru1fYMg" base_Element="_ZA5PYIHpEeSUu7Vru1fYMg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_ZA52cYHpEeSUu7Vru1fYMg" base_Element="_ZA52cIHpEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="_ZA7EkIHpEeSUu7Vru1fYMg" base_Element="_ZA6dhYHpEeSUu7Vru1fYMg"/>
   <UMLLabProfile:Reference xmi:id="_ZA7Ek4HpEeSUu7Vru1fYMg" base_Element="_ZA7EkYHpEeSUu7Vru1fYMg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_e8OwQIL4EeSJYqWxf0Ns9A" base_Element="__WKBcIHmEeSUu7Vru1fYMg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_e8aWcIL4EeSJYqWxf0Ns9A" base_Element="__wNgN4HmEeSUu7Vru1fYMg"/>
+  <UMLLabProfile:Reference xmi:id="_e92g4IL4EeSJYqWxf0Ns9A" base_Element="_e9150IL4EeSJYqWxf0Ns9A"/>
+  <UMLLabProfile:Reference xmi:id="_e949IIL4EeSJYqWxf0Ns9A" base_Element="_e93vAIL4EeSJYqWxf0Ns9A"/>
+  <UMLLabProfile:Reference xmi:id="_e9_DwIL4EeSJYqWxf0Ns9A" base_Element="_e991oIL4EeSJYqWxf0Ns9A"/>
+  <UMLLabProfile:Reference xmi:id="_e-A48IL4EeSJYqWxf0Ns9A" base_Element="_e-AR4IL4EeSJYqWxf0Ns9A"/>
+  <UMLLabProfile:Reference xmi:id="_e-I0wIL4EeSJYqWxf0Ns9A" base_Element="_e-INsIL4EeSJYqWxf0Ns9A"/>
+  <UMLLabProfile:Reference xmi:id="_e-idYIL4EeSJYqWxf0Ns9A" base_Element="_e-hPQIL4EeSJYqWxf0Ns9A"/>
+  <UMLLabProfile:Reference xmi:id="_e-jEcIL4EeSJYqWxf0Ns9A" base_Element="_e-idYYL4EeSJYqWxf0Ns9A"/>
+  <UMLLabProfile:Reference xmi:id="_e-jrgoL4EeSJYqWxf0Ns9A" base_Element="_e-jrgIL4EeSJYqWxf0Ns9A"/>
+  <UMLLabProfile:Reference xmi:id="_e-k5oIL4EeSJYqWxf0Ns9A" base_Element="_e-kSkIL4EeSJYqWxf0Ns9A"/>
+  <UMLLabProfile:Patch xmi:id="_h4klkIL4EeSJYqWxf0Ns9A" base_Element="__uwus4HmEeSUu7Vru1fYMg" patchText="@@ -2619,16 +2619,17 @@&#xA; %0D%0A%09 */%0D%0A&#xA;+%09&#xA; @Overrid&#xA;@@ -2631,16 +2631,17 @@&#xA; erride%0D%0A&#xA;+%09&#xA; public L&#xA;@@ -4003,24 +4003,37 @@&#xA;  add%0D%0A%09 */%0D%0A&#xA;+%09@Override%0D%0A%09&#xA; public void &#xA;" conflicting="false"/>
+  <UMLLabProfile:Patch xmi:id="_h4o3AIL4EeSJYqWxf0Ns9A" base_Element="__WDTwIHmEeSUu7Vru1fYMg" patchText="@@ -511,16 +511,43 @@&#xA; StockGUI&#xA;+ implements AddNewInterface&#xA; %7B%0D%0A%09priv&#xA;" conflicting="false"/>
+  <UMLLabProfile:Patch xmi:id="_iHOFkIL4EeSJYqWxf0Ns9A" base_Element="__ufB4IHmEeSUu7Vru1fYMg" patchText="@@ -117,20 +117,21 @@&#xA; awt.&#xA;-Toolki&#xA;+GridLayou&#xA; t;%0D%0A&#xA;-%0D%0A&#xA; impo&#xA;@@ -141,53 +141,25 @@&#xA; java&#xA;-x.swing.JFrame;%0D%0Aimport javax.swing.JLabel&#xA;+.awt.Toolkit&#xA; ;%0D%0A&#xA;+%0D%0A&#xA; impo&#xA;@@ -174,20 +174,22 @@&#xA; .swing.J&#xA;-Menu&#xA;+Button&#xA; ;%0D%0Aimpor&#xA;@@ -203,23 +203,21 @@&#xA; .swing.J&#xA;-MenuBar&#xA;+Frame&#xA; ;%0D%0Aimpor&#xA;@@ -231,24 +231,21 @@&#xA; .swing.J&#xA;-MenuItem&#xA;+Label&#xA; ;%0D%0Aimpor&#xA;@@ -322,17 +322,17 @@&#xA; c class &#xA;-t&#xA;+T&#xA; ickerDis&#xA;@@ -342,16 +342,18 @@&#xA; yGUI %7B%0D%0A&#xA;+%0D%0A&#xA; %09private&#xA;@@ -400,517 +400,294 @@&#xA; l;%0D%0A&#xA;-%09private JPanel tickerPanel;%0D%0A%09private JPanel valuePanel;%0D%0A%09private JPanel gainPanel;%0D%0A%09private JMenuBar menus;%0D%0A%09private JMenu edit;%0D%0A%09private JMenuItem addShares;%0D%0A%09private JMenuItem sellShares;%0D%0A%09private JLabel tickerSymbol;%0D%0A%09private JLabel stockName;%0D%0A%09private JLabel currentValue;%0D%0A%09private JLabel dailyChange;%0D%0A%09private JLabel totalSpend;%0D%0A%09private JLabel totalGain;%0D%0A%09%0D%0A%0D%0A%09public static void main(String%5B%5D args) %7B%0D%0A%0D%0A%09%09new tickerDisplayGUI();%0D%0A%09%7D%0D%0A%0D%0A%09public tickerDisplayGUI() %7B%0D%0A%09%09makeFrame();%0D%0A%09%7D%0D%0A%09&#xA;+%0D%0A%09public static void main(String%5B%5D args) %7B%0D%0A%0D%0A%09%09new TickerDisplayGUI();%0D%0A%09%7D%0D%0A%0D%0A%09public TickerDisplayGUI() %7B%0D%0A%09%09makeFrame();%0D%0A%09%7D%0D%0A%0D%0A%09/**%0D%0A%09 * creates the frame which displays the ticker information as well as%0D%0A%09 * buttons that allow the user to sell and buy shares for that ticker%0D%0A%09 */&#xA; %0D%0A%09p&#xA;@@ -709,16 +709,17 @@&#xA; eFrame()&#xA;+ &#xA; %7B%0D%0A%09%09// &#xA;@@ -809,17 +809,16 @@&#xA; olioName&#xA;-'&#xA; %22);%0D%0A%09%09f&#xA;@@ -1208,30 +1208,8 @@&#xA; %0D%0A%09%09&#xA;-createMenu(frame);%0D%0A%09%09&#xA; main&#xA;@@ -1341,34 +1341,13 @@&#xA; eate&#xA;-ValuePanel();%0D%0A%09%09createGai&#xA;+Butto&#xA; nPan&#xA;@@ -1429,1827 +1429,1508 @@&#xA; %09%7D%0D%0A&#xA;-%09%0D%0A%09private void createMenu(JFrame frame)%7B%0D%0A%09%09%09menus = new JMenuBar();%0D%0A%09%09%09edit = new JMenu(%22Edit%22);%0D%0A%09%09%09addShares = new JMenuItem(%22Add Shares%22);%0D%0A%09%09%09sellShares = new JMenuItem(%22Sell Shares%22);%0D%0A%09%09%09menus.add(edit);%0D%0A%09%09%09edit.add(addShares);%0D%0A%09%09%09edit.add(sellShares);%0D%0A%09%09%09frame.setJMenuBar(menus);%0D%0A%09%09%7D%0D%0A%09%09%0D%0A%09%0D%0A%09private void createTickerPanel()%7B%0D%0A%09%09tickerPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));%0D%0A%09%09Dimension d = new Dimension(500, 100);%0D%0A%09%09tickerPanel.setPreferredSize(d);%0D%0A%09%09tickerPanel.setBorder(new EmptyBorder(20, 0, 0, 0));%0D%0A%09%09tickerSymbol = new JLabel(%22Ticker Symbol: +Ticker Symbol%22);%0D%0A%09%09tickerSymbol.setBorder(new EmptyBorder(0, 0, 0, 30));%0D%0A%09%09stockName = new JLabel(%22Stock Name: +StockName%22);%0D%0A%09%09tickerPanel.add(tickerSymbol);%0D%0A%09%09tickerPanel.add(stockName);%0D%0A%09%09mainPanel.add(tickerPanel, BorderLayout.NORTH);%0D%0A%09%7D%0D%0A%09%0D%0A%09private void createValuePanel()%7B%0D%0A%09%09valuePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));%0D%0A%09%09Dimension d = new Dimension(500, 100);%0D%0A%09%09valuePanel.setPreferredSize(d);%0D%0A%09%09currentValue = new JLabel(%22Current Value: +Current Value%22);%0D%0A%09%09currentValue.setBorder(new EmptyBorder(0, 0, 0, 30));%0D%0A%09%09dailyChange = new JLabel(%22Daily Change: +Daily Change%22);%0D%0A%09%09valuePanel.add(currentValue);%0D%0A%09%09valuePanel.add(dailyChange);%0D%0A%09%09mainPanel.add(valuePanel, BorderLayout.CENTER);%0D%0A%09%7D%0D%0A%09%0D%0A%09%0D%0A%09private void createGainPanel()%7B%0D%0A%09%09gainPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));%0D%0A%09%09Dimension d = new Dimension(500, 100);%0D%0A%09%09valuePanel.setPreferredSize(d);%0D%0A%09%09gainPanel.setBorder(new EmptyBorder(0, 0, 30, 0));%0D%0A%09%09totalGain = new JLabel(%22Total Gain: +totalGain%22);%0D%0A%09%09totalGain.setBorder(new EmptyBorder(0, 0, 0, 30));%0D%0A%09%09totalSpend = new JLabel(%22Total Spend: +totalSpend%22);%0D%0A%09%09gainPanel.add(totalGain);%0D%0A%09%09gainPanel.add(totalSpend);%0D%0A%09%09mainPanel.add(gainPanel, BorderLayout.SOUTH);%0D%0A%09%7D&#xA;+%0D%0A%09/**%0D%0A%09 * creates the panel which displays all the information for that ticker.%0D%0A%09 * This panel is then centered in the main frame.%0D%0A%09 */%0D%0A%09private void createTickerPanel() %7B%0D%0A%09%09JPanel tickerPanel = new JPanel(new GridLayout(6, 0, 10, 0));%0D%0A%09%09tickerPanel.setBorder(new EmptyBorder(10, 180, 0, 0));%0D%0A%09%09JLabel tickerSymbolLabel = new JLabel(%22Ticker Symbol: +tickerSymbol%22);%0D%0A%09%09JLabel stockNameLabel = new JLabel(%22Stock Name: +stockName%22);%0D%0A%09%09JLabel currentValueLabel = new JLabel(%22Current Value: +currentValue%22);%0D%0A%09%09JLabel dailyChangeLabel = new JLabel(%22Daily Change: +dailyChange%22);%0D%0A%09%09JLabel totalGainLabel = new JLabel(%22Total Gain: +totalGain%22);%0D%0A%09%09JLabel totalSpend = new JLabel(%22Total Spend: + totalSpend%22);%0D%0A%09%09tickerPanel.add(tickerSymbolLabel);%0D%0A%09%09tickerPanel.add(stockNameLabel);%0D%0A%09%09tickerPanel.add(currentValueLabel);%0D%0A%09%09tickerPanel.add(dailyChangeLabel);%0D%0A%09%09tickerPanel.add(totalGainLabel);%0D%0A%09%09tickerPanel.add(totalSpend);%0D%0A%09%09mainPanel.add(tickerPanel, BorderLayout.CENTER);%0D%0A%09%7D%0D%0A%0D%0A%09/**%0D%0A%09 * Creates the panel which consists of the add and sell shares buttons. This%0D%0A%09 * panel is set to the south in the main frame%0D%0A%09 */%0D%0A%09private void createButtonPanel() %7B%0D%0A%09%09JPanel buttonPanel = new JPanel(new FlowLayout());%0D%0A%09%09buttonPanel.setBorder(new EmptyBorder(10, 0, 20, 0));%0D%0A%09%09JButton buyShares = new JButton(%22Buy Shares%22);%0D%0A%09%09JButton sellShares = new JButton(%22Sell Shares%22);%0D%0A%09%09buttonPanel.add(buyShares);%0D%0A%09%09buttonPanel.add(sellShares);%0D%0A%09%09mainPanel.add(buttonPanel, BorderLayout.SOUTH);%0D%0A%09%7D%0D%0A&#xA; %0D%0A%7D%0D&#xA;" conflicting="false"/>
 </xmi:XMI>

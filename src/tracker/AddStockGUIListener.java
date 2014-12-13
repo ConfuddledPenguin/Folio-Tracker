@@ -1,18 +1,21 @@
 package tracker;
 
+import gui.AddNewInterface;
 import gui.AddStockGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
+import quoteServer.NoSuchTickerException;
 import model.Portfolio;
 
-class AddStockGUIListener implements ActionListener {
+public class AddStockGUIListener implements ActionListener {
 
 	private Portfolio portfolio;
-	private AddStockGUI ui;
+	private AddNewInterface ui;
 	
-	public AddStockGUIListener(AddStockGUI ui, Portfolio portfolio) {
+	public AddStockGUIListener(AddNewInterface ui, Portfolio portfolio) {
 		
 		this.portfolio = portfolio;
 		this.ui = ui;
@@ -21,9 +24,15 @@ class AddStockGUIListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		portfolio.newStock(ui.getTicker());
+		try {
+			portfolio.newStock(ui.getInfo());
+		} catch (NoSuchTickerException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		ui.close();
-		
 	}
-
 }
