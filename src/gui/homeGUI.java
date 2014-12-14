@@ -135,7 +135,7 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		
 		if(tabs.getTabCount()==0){
 			JPanel addPortfolioPanel = new JPanel();
-			addPortfolioPanel.setBorder(new EmptyBorder(0,200,0,0));
+			addPortfolioPanel.setBorder(new EmptyBorder(0,190,0,0));
 			
 			addPortfolioPanel.setLayout(new BorderLayout());
 			
