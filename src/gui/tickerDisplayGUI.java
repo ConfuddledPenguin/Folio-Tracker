@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,17 +13,17 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import model.Stock;
+
 public class TickerDisplayGUI {
 
 	private JFrame frame;
 	private JPanel mainPanel;
+	private Stock stock;
 
-	public static void main(String[] args) {
 
-		new TickerDisplayGUI();
-	}
-
-	public TickerDisplayGUI() {
+	public TickerDisplayGUI(Stock stock) {
+		this.stock = stock;
 		makeFrame();
 	}
 
@@ -32,7 +33,7 @@ public class TickerDisplayGUI {
 	 */
 	private void makeFrame() {
 		// create a new frame
-		frame = new JFrame("Editing Portfolio 'tickerName' for 'portfolioName");
+		frame = new JFrame("Editing " + stock.getName());
 		frame.setSize(500, 300);
 		// frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,12 +59,12 @@ public class TickerDisplayGUI {
 	private void createTickerPanel() {
 		JPanel tickerPanel = new JPanel(new GridLayout(6, 0, 10, 0));
 		tickerPanel.setBorder(new EmptyBorder(10, 180, 0, 0));
-		JLabel tickerSymbolLabel = new JLabel("Ticker Symbol: +tickerSymbol");
-		JLabel stockNameLabel = new JLabel("Stock Name: +stockName");
-		JLabel currentValueLabel = new JLabel("Current Value: +currentValue");
-		JLabel dailyChangeLabel = new JLabel("Daily Change: +dailyChange");
-		JLabel totalGainLabel = new JLabel("Total Gain: +totalGain");
-		JLabel totalSpend = new JLabel("Total Spend: + totalSpend");
+		JLabel tickerSymbolLabel = new JLabel("Ticker Symbol: " + stock.getTicker());
+		JLabel stockNameLabel = new JLabel("Stock Name: " + stock.getName());
+		JLabel currentValueLabel = new JLabel("Current Value: " + stock.getCurrentValue());
+		JLabel dailyChangeLabel = new JLabel("Daily Change: " + stock.getDailyChange());
+		JLabel totalGainLabel = new JLabel("Total Gain: " + stock.getNetGain());
+		JLabel totalSpend = new JLabel("Total Spend: " + stock.getTotalSpent());
 		tickerPanel.add(tickerSymbolLabel);
 		tickerPanel.add(stockNameLabel);
 		tickerPanel.add(currentValueLabel);
