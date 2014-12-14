@@ -30,8 +30,12 @@ public class sellShareGUI {
 		makeFrame();
 	}
 
+	/**
+	 * creates the initial JFrame and adds the components created in separate
+	 * methods to it
+	 */
 	private void makeFrame() {
-		frame = new JFrame("Adding Shares To +StockName");
+		frame = new JFrame("Selling Shares From +StockName");
 		frame.setSize(400, 175);
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI
@@ -52,11 +56,15 @@ public class sellShareGUI {
 
 	}
 
+	/**
+	 * Creates the number of shares panel consisting of a label and text box for
+	 * the user to enter the required amount of shares to sell
+	 */
 	private void numberOfSharesPane() {
 		noOfShares = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		Dimension d = new Dimension(400, 50);
 		// set border from top of panel
-		noOfShares.setBorder(new EmptyBorder(20, 10, 10, 10));
+		noOfShares.setBorder(new EmptyBorder(40, 10, 10, 10));
 		noOfShares.setPreferredSize(d);
 		noOfSharesLabel = new JLabel("number of Shares:    ");
 		noOfSharesText = new JTextField(10);
@@ -66,6 +74,9 @@ public class sellShareGUI {
 
 	}
 
+	/**
+	 * Creates the sell button to be added to the bottom of the JFrame
+	 */
 	private void sellButtonPane() {
 		sellButton = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		Dimension d = new Dimension(400, 50);
