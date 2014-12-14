@@ -3,6 +3,7 @@ package gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
+import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -43,7 +45,7 @@ public class homeGUI implements HomeGUIInterface, Observer{
 	private ActionListener stockListner = new AddStockListener(this);
 	private ActionListener portfolioListener;
 	private ActionListener setRefreshRateListener;
-	private ActionListener EditStockListener = new EditStockListener(this);
+	//private ActionListener EditStockListener = new EditStockListener(this);
 	
 	/**
 	 * Constructor for the UI. This creates the initial view
@@ -106,7 +108,7 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		
 		JMenu stock = new JMenu("Stock");
 		JMenuItem editStock = new JMenuItem("Edit");
-		editStock.addActionListener(EditStockListener);
+		//editStock.addActionListener(EditStockListener);
 		stock.add(editStock);
 		
 		menus.add(stock);
@@ -130,6 +132,27 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		tabs = new JTabbedPane();
 		
 		addPortfolios(tabs);
+		
+		if(tabs.getTabCount()==0){
+			JPanel addPortfolioPanel = new JPanel();
+			addPortfolioPanel.setBorder(new EmptyBorder(0,200,0,0));
+			
+			addPortfolioPanel.setLayout(new BorderLayout());
+			
+			JLabel addPortfolioLabel = new JLabel("Please add a Portfolio");
+			addPortfolioLabel.setFont(new Font("Serif", Font.BOLD, 25));
+			
+			addPortfolioPanel.add(addPortfolioLabel);
+			
+			
+			frame.add(addPortfolioPanel, BorderLayout.CENTER);
+			
+			
+			tabs.addTab("Default", addPortfolioPanel);
+			
+			frame.add(tabs);
+		
+		}
 	}
 	
 	private void rebuildPortfolio(){
