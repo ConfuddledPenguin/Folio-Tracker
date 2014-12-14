@@ -26,7 +26,6 @@ import javax.swing.table.TableModel;
 import model.*;
 import tracker.*;
 
-
 public class homeGUI implements HomeGUIInterface, Observer{
 
 	
@@ -86,9 +85,16 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		JMenuBar menus = new JMenuBar();
 		
 		JMenu file = new JMenu("File");
+		
 		JMenuItem newFolio = new JMenuItem("Create Folio");
 		newFolio.addActionListener(portfolioListener);
 		file.add(newFolio);
+		
+		JMenuItem loadFolio = new JMenuItem("Load Folio");
+		file.add(loadFolio);
+		
+		JMenuItem saveFolio = new JMenuItem("Save Folio");
+		file.add(saveFolio);
 		
 		menus.add(file);
 		
@@ -108,6 +114,9 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		JMenuItem editStock = new JMenuItem("Edit");
 		editStock.addActionListener(EditStockListener);
 		stock.add(editStock);
+		
+		JMenuItem deleteStock = new JMenuItem("Delete");
+		stock.add(deleteStock);
 		
 		menus.add(stock);
 		
