@@ -2,6 +2,7 @@ package gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -11,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 import model.Tracker;
 import tracker.AddPortfolioGUIListener;
@@ -47,12 +49,8 @@ public class SetRefreshRateGUI implements SetRefreshRateInterface{
 		mainPanel = new JPanel(new BorderLayout());
 		mainPanel.setPreferredSize(new Dimension(400, 175));
 		
+		createSetRefreshRatePanel();
 		
-		JLabel label =  new JLabel("Time between refreshes in seconds:");
-		mainPanel.add(label, BorderLayout.WEST);
-		
-		timeField = new JTextField();
-		mainPanel.add(timeField, BorderLayout.EAST);
 		
 		JButton add = new JButton("Set Rate");
 		
@@ -63,6 +61,17 @@ public class SetRefreshRateGUI implements SetRefreshRateInterface{
 		frame.add(mainPanel);
 		frame.revalidate();
 		frame.repaint();
+	}
+	
+	private void createSetRefreshRatePanel(){
+		JPanel refreshRate = new JPanel(new FlowLayout());
+		refreshRate.setSize(400, 50);
+		refreshRate.setBorder(new EmptyBorder(40, 0, 0, 0));
+		JLabel label =  new JLabel("Time between refreshes in seconds:");
+		refreshRate.add(label);		
+		timeField = new JTextField(4);
+		refreshRate.add(timeField);
+		mainPanel.add(refreshRate, BorderLayout.CENTER);
 	}
 	
 	@Override
