@@ -69,7 +69,7 @@ public class AddPortfolioGUI implements AddNewInterface {
 		createPortfolio.add(label);		
 		nameField = new JTextField(20);
 		createPortfolio.add(nameField);	
-		frame.add(createPortfolio, BorderLayout.CENTER);		
+		mainPanel.add(createPortfolio, BorderLayout.CENTER);		
 	}
 	
 	public String getInfo(){
