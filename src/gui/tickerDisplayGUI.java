@@ -33,7 +33,7 @@ public class TickerDisplayGUI {
 	 */
 	private void makeFrame() {
 		// create a new frame
-		frame = new JFrame("Editing " + stock.getName());
+		frame = new JFrame("Editing " + stock.getName() + " shares");
 		frame.setSize(500, 300);
 		// frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
