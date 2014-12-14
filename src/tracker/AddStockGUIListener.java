@@ -1,14 +1,13 @@
 package tracker;
 
 import gui.AddNewInterface;
-import gui.AddStockGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
-import quoteServer.NoSuchTickerException;
 import model.Portfolio;
+import quoteServer.NoSuchTickerException;
 
 public class AddStockGUIListener implements ActionListener {
 

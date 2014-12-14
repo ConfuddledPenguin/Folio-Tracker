@@ -78,5 +78,22 @@ public interface Portfolio {
 	 */
 	public String getName();
 	
+	/**
+	 * Saves the portfolio
+	 * 
+	 * @effects saves the portfolio to the file given
+	 * 
+	 * @param outputFile the file to save to
+	 */
 	public void savePortfolio(File outputFile);
+	
+	/**
+	 * Returns whether the portfolio is saved or not
+	 * 
+	 * @effects returns true if this portfolio is saved
+	 * false otherwise.
+	 * 
+	 * @return true if saved, false otherwise;
+	 */
+	public Boolean isSaved();
 }

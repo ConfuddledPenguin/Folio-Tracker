@@ -1,22 +1,24 @@
 package tracker;
 
-import gui.View;
+import gui.AddNewInterface;
+import gui.AddPortfolioGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddPortfolioListener implements ActionListener {
+import model.Tracker;
 
-	private View ui;
+public class AddPortfolioListener implements ActionListener {
 	
-	public AddPortfolioListener(View ui) {
-		
-		this.ui = ui;
+	private Tracker tracker;
+	
+	public AddPortfolioListener(Tracker tracker) {
+		this.tracker = tracker;
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		ui.showAddPortfolio();
+		AddNewInterface ui = new AddPortfolioGUI(tracker);
 	}	
 }

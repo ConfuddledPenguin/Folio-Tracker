@@ -14,24 +14,26 @@ import javax.swing.JTextField;
 
 import model.Tracker;
 import tracker.AddPortfolioGUIListener;
+import tracker.SetRefreshRateGUIListener;
+import tracker.SetRefreshRateListener;
 
-public class AddPortfolioGUI implements AddNewInterface {
-	
+public class SetRefreshRateGUI implements SetRefreshRateInterface{
+
 	private JFrame frame;
 	private JPanel mainPanel;
-	private JTextField nameField;
+	private JTextField timeField;
 	
 	private ActionListener al;
 
-	public AddPortfolioGUI(Tracker tracker) {
+	public SetRefreshRateGUI(Tracker tracker) {
 		
-		al = new AddPortfolioGUIListener(this, tracker);
+		al = new SetRefreshRateGUIListener(this, tracker);
 		
 		makeFrame();
 	}
 
 	private void makeFrame() {
-		frame = new JFrame("Add new Portfolio");
+		frame = new JFrame("Set the Refresh Rate");
 		frame.setSize(400, 175);
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI
@@ -46,13 +48,13 @@ public class AddPortfolioGUI implements AddNewInterface {
 		mainPanel.setPreferredSize(new Dimension(400, 175));
 		
 		
-		JLabel label =  new JLabel("Name Of Portfolio:");
+		JLabel label =  new JLabel("Time between refreshes in seconds:");
 		mainPanel.add(label, BorderLayout.WEST);
 		
-		nameField = new JTextField();
-		mainPanel.add(nameField, BorderLayout.EAST);
+		timeField = new JTextField();
+		mainPanel.add(timeField, BorderLayout.EAST);
 		
-		JButton add = new JButton("Add Portfolio");
+		JButton add = new JButton("Set Rate");
 		
 		add.addActionListener(al);
 		
@@ -61,14 +63,19 @@ public class AddPortfolioGUI implements AddNewInterface {
 		frame.add(mainPanel);
 		frame.revalidate();
 		frame.repaint();
+	}
+	
+	@Override
+	public String getRefreshRate() {
+		
+		return timeField.getText();
+		
+	}
 
+	@Override
+	public void close() {
+		
+		frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));		
 	}
-	
-	public String getInfo(){
-		return nameField.getText();
-	}
-	
-	public void close(){
-		frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-	}
+
 }

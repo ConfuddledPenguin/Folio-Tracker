@@ -17,6 +17,7 @@ class PortfolioImp implements Portfolio {
 	
 	//The name of the portfolio
 	private String name;
+	private Boolean saved = false;
 	//The stocks held in this portfolio
 	List<StockImp> stocks;
 	
@@ -65,6 +66,7 @@ class PortfolioImp implements Portfolio {
 		
 		stocks.add(s);
 		
+		saved = false;
 		tracker.modelChanged();
 		
 		return s;
@@ -85,21 +87,40 @@ class PortfolioImp implements Portfolio {
 		
 		if ( o instanceof Stock && o != null){
 			
+			saved=false;
 			tracker.modelChanged();
 			return stocks.remove( (Stock) o);
 		}
 		
-		
-		
 		return false;
 	}
 	
+	/**
+	 * Saves the portfolio
+	 * 
+	 * @effects saves the portfolio to the file given
+	 * 
+	 * @param outputFile the file to save to
+	 */
 	public void savePortfolio(File outputFile) {
 		
 		PortfolioSaver ps = new PortfolioSaver();
 		
 		ps.savePortfolio(this, outputFile);
 		
+		saved = true;
+	}
+	
+	/**
+	 * Returns whether the portfolio is saved or not
+	 * 
+	 * @effects returns true if this portfolio is saved
+	 * false otherwise.
+	 * 
+	 * @return true if saved, false otherwise;
+	 */
+	public Boolean isSaved(){
+		return saved;
 	}
 	
 	/*-----------------------------------------------------------------------

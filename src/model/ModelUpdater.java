@@ -49,6 +49,7 @@ class ModelUpdater implements Runnable{
 				e.printStackTrace();
 			}
 			tracker.updateTracker();
+			tracker.modelChanged();
 		}
 	}
 }

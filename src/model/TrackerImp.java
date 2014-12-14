@@ -140,13 +140,16 @@ public class TrackerImp extends Observable implements Tracker {
 			throw new IllegalRefreashRate("Refreash rate must be greater than minimum refreash rate", MIN_REFRESH_RATE);
 		}
 		
-		//Calculate how much time is needed between refreshes in mins
-		//it is plus 100 to ensure room to grow in the future.
-		double legalRefreashRateInMins = 60 / (2000 / (noStocks()));
-		long legalRefreashRate = (long) (legalRefreashRateInMins * 60 * 1000);
-		
-		if(refreashRate < legalRefreashRate){
-			throw new IllegalRefreashRate("Rate must be greater than " + MIN_REFRESH_RATE + "to avoid the API banhammer", MIN_REFRESH_RATE);
+		if(noStocks() != 0){
+				
+			//Calculate how much time is needed between refreshes in mins
+			//it is plus 100 to ensure room to grow in the future.
+			double legalRefreashRateInMins = 60 / (2000 / (noStocks()));
+			long legalRefreashRate = (long) (legalRefreashRateInMins * 60 * 1000);
+			
+			if(refreashRate < legalRefreashRate){
+				throw new IllegalRefreashRate("Rate must be greater than " + MIN_REFRESH_RATE + "to avoid the API banhammer", MIN_REFRESH_RATE);
+			}
 		}
 		
 		this.refreshRate = refreashRate;
@@ -195,7 +198,7 @@ public class TrackerImp extends Observable implements Tracker {
 		int total =0;
 		
 		for(PortfolioImp p : portfolios){
-			total =+ p.noStocks();
+			total += p.noStocks();
 		}
 		
 		return total;

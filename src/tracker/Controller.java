@@ -3,8 +3,8 @@ package tracker;
 import java.io.IOException;
 
 import quoteServer.NoSuchTickerException;
-import gui.HomeGUI;
-import gui.homeGUIImp;
+import gui.HomeGUIInterface;
+import gui.homeGUI;
 import model.Portfolio;
 import model.Stock;
 import model.Tracker;
@@ -13,7 +13,7 @@ import model.TrackerImp;
 public class Controller{
 	
 	private Tracker tracker;
-	private HomeGUI home;
+	private HomeGUIInterface home;
 	
 	public Controller(){
 		
@@ -25,7 +25,7 @@ public class Controller{
 		addPortfolio();	
 		
 		//create new gui passing it this and the model
-		home = new homeGUIImp(tracker);
+		home = new homeGUI(tracker);
 	}
 	
 	/*--------------------------------------------------------------
