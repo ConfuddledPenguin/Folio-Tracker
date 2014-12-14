@@ -12,17 +12,17 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class TickerDisplayGUI {
+import model.Stock;
+
+public class TickerDisplayGUI implements TickerDisplayGUIInterface {
 
 	private JFrame frame;
 	private JPanel mainPanel;
+	
+	private Stock stock;
 
-	public static void main(String[] args) {
-
-		new TickerDisplayGUI();
-	}
-
-	public TickerDisplayGUI() {
+	public TickerDisplayGUI(Stock stock) {
+		this.stock = stock;
 		makeFrame();
 	}
 

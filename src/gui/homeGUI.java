@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Vector;
@@ -21,12 +23,8 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-import model.Portfolio;
-import model.Stock;
-import model.Tracker;
-import tracker.AddPortfolioListener;
-import tracker.AddStockListener;
-import tracker.SetRefreshRateListener;
+import model.*;
+import tracker.*;
 
 
 public class homeGUI implements HomeGUIInterface, Observer{
@@ -39,10 +37,13 @@ public class homeGUI implements HomeGUIInterface, Observer{
 	//The Tracker of folios
 	private Tracker tracker;
 	
+	private List<JTable> tables = new ArrayList<JTable>(); 
+	
 	
 	private ActionListener stockListner = new AddStockListener(this);
 	private ActionListener portfolioListener;
 	private ActionListener setRefreshRateListener;
+	private ActionListener EditStockListener = new EditStockListener(this);
 	
 	/**
 	 * Constructor for the UI. This creates the initial view
@@ -93,16 +94,23 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		
 		JMenu folio = new JMenu("Folio");
 		JMenuItem closeFolio = new JMenuItem("Close Folio");
-		JMenuItem deleteFolio = new JMenuItem("Delete Folio");
-		JMenuItem addStock = new JMenuItem("Add Stock");
 		
+		
+		JMenuItem addStock = new JMenuItem("Add Stock");
 		addStock.addActionListener(stockListner);
 		
 		folio.add(closeFolio);
-		folio.add(deleteFolio);
 		folio.add(addStock);
 		
 		menus.add(folio);
+		
+		JMenu stock = new JMenu("Stock");
+		JMenuItem editStock = new JMenuItem("Edit");
+		editStock.addActionListener(EditStockListener);
+		stock.add(editStock);
+		
+		menus.add(stock);
+		
 		
 		JMenu options = new JMenu("Options");
 		JMenuItem setRefreash = new JMenuItem("Set Refreash Rate");
@@ -171,6 +179,8 @@ public class homeGUI implements HomeGUIInterface, Observer{
 
 		JTable table = new PortfolioTable(buildTableModel(p, model));
 		
+		tables.add(table);
+		
 		table.setBackground(Color.WHITE);
 		
 		return table;
@@ -210,6 +220,17 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		}
 		
 		return model;
+	}
+	
+	public Stock getCurrentStock(){
+		
+		Portfolio portfolio = getCurrentPortfolio();
+		int index = tables.get(tabs.getSelectedIndex()).getSelectedRow();
+		Stock s = portfolio.getStocks().get(index);
+		
+		System.out.println(s.getName());
+		
+		return s;
 	}
 	
 	public Portfolio getCurrentPortfolio(){
