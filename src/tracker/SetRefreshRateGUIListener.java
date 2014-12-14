@@ -5,7 +5,7 @@ import gui.SetRefreshRateInterface;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import model.IllegalRefreashRate;
+import model.IllegalRefreashRateException;
 import model.Tracker;
 
 public class SetRefreshRateGUIListener implements ActionListener {
@@ -30,7 +30,7 @@ public class SetRefreshRateGUIListener implements ActionListener {
 		
 		try {
 			tracker.setRefreshRate(rateInMS);
-		} catch (IllegalRefreashRate e1) {
+		} catch (IllegalRefreashRateException e1) {
 			// TODO display error
 			ui.close();
 			new SetRefreshRateListener(tracker).actionPerformed(new ActionEvent(this, 0, ""));

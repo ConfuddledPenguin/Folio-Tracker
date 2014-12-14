@@ -17,8 +17,22 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+/**
+ * This class handles the saving of portfolios
+ * 
+ * @author Tom Maxwell
+ *
+ */
 class PortfolioSaver {
 	
+	/**
+	 * Saves the given portfolio to the given file
+	 * 
+	 * @effects saves the given portfolio
+	 * 
+	 * @param portfolio The portfolio to save
+ 	 * @param outputFile The file to save it too
+	 */
 	void savePortfolio(PortfolioImp portfolio, File outputFile){
 		
 		if (!outputFile.exists()) {

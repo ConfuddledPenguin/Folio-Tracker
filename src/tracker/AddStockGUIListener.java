@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+import model.AlreadyExistsException;
 import model.Portfolio;
 import quoteServer.NoSuchTickerException;
 
@@ -29,6 +30,9 @@ public class AddStockGUIListener implements ActionListener {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (AlreadyExistsException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}

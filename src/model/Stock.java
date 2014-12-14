@@ -16,6 +16,8 @@ package model;
  *  <li>The holding value</li>
  *  <li>etc...</li>
  * </ul>
+ * 
+ * @author Tom Maxwell
  */
 public interface Stock {
 

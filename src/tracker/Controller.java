@@ -5,6 +5,7 @@ import java.io.IOException;
 import quoteServer.NoSuchTickerException;
 import gui.HomeGUIInterface;
 import gui.homeGUI;
+import model.AlreadyExistsException;
 import model.Portfolio;
 import model.Stock;
 import model.Tracker;
@@ -62,12 +63,18 @@ public class Controller{
 		} catch (IOException e) {
 			System.err.println("Error talking to server");
 			e.printStackTrace();
+		} catch (AlreadyExistsException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		s.addShares(2000, 12.0);
 		try {
 			s = p.newStock("RBS.l");
 		} catch (NoSuchTickerException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (AlreadyExistsException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

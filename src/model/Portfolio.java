@@ -8,6 +8,10 @@ import quoteServer.NoSuchTickerException;
 
 /**
  * An interface for the Portfolio.
+ * 
+ * A portfolio stores information about a number of stocks
+ * 
+ * @author Tom Maxwell
  *
  */
 public interface Portfolio {
@@ -20,15 +24,13 @@ public interface Portfolio {
 	 * @modifies this
 	 * 
 	 * @param ticker The ticker of the stock
-	 * @param name The name of the stock
-	 * @param exchange The name of the exchange
-	 * @param currentValue The currentValue of the stock
 	 * 
 	 * @return The new stock object
 	 * @throws IOException Error communicating with server
 	 * @throws NoSuchTickerException Ticker does not exist
+	 * @throws AlreadyExistsException If the Stock already exists 
 	 */
-	public Stock newStock(String ticker) throws NoSuchTickerException, IOException;
+	public Stock newStock(String ticker) throws NoSuchTickerException, IOException, AlreadyExistsException;
 	
 	/**
 	 * Deletes the given stock from the portfolio

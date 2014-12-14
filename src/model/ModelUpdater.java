@@ -6,6 +6,8 @@ package model;
  * from the rest of the application. It handles the timing of
  * the automated updates that update the model with new
  * information from yahoo.
+ * 
+ * @author Tom Maxwell
  *
  */
 class ModelUpdater implements Runnable{

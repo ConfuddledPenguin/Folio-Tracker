@@ -9,6 +9,7 @@ import java.util.Observer;
 /**
  * An implementation of the Model interface
  * 
+ * @author Tom Maxwell
  */
 public class TrackerImp extends Observable implements Tracker {
 
@@ -67,9 +68,10 @@ public class TrackerImp extends Observable implements Tracker {
 	 * @param name What to call the created portfolio
 	 * 
 	 * @return The portfolio created
+	 * @throws AlreadyExistsException If the portfolio already exists
 	 */
 	@Override
-	public Portfolio createPortfolio(String name) {
+	public Portfolio createPortfolio(String name){
 		
 		PortfolioImp p = new PortfolioImp(name, this);
 		
@@ -80,6 +82,14 @@ public class TrackerImp extends Observable implements Tracker {
 		return p;
 	}
 	
+	/**
+	 * Loads the given file
+	 * 
+	 * @modifies this
+	 * 
+	 * @param inputFile the file to load
+	 * @return the loaded portfolio
+	 */
 	public Portfolio loadPortfolio(File inputFile){
 		
 		PortfolioLoader pl = new PortfolioLoader(this);
@@ -128,16 +138,16 @@ public class TrackerImp extends Observable implements Tracker {
 	/**
 	 * Sets the rate at which the application checks
 	 * for the latest stock information
-	 * @throws IllegalRefreashRate 
+	 * @throws IllegalRefreashRateException 
 	 * 
 	 * @effects model.refreshRate = refreshRate
 	 * @modifies this
 	 */
 	@Override
-	public void setRefreshRate(long refreashRate) throws IllegalRefreashRate {
+	public void setRefreshRate(long refreashRate) throws IllegalRefreashRateException {
 		
 		if(refreashRate < MIN_REFRESH_RATE){
-			throw new IllegalRefreashRate("Refreash rate must be greater than minimum refreash rate", MIN_REFRESH_RATE);
+			throw new IllegalRefreashRateException("Refreash rate must be greater than minimum refreash rate", MIN_REFRESH_RATE);
 		}
 		
 		if(noStocks() != 0){
@@ -148,7 +158,7 @@ public class TrackerImp extends Observable implements Tracker {
 			long legalRefreashRate = (long) (legalRefreashRateInMins * 60 * 1000);
 			
 			if(refreashRate < legalRefreashRate){
-				throw new IllegalRefreashRate("Rate must be greater than " + MIN_REFRESH_RATE + "to avoid the API banhammer", MIN_REFRESH_RATE);
+				throw new IllegalRefreashRateException("Rate must be greater than " + MIN_REFRESH_RATE + "to avoid the API banhammer", MIN_REFRESH_RATE);
 			}
 		}
 		

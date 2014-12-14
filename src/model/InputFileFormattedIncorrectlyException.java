@@ -1,5 +1,11 @@
 package model;
 
+/**
+ * If the input file is incorrectly formatted
+ * 
+ * @author Tom
+ *
+ */
 public class InputFileFormattedIncorrectlyException extends Exception{
 
 	

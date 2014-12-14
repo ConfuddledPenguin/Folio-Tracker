@@ -7,6 +7,9 @@ import java.util.Observer;
 /**
  * An interface for the Model.
  * 
+ * The traker keep track of all the portfolios in the model
+ * 
+ * @author Tom Maxwell
  */
 public interface Tracker {
 	
@@ -24,6 +27,14 @@ public interface Tracker {
 	 */
 	public Portfolio createPortfolio(String name);
 	
+	/**
+	 * Loads the given file
+	 * 
+	 * @modifies this
+	 * 
+	 * @param inputFile the file to load
+	 * @return the loaded portfolio
+	 */
 	public Portfolio loadPortfolio(File inputFile);
 	
 	/**
@@ -53,7 +64,7 @@ public interface Tracker {
 	 * 
 	 * @effects model.refreshRate = refreshRate
 	 */
-	public void setRefreshRate(long refreashRate) throws IllegalRefreashRate;
+	public void setRefreshRate(long refreashRate) throws IllegalRefreashRateException;
 	
 	/**
 	 * Adds an observer to the set of observers for this object, 

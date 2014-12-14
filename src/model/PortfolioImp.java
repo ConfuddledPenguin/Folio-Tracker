@@ -9,6 +9,10 @@ import quoteServer.NoSuchTickerException;
 
 /**
  * A implementation of the portfolio interface
+ * 
+ * A portfolio stores information about a number of stocks
+ * 
+ * @author Tom Maxwell
  *
  */
 class PortfolioImp implements Portfolio {
@@ -45,18 +49,22 @@ class PortfolioImp implements Portfolio {
 	 * @modifies this
 	 * 
 	 * @param ticker The ticker of the stock
-	 * @param name The name of the stock
-	 * @param exchange The name of the exchange
-	 * @param currentValue The currentValue of the stock
 	 * 
 	 * @return The new stock object
 	 * @throws IOException Error communicating with server
 	 * @throws NoSuchTickerException The ticker does not exist
+	 * @throws AlreadyExistsException If the stock already exists
 	 */
 	@Override
-	public synchronized Stock newStock(String ticker) throws NoSuchTickerException, IOException {
+	public synchronized Stock newStock(String ticker) throws NoSuchTickerException, IOException, AlreadyExistsException {
 		
 		StockImp s = null;
+		
+		for(Stock stock: stocks){
+			if(stock.getTicker().equals(ticker)){
+				throw new AlreadyExistsException("Stock already exists in portfolio");
+			}
+		}
 		
 		try{
 			s = new StockImp(ticker, tracker);

@@ -25,6 +25,8 @@ import quoteServer.WebsiteDataException;
  *  <li>The holding value</li>
  *  <li>etc...</li>
  * </ul>
+ * 
+ * @author Tom Maxwell
  */
 class StockImp implements Stock {
 

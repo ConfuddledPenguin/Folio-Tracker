@@ -1,5 +1,11 @@
 package model;
 
+/**
+ * Used if there is no such ticker in the world
+ * 
+ * @author Tom Maxwell
+ *
+ */
 public class NoSuchTickerException extends Exception {
 
 	/**

@@ -46,6 +46,7 @@ public class homeGUI implements HomeGUIInterface, Observer{
 	private ActionListener portfolioListener;
 	private ActionListener setRefreshRateListener;
 	private ActionListener EditStockListener = new EditStockListener(this);
+	private ActionListener fileman;
 	
 	/**
 	 * Constructor for the UI. This creates the initial view
@@ -60,6 +61,7 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		//create actionListener for the future
 		portfolioListener = new AddPortfolioListener(tracker);
 		setRefreshRateListener = new SetRefreshRateListener(tracker);
+		fileman = new PortfolioFileManagementListener(this, tracker);
 		
 		frame = new JFrame("Folio Tracker");
 		// frame.setResizable(false);
@@ -94,9 +96,11 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		file.add(newFolio);
 		
 		JMenuItem loadFolio = new JMenuItem("Load Folio");
+		loadFolio.addActionListener(fileman);
 		file.add(loadFolio);
 		
 		JMenuItem saveFolio = new JMenuItem("Save Folio");
+		saveFolio.addActionListener(fileman);
 		file.add(saveFolio);
 		
 		menus.add(file);

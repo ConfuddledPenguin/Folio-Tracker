@@ -10,15 +10,35 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+/**
+ * The class handles the loading of portfolios
+ * 
+ * @author Tom
+ *
+ */
 class PortfolioLoader {
 
 	private TrackerImp tracker;
 	
+	/**
+	 * The default constructor
+	 * 
+	 * @param tracker
+	 */
 	PortfolioLoader(TrackerImp tracker) {
 		
 		this.tracker = tracker;
 	}
 	
+	/**
+	 * Loads the given file/portfolio
+	 * 
+	 * @effects loads and add the portfolio into the model
+	 * @modifies this, tracker
+	 * 
+	 * @param inputFile The file to be loaded
+	 * @return the loaded portfolio
+	 */
 	Portfolio loadPortfolio(File inputFile){
 		 
 		PortfolioImp portfolio = null;
