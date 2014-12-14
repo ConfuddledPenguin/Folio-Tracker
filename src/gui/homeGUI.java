@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
@@ -44,7 +45,7 @@ public class homeGUI implements HomeGUIInterface, Observer{
 	private ActionListener stockListner = new AddStockListener(this);
 	private ActionListener portfolioListener;
 	private ActionListener setRefreshRateListener;
-	//private ActionListener EditStockListener = new EditStockListener(this);
+	private ActionListener EditStockListener = new EditStockListener(this);
 	
 	/**
 	 * Constructor for the UI. This creates the initial view
@@ -114,7 +115,7 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		
 		JMenu stock = new JMenu("Stock");
 		JMenuItem editStock = new JMenuItem("Edit");
-		//editStock.addActionListener(EditStockListener);
+		editStock.addActionListener(EditStockListener);
 		stock.add(editStock);
 		
 		JMenuItem deleteStock = new JMenuItem("Delete");
@@ -210,7 +211,7 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		DefaultTableModel model = new DefaultTableModel();
 
 		JTable table = new PortfolioTable(buildTableModel(p, model));
-		
+		table.addMouseListener((MouseListener)EditStockListener);
 		tables.add(table);
 		
 		table.setBackground(Color.WHITE);
