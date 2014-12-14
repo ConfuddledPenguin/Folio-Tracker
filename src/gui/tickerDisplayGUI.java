@@ -36,7 +36,6 @@ public class TickerDisplayGUI implements TickerDisplayGUIInterface {
 		frame = new JFrame("Editing " + stock.getName() + " shares");
 		frame.setSize(500, 300);
 		// frame.setResizable(false);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.setResizable(false);
 		// centre the GUI according to the screen size

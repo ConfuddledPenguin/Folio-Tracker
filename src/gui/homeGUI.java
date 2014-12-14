@@ -226,9 +226,12 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		
 		Portfolio portfolio = getCurrentPortfolio();
 		int index = tables.get(tabs.getSelectedIndex()).getSelectedRow();
-		Stock s = portfolio.getStocks().get(index);
 		
-		System.out.println(s.getName());
+		Stock s;
+		if(index >=0){
+			s = portfolio.getStocks().get(index);
+		}else
+			s = null;
 		
 		return s;
 	}
