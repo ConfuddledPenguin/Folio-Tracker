@@ -16,12 +16,9 @@ public class addSharesGUI {
 	private JFrame frame;
 	private JPanel mainPanel;
 	private JPanel noOfShares;
-	private JPanel initialValue;
 	private JPanel saveButton;
 	private JLabel noOfSharesLabel;
-	private JLabel initialValueLabel;
 	private JTextField noOfSharesText;
-	private JTextField initialValueText;
 	private JButton save;
 
 	public static void main(String[] args) {
@@ -33,8 +30,11 @@ public class addSharesGUI {
 		makeFrame();
 	}
 
+	/**
+	 * Creates the initial buy shares frame
+	 */
 	private void makeFrame() {
-		frame = new JFrame("Adding Shares To +StockName");
+		frame = new JFrame("Buying Shares for +StockName");
 		frame.setSize(400, 175);
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI
@@ -48,7 +48,6 @@ public class addSharesGUI {
 		mainPanel = new JPanel(new BorderLayout());
 		mainPanel.setPreferredSize(new Dimension(400, 175));
 		numberOfSharesPane();
-		initialValuePane();
 		saveButtonPane();
 		frame.add(mainPanel);
 		frame.revalidate();
@@ -56,32 +55,27 @@ public class addSharesGUI {
 
 	}
 
+	/**
+	 * Creates the panel which consists of a label and text box for the user to
+	 * enter the required number of shares to buy
+	 */
 	private void numberOfSharesPane() {
 		noOfShares = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		Dimension d = new Dimension(400, 50);
 		// set border from top of panel
-		noOfShares.setBorder(new EmptyBorder(10, 10, 10, 10));
+		noOfShares.setBorder(new EmptyBorder(40, 10, 10, 10));
 		noOfShares.setPreferredSize(d);
 		noOfSharesLabel = new JLabel("number of Shares:    ");
 		noOfSharesText = new JTextField(10);
 		noOfShares.add(noOfSharesLabel);
 		noOfShares.add(noOfSharesText);
-		mainPanel.add(noOfShares, BorderLayout.NORTH);
+		mainPanel.add(noOfShares, BorderLayout.CENTER);
 
 	}
 
-	private void initialValuePane() {
-		initialValue = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		Dimension d = new Dimension(400, 50);
-		noOfShares.setPreferredSize(d);
-		initialValueLabel = new JLabel("Initial Value:                 ");
-		initialValueText = new JTextField(10);
-		initialValue.add(initialValueLabel);
-		initialValue.add(initialValueText);
-		mainPanel.add(initialValue, BorderLayout.CENTER);
-
-	}
-
+	/**
+	 * Creates the save button to be added to the bottom of the JFrame
+	 */
 	private void saveButtonPane() {
 		saveButton = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		Dimension d = new Dimension(400, 50);
