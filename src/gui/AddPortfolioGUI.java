@@ -2,6 +2,7 @@ package gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -11,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 import model.Tracker;
 import tracker.AddPortfolioGUIListener;
@@ -45,12 +47,7 @@ public class AddPortfolioGUI implements AddNewInterface {
 		mainPanel = new JPanel(new BorderLayout());
 		mainPanel.setPreferredSize(new Dimension(400, 175));
 		
-		
-		JLabel label =  new JLabel("Name Of Portfolio:");
-		mainPanel.add(label, BorderLayout.WEST);
-		
-		nameField = new JTextField();
-		mainPanel.add(nameField, BorderLayout.EAST);
+		createNewPortfolioPanel();
 		
 		JButton add = new JButton("Add Portfolio");
 		
@@ -62,6 +59,17 @@ public class AddPortfolioGUI implements AddNewInterface {
 		frame.revalidate();
 		frame.repaint();
 
+	}
+	
+	private void createNewPortfolioPanel(){
+		JPanel createPortfolio = new JPanel(new FlowLayout());
+		createPortfolio.setSize(400, 175);
+		createPortfolio.setBorder(new EmptyBorder(40,0,0,0));
+		JLabel label =  new JLabel("Name Of Portfolio:");
+		createPortfolio.add(label);		
+		nameField = new JTextField(20);
+		createPortfolio.add(nameField);	
+		frame.add(createPortfolio, BorderLayout.CENTER);		
 	}
 	
 	public String getInfo(){
