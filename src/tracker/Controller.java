@@ -67,8 +67,7 @@ public class Controller{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		s.addShares(2000, 12.0);
+	
 		try {
 			s = p.newStock("RBS.l");
 		} catch (NoSuchTickerException | IOException e) {
@@ -78,6 +77,5 @@ public class Controller{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		s.addShares(3000, 18.00);
 	}
 }

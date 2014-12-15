@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import tracker.StockTradeListener;
 import model.Stock;
 
 public class TickerDisplayGUI implements TickerDisplayGUIInterface {
@@ -20,10 +21,16 @@ public class TickerDisplayGUI implements TickerDisplayGUIInterface {
 	private JFrame frame;
 	private JPanel mainPanel;
 	
+	private ActionListener al;
+	
 	private Stock stock;
 
 	public TickerDisplayGUI(Stock stock) {
+		
 		this.stock = stock;
+		
+		al = new StockTradeListener(stock);
+		
 		makeFrame();
 	}
 
@@ -82,6 +89,8 @@ public class TickerDisplayGUI implements TickerDisplayGUIInterface {
 		buttonPanel.setBorder(new EmptyBorder(10, 0, 20, 0));
 		JButton buyShares = new JButton("Buy Shares");
 		JButton sellShares = new JButton("Sell Shares");
+		buyShares.addActionListener(al);
+		sellShares.addActionListener(al);
 		buttonPanel.add(buyShares);
 		buttonPanel.add(sellShares);
 		mainPanel.add(buttonPanel, BorderLayout.SOUTH);

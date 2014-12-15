@@ -31,8 +31,9 @@ public interface Stock {
 	 * @param initialValue The value the shares where purchased at
 	 * 
 	 * @return true if successful, false otherwise
+	 * @throws CantPurchaseMoreThanAvailableException 
 	 */
-	public boolean addShares(int noShares, double initialValue);
+	public boolean addShares(int noShares) throws CantPurchaseMoreThanAvailableException;
 	
 	/**
 	 * Removes shares from a stock
@@ -41,8 +42,9 @@ public interface Stock {
 	 * @modifies this
 	 * 
 	 * @param noShares The shares to be removed
+	 * @throws CantRemoveMoreThanOwnedException 
 	 */
-	public boolean removeShares(int noShares);
+	public boolean removeShares(int noShares) throws CantRemoveMoreThanOwnedException;
 	
 	/**
 	 * Returns the stock ticker

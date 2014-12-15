@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,7 +14,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class sellShareGUI {
+import tracker.StockTradeGUIListener;
+import model.Stock;
+
+public class sellShareGUI implements StockTradeGUIInterface {
+	
 	private JFrame frame;
 	private JPanel mainPanel;
 	private JPanel noOfShares;
@@ -20,13 +26,15 @@ public class sellShareGUI {
 	private JLabel noOfSharesLabel;
 	private JTextField noOfSharesText;
 	private JButton sell;
+	
+	private Stock stock;
+	private ActionListener al;
 
-	public static void main(String[] args) {
-
-		new sellShareGUI();
-	}
-
-	public sellShareGUI() {
+	public sellShareGUI(Stock stock) {
+		
+		this.stock = stock;
+		this.al = new StockTradeGUIListener(stock, this);
+		
 		makeFrame();
 	}
 
@@ -40,7 +48,6 @@ public class sellShareGUI {
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI
 		frame.setAlwaysOnTop(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		// centre the GUI according to the screen size
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
@@ -81,9 +88,24 @@ public class sellShareGUI {
 		sellButton = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		Dimension d = new Dimension(400, 50);
 		sellButton.setPreferredSize(d);
-		sell = new JButton("sell");
+		sell = new JButton("Sell");
+		sell.addActionListener(al);
 		sellButton.add(sell);
 		mainPanel.add(sellButton, BorderLayout.SOUTH);
 	}
 
+	@Override
+	public int amount() {
+		
+		int amount = Integer.parseInt(noOfSharesText.getText());
+		
+		return amount;
+	}
+	
+	/**
+	 * Method to close the JFrame
+	 */
+	public void close() {
+		frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+	}
 }

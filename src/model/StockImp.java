@@ -81,7 +81,6 @@ class StockImp implements Stock {
 			quoter.setValues(ticker);
 			name = quoter.getName();
 			exchange = quoter.getExchange();
-			currentValue = quoter.getLatest();
 		} catch (IOException e){
 			throw e;
 		} catch (WebsiteDataException e){
@@ -91,6 +90,7 @@ class StockImp implements Stock {
 		} catch(NoSuchTickerException e){
 			throw new NoSuchTickerException("Ticker " + ticker + " doesnt exist");
 		}
+		update();
 	}
 	
 	/**
@@ -103,11 +103,16 @@ class StockImp implements Stock {
 	 * @param initialValue The value the shares where purchased at
 	 * 
 	 * @return true if successful, false otherwise
+	 * @throws CantPurchaseMoreThanAvailableException 
 	 */
-	public synchronized boolean addShares(int noShares, double initialValue) {
+	public synchronized boolean addShares(int noShares) throws CantPurchaseMoreThanAvailableException {
+
+		if(noShares > volume){
+			throw new CantPurchaseMoreThanAvailableException("Can't purchase " + noShares + " as only " + volume + " are available");
+		}
 		
 		this.noShares += noShares;
-		this.totalSpent += initialValue * noShares;
+		this.totalSpent += currentValue * noShares;
 		
 		tracker.modelChanged();
 		
@@ -121,9 +126,15 @@ class StockImp implements Stock {
 	 * @modifies this
 	 * 
 	 * @param noShares The shares to be removed
+	 * @throws CantRemoveMoreThanOwnedException 
 	 */
-	public synchronized boolean removeShares(int noShares){
+	public synchronized boolean removeShares(int noShares) throws CantRemoveMoreThanOwnedException{
 		
+		if(noShares > this.noShares){
+			throw new CantRemoveMoreThanOwnedException("Can't sell " + noShares + " as only " + this.noShares + " are held");
+		}
+		
+		this.noShares -= noShares;
 		double value = noShares * currentValue;
 		
 		totalSpent -= value;

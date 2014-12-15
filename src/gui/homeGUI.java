@@ -239,7 +239,6 @@ public class homeGUI implements HomeGUIInterface, Observer{
 			Vector<Object> v = new Vector<Object>();
 			
 			v.addElement(s.getTicker());
-			System.out.println(s.getTicker());
 			v.addElement(s.getName());
 			v.addElement(s.getNumberOfShares());
 			v.addElement(s.getCurrentValue());

@@ -4,6 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,7 +15,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class buySharesGUI {
+import tracker.StockTradeGUIListener;
+import model.Stock;
+
+public class buySharesGUI implements StockTradeGUIInterface{
+	
 	private JFrame frame;
 	private JPanel mainPanel;
 	private JPanel noOfShares;
@@ -20,13 +27,16 @@ public class buySharesGUI {
 	private JLabel noOfSharesLabel;
 	private JTextField noOfSharesText;
 	private JButton buy;
+	
+	private Stock stock;
+	private ActionListener al;
 
-	public static void main(String[] args) {
-
-		new buySharesGUI();
-	}
-
-	public buySharesGUI() {
+	public buySharesGUI(Stock stock) {
+		
+		this.stock = stock;
+		this.al = new StockTradeGUIListener(stock, this);
+		
+		System.out.println("Draw");
 		makeFrame();
 	}
 
@@ -39,7 +49,6 @@ public class buySharesGUI {
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI
 		frame.setAlwaysOnTop(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		// centre the GUI according to the screen size
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
@@ -80,9 +89,23 @@ public class buySharesGUI {
 		buyButton = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		Dimension d = new Dimension(400, 50);
 		buyButton.setPreferredSize(d);
-		buy = new JButton("buy");
+		buy = new JButton("Buy");
+		buy.addActionListener(al);
 		buyButton.add(buy);
 		mainPanel.add(buyButton, BorderLayout.SOUTH);
 	}
-
+	
+	public int amount(){
+		
+		int amount = Integer.parseInt(noOfSharesText.getText());
+		
+		return amount;
+	}
+	
+	/**
+	 * Method to close the JFrame
+	 */
+	public void close() {
+		frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+	}
 }
