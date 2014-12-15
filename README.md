@@ -14,13 +14,11 @@ Copyright 2014
 
 Thomas Maxwell		-	gvb12182@uni.strath.ac.uk
 
-Chole Forsyth		  - xeb12185@uni.strath.ac.uk
+Chloe Forsyth		  - 	xeb12185@uni.strath.ac.uk
 
-Amanda Renny		  - gpb12164@uni.strath.ac.uk
+Amanda Renny		  - 	gpb12164@uni.strath.ac.uk
 
-Ricky Provan		  - yfb13226@uni.strath.ac.uk
-
-Ryan Gibson		  	-	richard.provan.2013@uni.strath.ac.uk
+Ryan Gibson		  	-		yfb13226@uni.strath.ac.uk
 
 
 This project can not be copied and/or distributed without the express permission of the authors.
