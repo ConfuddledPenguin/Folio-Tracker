@@ -68,7 +68,7 @@ public class AddStockGUI implements AddNewInterface{
 	private void createStockPanel() {
 		JPanel stockPanel = new JPanel(new GridLayout(1, 1));
 		stockPanel.setBorder(new EmptyBorder(50, 80, 50, 80));
-		JLabel label = new JLabel("Name Of stock:");
+		JLabel label = new JLabel("Stock Ticker:");
 		nameField = new JTextField(20);
 		stockPanel.add(label);
 		stockPanel.add(nameField);

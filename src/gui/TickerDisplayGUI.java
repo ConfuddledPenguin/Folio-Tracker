@@ -63,18 +63,30 @@ public class TickerDisplayGUI implements TickerDisplayGUIInterface {
 	 * This panel is then centered in the main frame.
 	 */
 	private void createTickerPanel() {
-		JPanel tickerPanel = new JPanel(new GridLayout(6, 0, 10, 0));
-		tickerPanel.setBorder(new EmptyBorder(10, 180, 0, 0));
+		JPanel tickerPanel = new JPanel(new GridLayout(6, 2, 10, 0));
+		tickerPanel.setBorder(new EmptyBorder(10, 70, 0, 0));
 		JLabel tickerSymbolLabel = new JLabel("Ticker Symbol: " + stock.getTicker());
 		JLabel stockNameLabel = new JLabel("Stock Name: " + stock.getName());
+		JLabel stockExchangeLabel = new JLabel("Stock Exchnage: " + stock.getExchange());
 		JLabel currentValueLabel = new JLabel("Current Value: " + stock.getCurrentValue());
+		JLabel openingLabel = new JLabel("Openign value: " + stock.getOpeningPrice());
 		JLabel dailyChangeLabel = new JLabel("Daily Change: " + stock.getDailyChange());
-		JLabel totalGainLabel = new JLabel("Total Gain: " + stock.getNetGain());
+		JLabel dailyMaxLabel = new JLabel("Daily Max: " + stock.getDailyMax());
+		JLabel dailyMinLabel = new JLabel("Daily Min: " + stock.getDailyMin());
+		JLabel volumeAvailable = new JLabel("Volume Available: " + stock.getVolume());
+		JLabel holdingValueLabel = new JLabel("Holding Value: " + stock.getHoldingValue());
 		JLabel totalSpend = new JLabel("Total Spend: " + stock.getTotalSpent());
+		JLabel totalGainLabel = new JLabel("Total Gain: " + stock.getNetGain());
 		tickerPanel.add(tickerSymbolLabel);
 		tickerPanel.add(stockNameLabel);
+		tickerPanel.add(stockExchangeLabel);
 		tickerPanel.add(currentValueLabel);
+		tickerPanel.add(openingLabel);
 		tickerPanel.add(dailyChangeLabel);
+		tickerPanel.add(dailyMaxLabel);
+		tickerPanel.add(dailyMinLabel);
+		tickerPanel.add(volumeAvailable);
+		tickerPanel.add(holdingValueLabel);
 		tickerPanel.add(totalGainLabel);
 		tickerPanel.add(totalSpend);
 		mainPanel.add(tickerPanel, BorderLayout.CENTER);
