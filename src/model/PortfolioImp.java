@@ -98,8 +98,9 @@ class PortfolioImp implements Portfolio {
 		if ( o instanceof Stock && o != null){
 			
 			saved=false;
+			boolean success = stocks.remove( (Stock) o);
 			tracker.modelChanged();
-			return stocks.remove( (Stock) o);
+			return success;
 		}
 		
 		return false;

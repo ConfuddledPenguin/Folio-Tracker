@@ -31,7 +31,7 @@ public class confirmationGUI implements ConfirmationInterface{
 	 */
 	private void makeFrame() {
 		frame = new JFrame("Deleting " + msg);
-		frame.setSize(900, 175);
+		frame.setSize(800, 175);
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI
 		frame.setAlwaysOnTop(true);
