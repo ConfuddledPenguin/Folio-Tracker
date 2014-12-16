@@ -76,6 +76,9 @@ class StockImp implements Stock {
 		this.ticker = ticker;
 		this.tracker = tracker;
 		
+		assert ticker!=null;
+		assert tracker!=null;
+		
 		quoter  = new Quote(TrackerImp.USE_PROXY);
 		try {
 			quoter.setValues(ticker);
@@ -107,6 +110,7 @@ class StockImp implements Stock {
 	 */
 	public synchronized boolean addShares(int noShares) throws CantPurchaseMoreThanAvailableException {
 
+		
 		if(noShares > volume){
 			throw new CantPurchaseMoreThanAvailableException("Can't purchase " + noShares + " as only " + volume + " are available");
 		}
@@ -114,6 +118,7 @@ class StockImp implements Stock {
 		this.noShares += noShares;
 		this.totalSpent += currentValue * noShares;
 		
+		assert (totalSpent > (currentValue)): "the total spent is less than the current value";
 		tracker.modelChanged();
 		
 		return true;
@@ -138,6 +143,7 @@ class StockImp implements Stock {
 		double value = noShares * currentValue;
 		
 		totalSpent -= value;
+		assert(totalSpent == (totalSpent)): "total spent does not equal itself";
 		
 		tracker.modelChanged();
 		
@@ -161,6 +167,8 @@ class StockImp implements Stock {
 			volume = quoter.getVolume();		//update volume
 			dailyMax = quoter.getRangeMax();	//update daily max
 			dailyMin = quoter.getRangeMin();	//update daily min
+			assert (dailyMax > (dailyMin)): "the daily max is lower than the daily min!";
+			
 		} catch (MethodException e) {
 			/*
 			 * Do nothing
@@ -185,6 +193,7 @@ class StockImp implements Stock {
 	 */
 	void setTotalSpent(double totalSpent) {
 		this.totalSpent = totalSpent;
+		assert (totalSpent ==(totalSpent)): "Total spent does not equal itself";
 	}
 	
 	/**
@@ -214,7 +223,9 @@ class StockImp implements Stock {
 	@Override
 	public String getTicker() {
 		
+		assert ticker!=null;
 		return ticker;
+		
 	}
 
 	/**
@@ -227,6 +238,7 @@ class StockImp implements Stock {
 	@Override
 	public String getName() {
 
+		assert name!=null;
 		return name;
 	}
 
@@ -250,6 +262,7 @@ class StockImp implements Stock {
 	@Override
 	public String getExchange() {
 		
+		assert exchange!=null;
 		return exchange;
 	}
 
@@ -262,6 +275,7 @@ class StockImp implements Stock {
 	 */
 	@Override
 	public synchronized double getCurrentValue() {
+		
 		
 		return currentValue;
 	}
@@ -317,6 +331,7 @@ class StockImp implements Stock {
 	@Override
 	public synchronized double getClosingPrice() {
 		
+		
 		return closingPrice;
 	}
 
@@ -345,6 +360,7 @@ class StockImp implements Stock {
 	@Override
 	public double getDailyChange() {
 		
+		
 		return dailyChange;
 	}
 
@@ -359,6 +375,7 @@ class StockImp implements Stock {
 	@Override
 	public double getDailyMax() {
 
+		
 		return dailyMax;
 	}
 
@@ -385,6 +402,7 @@ class StockImp implements Stock {
 	 */
 	@Override
 	public double getVolume() {
+		
 		
 		return volume;
 	}

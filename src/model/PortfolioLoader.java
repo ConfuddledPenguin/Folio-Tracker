@@ -27,6 +27,7 @@ class PortfolioLoader {
 	 */
 	PortfolioLoader(TrackerImp tracker) {
 		
+		assert tracker!=null;
 		this.tracker = tracker;
 	}
 	
@@ -41,6 +42,7 @@ class PortfolioLoader {
 	 */
 	Portfolio loadPortfolio(File inputFile){
 		 
+		assert inputFile!=null;
 		PortfolioImp portfolio = null;
 		
 		try{

@@ -24,7 +24,7 @@ class ModelUpdater implements Runnable{
 	 * for
 	 */
 	ModelUpdater(Tracker model){
-		
+		assert model!=null;
 		if(model instanceof TrackerImp){
 		
 			this.tracker = (TrackerImp) model;
@@ -50,6 +50,7 @@ class ModelUpdater implements Runnable{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			assert tracker!=null;
 			tracker.updateTracker();
 			tracker.modelChanged();
 		}

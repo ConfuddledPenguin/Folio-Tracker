@@ -35,6 +35,7 @@ class PortfolioSaver {
 	 */
 	void savePortfolio(PortfolioImp portfolio, File outputFile){
 		
+		assert portfolio!=null;
 		if (!outputFile.exists()) {
 			try {
 				outputFile.createNewFile();
@@ -61,6 +62,9 @@ class PortfolioSaver {
 		
 			//Add Stock info
 			for(Stock s: portfolio.getStocks()){
+				
+				assert s!=null;
+				
 				
 				Element stock = doc.createElement("stock");
 				rootElem.appendChild(stock);
