@@ -5,7 +5,7 @@ import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-public class FileChooserGUI{
+public class FileChooserGUI implements FileChooserInterface{
 	
 		JFileChooser chooser;
 	
@@ -17,6 +17,10 @@ public class FileChooserGUI{
 		chooser.setCurrentDirectory(dir);
 	}
 	
+	/* (non-Javadoc)
+	 * @see gui.FileChooserInterface#GetFile()
+	 */
+	@Override
 	public File GetFile(){
 		
 		int returnval = chooser.showOpenDialog(chooser);
@@ -28,6 +32,10 @@ public class FileChooserGUI{
 		return null;
 	}
 	
+	/* (non-Javadoc)
+	 * @see gui.FileChooserInterface#SaveFile()
+	 */
+	@Override
 	public File SaveFile(){
 		
 		

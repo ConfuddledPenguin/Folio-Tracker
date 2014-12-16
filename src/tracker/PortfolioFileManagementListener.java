@@ -2,6 +2,7 @@ package tracker;
 
 import gui.ErrorInterface;
 import gui.FileChooserGUI;
+import gui.FileChooserInterface;
 import gui.HomeGUIInterface;
 import gui.errorGUI;
 
@@ -30,7 +31,7 @@ public class PortfolioFileManagementListener implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		JMenuItem source = (JMenuItem) e.getSource();
-		FileChooserGUI chooser = new FileChooserGUI();
+		FileChooserInterface chooser = new FileChooserGUI();
 		
 		if(source.getText().equals("Save Folio")){
 			
