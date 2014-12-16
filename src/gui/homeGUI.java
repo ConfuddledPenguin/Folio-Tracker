@@ -188,11 +188,30 @@ public class homeGUI implements HomeGUIInterface, Observer{
 	}
 	
 	private void addPortfolios(JTabbedPane tabs){
+		
+		JPanel portfolioPanel = new JPanel();
+		
+		if(tracker.getPortfolios().size() == 0){
+			
+			portfolioPanel.setBorder(new EmptyBorder(0,190,0,0));
+			
+			portfolioPanel.setLayout(new BorderLayout());
+			
+			JLabel addPortfolioLabel = new JLabel("Please add a Portfolio");
+			addPortfolioLabel.setFont(new Font("Serif", Font.BOLD, 25));
+			
+			portfolioPanel.add(addPortfolioLabel);
+			
+			frame.add(portfolioPanel, BorderLayout.CENTER);
+			
+			tabs.addTab("Default", portfolioPanel);
+			
+			frame.add(tabs);
+		}
+		
 		for(Portfolio p: tracker.getPortfolios()){
 			
 			portfoliosPresent = true;
-			
-			JPanel portfolioPanel = new JPanel();
 			
 			portfolioPanel.setLayout(new BorderLayout());
 			
@@ -205,7 +224,6 @@ public class homeGUI implements HomeGUIInterface, Observer{
 			frame.add(tabs);
 		
 			//Add value display
-			
 			JPanel value = new JPanel();
 			
 			value.setLayout(new BorderLayout());

@@ -1,6 +1,8 @@
 package tracker;
 
 import gui.AddNewInterface;
+import gui.ErrorInterface;
+import gui.errorGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,9 +26,8 @@ public class AddPortfolioGUIListener implements ActionListener {
 		String name = ui.getInfo();
 		
 		if(name.length() == 0){
-			//TODO throw error
+			ErrorInterface errorui = new errorGUI("You must give the portfolio a name");
 			ui.close();
-			new AddPortfolioListener(tracker).actionPerformed(new ActionEvent(this, 0, ""));
 		}else{
 			tracker.createPortfolio(name);
 			ui.close();
