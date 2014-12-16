@@ -38,8 +38,9 @@ class PortfolioLoader {
 	 * 
 	 * @param inputFile The file to be loaded
 	 * @return the loaded portfolio
+	 * @throws FailedToLoadFileException 
 	 */
-	Portfolio loadPortfolio(File inputFile){
+	Portfolio loadPortfolio(File inputFile) throws FailedToLoadFileException{
 		 
 		PortfolioImp portfolio = null;
 		
@@ -84,7 +85,7 @@ class PortfolioLoader {
 			}
 			
 		}catch(Exception e){
-			
+			throw new FailedToLoadFileException();
 		}
 		
 		return portfolio;

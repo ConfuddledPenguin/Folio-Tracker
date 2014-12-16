@@ -112,12 +112,18 @@ class PortfolioImp implements Portfolio {
 	 * @effects saves the portfolio to the file given
 	 * 
 	 * @param outputFile the file to save to
+	 * @throws FailedToSaveFileException 
 	 */
-	public void savePortfolio(File outputFile) {
+	public void savePortfolio(File outputFile) throws FailedToSaveFileException {
 		
 		PortfolioSaver ps = new PortfolioSaver();
 		
-		ps.savePortfolio(this, outputFile);
+		try {
+			ps.savePortfolio(this, outputFile);
+		} catch (FailedToSaveFileException e) {
+			//try again
+			ps.savePortfolio(this, outputFile);
+		}
 		
 		saved = true;
 	}

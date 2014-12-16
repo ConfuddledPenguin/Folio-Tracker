@@ -89,14 +89,20 @@ public class TrackerImp extends Observable implements Tracker {
 	 * 
 	 * @param inputFile the file to load
 	 * @return the loaded portfolio
+	 * @throws FailedToLoadFileException 
 	 */
-	public Portfolio loadPortfolio(File inputFile){
+	public Portfolio loadPortfolio(File inputFile) throws FailedToLoadFileException{
 		
 		PortfolioLoader pl = new PortfolioLoader(this);
 		
 		modelChanged();
 		
-		return pl.loadPortfolio(inputFile);
+		try {
+			return pl.loadPortfolio(inputFile);
+		} catch (FailedToLoadFileException e) {
+			//try again
+			return pl.loadPortfolio(inputFile);
+		}
 	}
 
 	/**

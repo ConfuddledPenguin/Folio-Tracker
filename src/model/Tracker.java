@@ -34,8 +34,9 @@ public interface Tracker {
 	 * 
 	 * @param inputFile the file to load
 	 * @return the loaded portfolio
+	 * @throws FailedToLoadFileException 
 	 */
-	public Portfolio loadPortfolio(File inputFile);
+	public Portfolio loadPortfolio(File inputFile) throws FailedToLoadFileException;
 	
 	/**
 	 * Deletes a given portfolio
