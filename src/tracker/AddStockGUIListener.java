@@ -1,6 +1,8 @@
 package tracker;
 
 import gui.AddNewInterface;
+import gui.ErrorInterface;
+import gui.errorGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,14 +29,11 @@ public class AddStockGUIListener implements ActionListener {
 		try {
 			portfolio.newStock(ui.getInfo());
 		} catch (NoSuchTickerException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			ErrorInterface ui = new errorGUI(e1.getMessage());
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			 ErrorInterface ui = new errorGUI(e1.getMessage());
 		} catch (AlreadyExistsException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			ErrorInterface ui = new errorGUI(e1.getMessage());
 		}
 		ui.close();
 	}

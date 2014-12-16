@@ -32,16 +32,22 @@ class PortfolioSaver {
 	 * 
 	 * @param portfolio The portfolio to save
  	 * @param outputFile The file to save it too
+	 * @throws FailedToSaveFileException 
 	 */
-	void savePortfolio(PortfolioImp portfolio, File outputFile){
+	void savePortfolio(PortfolioImp portfolio, File outputFile) throws FailedToSaveFileException{
+		
+		String filepath = outputFile.getAbsolutePath();
+		if(!filepath.endsWith(".ftf")){
+			filepath = filepath + ".ftf";
+			outputFile = new File(filepath);
+		}
 		
 		assert portfolio!=null;
 		if (!outputFile.exists()) {
 			try {
 				outputFile.createNewFile();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new FailedToSaveFileException();
 			}
 		}
 		
@@ -92,13 +98,11 @@ class PortfolioSaver {
 			transformer.transform(source, result);
 			
 		}catch(ParserConfigurationException e){
-			e.printStackTrace();
+			throw new FailedToSaveFileException();
 		}catch(TransformerConfigurationException e){
-			e.printStackTrace();
+			throw new FailedToSaveFileException();
 		}catch(TransformerException e){
-			e.printStackTrace();
+			throw new FailedToSaveFileException();
 		}
-		
-		System.out.println("saved");
 	}
 }

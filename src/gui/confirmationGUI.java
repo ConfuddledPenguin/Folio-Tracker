@@ -4,24 +4,24 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class confirmationGUI {
-	private String objectToDelete;
+public class confirmationGUI implements ConfirmationInterface{
+	private String msg;
 	private JFrame frame;
 	private JPanel mainPanel;
+	private ActionListener al;
 
-	public static void main(String[] args) {
-
-		new confirmationGUI("Portfolio1");
-	}
-
-	public confirmationGUI(String objectToDelete) {
-		this.objectToDelete = objectToDelete;
+	public confirmationGUI(String msg, ActionListener al) {
+		this.msg = msg;
+		this.al = al;
 		makeFrame();
 	}
 
@@ -30,21 +30,20 @@ public class confirmationGUI {
 	 * confirmation buttons added to the bottom
 	 */
 	private void makeFrame() {
-		frame = new JFrame("Deleting " + objectToDelete);
-		frame.setSize(400, 175);
+		frame = new JFrame("Deleting " + msg);
+		frame.setSize(800, 175);
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI
 		frame.setAlwaysOnTop(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		// centre the GUI according to the screen size
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		frame.setLocation(d.width / 2 - frame.getWidth() / 2, d.height / 2
 				- frame.getHeight() / 2);
 		mainPanel = new JPanel(new BorderLayout());
-		mainPanel.setPreferredSize(new Dimension(400, 250));
+		mainPanel.setPreferredSize(new Dimension(900, 250));
 		JLabel confirmationLabel = new JLabel(
-				"Are you sure you wish to delete " + objectToDelete);
+				"Are you sure you wish to delete " + msg);
 		confirmationLabel.setBorder(new EmptyBorder(10, 70, 0, 0));
 		mainPanel.add(confirmationLabel);
 		addButtons();
@@ -59,12 +58,21 @@ public class confirmationGUI {
 	private void addButtons() {
 		JPanel buttonPanel = new JPanel(new FlowLayout());
 		buttonPanel.setSize(400, 100);
-		JButton yes = new JButton("yes");
-		JButton no = new JButton("no");
+		JButton yes = new JButton("Yes");
+		yes.addActionListener(al);
+		JButton no = new JButton("No");
+		no.addActionListener(al);
 		buttonPanel.add(yes);
 		buttonPanel.add(no);
 		buttonPanel.setBorder(new EmptyBorder(0, 0, 20, 0));
 		mainPanel.add(buttonPanel, BorderLayout.SOUTH);
+	}
+	
+	/**
+	 * Method to close the JFrame
+	 */
+	public void close() {
+		frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 	}
 
 }

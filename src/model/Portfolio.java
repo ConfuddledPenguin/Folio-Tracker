@@ -86,8 +86,9 @@ public interface Portfolio {
 	 * @effects saves the portfolio to the file given
 	 * 
 	 * @param outputFile the file to save to
+	 * @throws FailedToSaveFileException 
 	 */
-	public void savePortfolio(File outputFile);
+	public void savePortfolio(File outputFile) throws FailedToSaveFileException;
 	
 	/**
 	 * Returns whether the portfolio is saved or not

@@ -74,7 +74,7 @@ public class Quote implements IQuote {
 	public void setValues(String tickerSymbol) throws IOException,
 			WebsiteDataException, NoSuchTickerException, MethodException {
 
-		String url = "http://finance.yahoo.com/d/quotes.csv?s=";
+		String url = "http://download.finance.yahoo.com/d/quotes.csv?s=";
 		
 		/*
 		 * s = ticker

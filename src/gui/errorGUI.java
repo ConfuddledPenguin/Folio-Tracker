@@ -2,8 +2,10 @@ package gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -11,18 +13,18 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class errorGUI {
+import tracker.ErrorGUIListener;
+
+public class errorGUI implements ErrorInterface {
+	
  private String errorMessage;
  private JFrame frame;
  private JPanel mainPanel;
- 
- public static void main(String[] args) {
-
-		new errorGUI("No such ticker name");
-	}
+ private ActionListener al;
 	
 	public errorGUI(String errorMessage){
 		this.errorMessage = errorMessage;
+		al = new ErrorGUIListener(this);
 		makeFrame();
 	}
 	
@@ -36,7 +38,6 @@ public class errorGUI {
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI
 		frame.setAlwaysOnTop(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		// centre the GUI according to the screen size
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
@@ -48,11 +49,19 @@ public class errorGUI {
 		errorMessageLabel.setBorder(new EmptyBorder(10, 0, 0, 0));
 		mainPanel.add(errorMessageLabel);
 		JButton ok = new JButton("OK");
+		ok.addActionListener(al);
 		ok.setBorder(new EmptyBorder(0,0,10,0));
 		mainPanel.add(ok, BorderLayout.SOUTH);
 		frame.add(mainPanel);
 		frame.revalidate();
 		frame.repaint();
+	}
+	
+	/**
+	 * Method to close the JFrame
+	 */
+	public void close() {
+		frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 	}
 
 }

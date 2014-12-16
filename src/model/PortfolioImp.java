@@ -36,11 +36,7 @@ class PortfolioImp implements Portfolio {
 	public PortfolioImp(String name, TrackerImp tracker) {
 		  
 		this.name = name;
-		assert name!=null;
-		assert(name.equals(name));
 		this.tracker = tracker;
-		assert tracker!=null;
-		assert(tracker.equals(tracker));
 		  
 		stocks = new ArrayList<StockImp>();
 	}
@@ -63,11 +59,10 @@ class PortfolioImp implements Portfolio {
 	public synchronized Stock newStock(String ticker) throws NoSuchTickerException, IOException, AlreadyExistsException {
 		
 		StockImp s = null;
-		assert ticker!=null;
 		
+		ticker = ticker.trim();
+		ticker = ticker.toUpperCase();
 		for(Stock stock: stocks){
-			assert !stocks.isEmpty():"There are no stocks in stock array";
-			assert stock!=null;
 			if(stock.getTicker().equals(ticker)){
 				throw new AlreadyExistsException("Stock already exists in portfolio");
 			}
@@ -80,14 +75,11 @@ class PortfolioImp implements Portfolio {
 		}
 		
 		stocks.add(s);
-		assert(stocks.contains(s)):"Stock" + s + " was not added.";
 		
 		saved = false;
-		//assert(saved = false):"saved is true!";
 		tracker.modelChanged();
 		
 		return s;
-		
 	}
 
 	/**
@@ -104,13 +96,11 @@ class PortfolioImp implements Portfolio {
 	public synchronized boolean deleteStock(Object o) {
 		
 		if ( o instanceof Stock && o != null){
-			assert o!=null;
+			
 			saved=false;
+			boolean success = stocks.remove( (Stock) o);
 			tracker.modelChanged();
-			return stocks.remove( (Stock) o);
-			
-			
-			
+			return success;
 		}
 		
 		return false;
@@ -122,15 +112,20 @@ class PortfolioImp implements Portfolio {
 	 * @effects saves the portfolio to the file given
 	 * 
 	 * @param outputFile the file to save to
+	 * @throws FailedToSaveFileException 
 	 */
-	public void savePortfolio(File outputFile) {
+	public void savePortfolio(File outputFile) throws FailedToSaveFileException {
 		
 		PortfolioSaver ps = new PortfolioSaver();
 		
-		ps.savePortfolio(this, outputFile);
+		try {
+			ps.savePortfolio(this, outputFile);
+		} catch (FailedToSaveFileException e) {
+			//try again
+			ps.savePortfolio(this, outputFile);
+		}
 		
 		saved = true;
-		
 	}
 	
 	/**
@@ -159,10 +154,8 @@ class PortfolioImp implements Portfolio {
 	 */
 	@Override
 	public synchronized List<Stock> getStocks() {
-		assert stocks!=null:"There are no stocks to view!";
+		
 		return new ArrayList<Stock>(stocks);
-		
-		
 	}
 	
 	/**
@@ -188,15 +181,13 @@ class PortfolioImp implements Portfolio {
 	public double getTotalValue() {
 		
 		double totalValue = 0;
-		assert (totalValue == 0): "Inital total value has not been set to 0";	
 		
 		for(StockImp s: stocks){
-			assert !stocks.isEmpty():"There are no stocks in stock array";
+			
 			totalValue += s.getHoldingValue();
 		}
 		
 		return totalValue;
-	
 	}
 
 	/**
@@ -211,10 +202,8 @@ class PortfolioImp implements Portfolio {
 		
 		double netGain = 0;
 		
-		
 		for(StockImp s: stocks){
 			
-			assert !stocks.isEmpty():"There are no stocks in stock array";
 			netGain += s.getNetGain();
 		}
 		
@@ -232,7 +221,6 @@ class PortfolioImp implements Portfolio {
 	public String getName() {
 
 		return name;
-		
 	}
 	
 	/*-----------------------------------------------------------------------
@@ -248,9 +236,7 @@ class PortfolioImp implements Portfolio {
 	 */
 	int noStocks(){
 		
-		assert !stocks.isEmpty(): "Stocks is empty - 0 stocks";
 		return stocks.size();
-		
 	}
 	
 	/**
@@ -260,7 +246,7 @@ class PortfolioImp implements Portfolio {
 	synchronized void update(){
 		
 		for(StockImp s: stocks){
-			assert stocks!=null: "Stock array is empty";
+			
 			s.update();
 		}
 	}

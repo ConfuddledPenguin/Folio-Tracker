@@ -7,6 +7,8 @@ import gui.HomeGUIInterface;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import model.Portfolio;
+
 public class AddStockListener implements ActionListener {
 
 	private HomeGUIInterface homeui;
@@ -20,6 +22,10 @@ public class AddStockListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		AddNewInterface ui = new AddStockGUI(homeui.getCurrentPortfolio());
+		Portfolio portfolio = homeui.getCurrentPortfolio();
+		
+		if(portfolio != null){
+			AddNewInterface ui = new AddStockGUI(homeui.getCurrentPortfolio());
+		}
 	}	
 }

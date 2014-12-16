@@ -41,12 +41,15 @@ public class homeGUI implements HomeGUIInterface, Observer{
 	
 	private List<JTable> tables = new ArrayList<JTable>(); 
 	
+	private boolean portfoliosPresent = false;
 	
-	private ActionListener stockListner = new AddStockListener(this);
+	private ActionListener addStockListner = new AddStockListener(this);
 	private ActionListener portfolioListener;
 	private ActionListener setRefreshRateListener;
 	private ActionListener EditStockListener = new EditStockListener(this);
 	private ActionListener fileman;
+	private ActionListener closePortfolio;
+	private ActionListener removeStock;
 	
 	/**
 	 * Constructor for the UI. This creates the initial view
@@ -62,6 +65,8 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		portfolioListener = new AddPortfolioListener(tracker);
 		setRefreshRateListener = new SetRefreshRateListener(tracker);
 		fileman = new PortfolioFileManagementListener(this, tracker);
+		closePortfolio = new CloseFolioListener(this, tracker);
+		removeStock = new RemoveStockListener(this);
 		
 		frame = new JFrame("Folio Tracker");
 		// frame.setResizable(false);
@@ -107,10 +112,11 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		
 		JMenu folio = new JMenu("Folio");
 		JMenuItem closeFolio = new JMenuItem("Close Folio");
+		closeFolio.addActionListener(closePortfolio);
 		
 		
 		JMenuItem addStock = new JMenuItem("Add Stock");
-		addStock.addActionListener(stockListner);
+		addStock.addActionListener(addStockListner);
 		
 		folio.add(closeFolio);
 		folio.add(addStock);
@@ -122,14 +128,15 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		editStock.addActionListener(EditStockListener);
 		stock.add(editStock);
 		
-		JMenuItem deleteStock = new JMenuItem("Delete");
+		JMenuItem deleteStock = new JMenuItem("Remove Stock");
+		deleteStock.addActionListener(removeStock);
 		stock.add(deleteStock);
 		
 		menus.add(stock);
 		
 		
 		JMenu options = new JMenu("Options");
-		JMenuItem setRefreash = new JMenuItem("Set Refreash Rate");
+		JMenuItem setRefreash = new JMenuItem("Set Refresh Rate");
 		setRefreash.addActionListener(setRefreshRateListener);
 		options.add(setRefreash);
 		
@@ -165,22 +172,29 @@ public class homeGUI implements HomeGUIInterface, Observer{
 			tabs.addTab("Default", addPortfolioPanel);
 			
 			frame.add(tabs);
-		
 		}
 	}
 	
 	private void rebuildPortfolio(){
 		
+		portfoliosPresent = false; 
 		int index = tabs.getSelectedIndex();
+		int noPortfolios = tables.size();
 		tabs.removeAll();
+		tables.removeAll(tables);
 		addPortfolios(tabs);
-		tabs.setSelectedIndex(index);
+		if(tables.size() == noPortfolios)
+			tabs.setSelectedIndex(index);
 	}
 	
 	private void addPortfolios(JTabbedPane tabs){
+		
+		//update the portfolio pane
 		for(Portfolio p: tracker.getPortfolios()){
 			
 			JPanel portfolioPanel = new JPanel();
+			
+			portfoliosPresent = true;
 			
 			portfolioPanel.setLayout(new BorderLayout());
 			
@@ -193,7 +207,6 @@ public class homeGUI implements HomeGUIInterface, Observer{
 			frame.add(tabs);
 		
 			//Add value display
-			
 			JPanel value = new JPanel();
 			
 			value.setLayout(new BorderLayout());
@@ -202,6 +215,28 @@ public class homeGUI implements HomeGUIInterface, Observer{
 			value.add(new JLabel("NetGain: $" + p.getNetGain()), BorderLayout.EAST);
 			
 			portfolioPanel.add(value, BorderLayout.SOUTH);
+		}
+		
+		if(portfoliosPresent){
+			return;
+		}else{
+			
+			JPanel portfolioPanel = new JPanel();
+						
+			portfolioPanel.setBorder(new EmptyBorder(0,190,0,0));
+			
+			portfolioPanel.setLayout(new BorderLayout());
+			
+			JLabel addPortfolioLabel = new JLabel("Please add a Portfolio");
+			addPortfolioLabel.setFont(new Font("Serif", Font.BOLD, 25));
+			
+			portfolioPanel.add(addPortfolioLabel);
+			
+			frame.add(portfolioPanel, BorderLayout.CENTER);
+			
+			tabs.addTab("Default", portfolioPanel);
+			
+			frame.add(tabs);
 		}
 	}
 	
@@ -222,8 +257,6 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		
 		return table;
 	}
-	
-	
 	
 	private TableModel buildTableModel(Portfolio p, DefaultTableModel model){
 		
@@ -261,6 +294,11 @@ public class homeGUI implements HomeGUIInterface, Observer{
 	public Stock getCurrentStock(){
 		
 		Portfolio portfolio = getCurrentPortfolio();
+		
+		if (portfolio == null){
+			return null;
+		}
+		
 		int index = tables.get(tabs.getSelectedIndex()).getSelectedRow();
 		
 		Stock s;
@@ -274,13 +312,15 @@ public class homeGUI implements HomeGUIInterface, Observer{
 	
 	public Portfolio getCurrentPortfolio(){
 		
+		if(tabs.getSelectedIndex()  < 0 || !portfoliosPresent){
+			return null;
+		}
 		return tracker.getPortfolios().get(tabs.getSelectedIndex());
 	}
 
 	@Override
 	public void update(Observable o, Object arg) {
 		
-		System.out.println("repaint");
 		rebuildPortfolio();	
 		frame.repaint();
 	}
