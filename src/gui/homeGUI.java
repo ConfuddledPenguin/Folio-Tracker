@@ -177,14 +177,21 @@ public class homeGUI implements HomeGUIInterface, Observer{
 	
 	private void rebuildPortfolio(){
 		
-		portfoliosPresent = false; 
 		int index = tabs.getSelectedIndex();
+		int tableIndex = 0;
+		if(index > -1 && portfoliosPresent){
+			tableIndex = tables.get(index).getSelectedRow();
+		}
 		int noPortfolios = tables.size();
+		portfoliosPresent = false;
 		tabs.removeAll();
 		tables.removeAll(tables);
 		addPortfolios(tabs);
-		if(tables.size() == noPortfolios)
+		if(tables.size() == noPortfolios){
 			tabs.setSelectedIndex(index);
+			if(tables.get(index).getRowCount() > 0 && tables.get(index).getRowCount() > tableIndex && tableIndex > -1)
+				tables.get(index).setRowSelectionInterval(tableIndex, tableIndex);
+		}
 	}
 	
 	private void addPortfolios(JTabbedPane tabs){
