@@ -69,7 +69,7 @@ public class TickerDisplayGUI implements TickerDisplayGUIInterface {
 		JLabel stockNameLabel = new JLabel("Stock Name: " + stock.getName());
 		JLabel stockExchangeLabel = new JLabel("Stock Exchnage: " + stock.getExchange());
 		JLabel currentValueLabel = new JLabel("Current Value: " + stock.getCurrentValue());
-		JLabel openingLabel = new JLabel("Openign value: " + stock.getOpeningPrice());
+		JLabel openingLabel = new JLabel("Opening value: " + stock.getOpeningPrice());
 		JLabel dailyChangeLabel = new JLabel("Daily Change: " + stock.getDailyChange());
 		JLabel dailyMaxLabel = new JLabel("Daily Max: " + stock.getDailyMax());
 		JLabel dailyMinLabel = new JLabel("Daily Min: " + stock.getDailyMin());
