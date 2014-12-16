@@ -1,6 +1,8 @@
 package tracker;
 
+import gui.ErrorInterface;
 import gui.SetRefreshRateInterface;
+import gui.errorGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,9 +33,7 @@ public class SetRefreshRateGUIListener implements ActionListener {
 		try {
 			tracker.setRefreshRate(rateInMS);
 		} catch (IllegalRefreashRateException e1) {
-			// TODO display error
-			ui.close();
-			new SetRefreshRateListener(tracker).actionPerformed(new ActionEvent(this, 0, ""));
+			ErrorInterface errorui = new errorGUI(e1.getMessage());
 		}
 		
 		ui.close();

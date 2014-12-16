@@ -1,5 +1,6 @@
 package tracker;
 
+import gui.FileChooserGUI;
 import gui.HomeGUIInterface;
 
 import java.awt.event.ActionEvent;
@@ -25,15 +26,21 @@ public class PortfolioFileManagementListener implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		JMenuItem source = (JMenuItem) e.getSource();
+		FileChooserGUI chooser = new FileChooserGUI();
 		
 		if(source.getText().equals("Save Folio")){
-			//TODO
+			
 			Portfolio portfolio = ui.getCurrentPortfolio();
-			File file = new File(portfolio.getName());
+			
+			if(portfolio == null){
+				return;
+			}
+			
+			File file = chooser.SaveFile();
 			portfolio.savePortfolio(file);
-		}else if(source.getText().equals("Load Portfolio")){
-			//TODO
-			System.out.println("Imagine it printing out");
+		}else if(source.getText().equals("Load Folio")){
+			File file = chooser.GetFile();
+			tracker.loadPortfolio(file);
 		}
 	}
 

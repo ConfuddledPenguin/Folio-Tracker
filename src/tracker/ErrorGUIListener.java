@@ -16,9 +16,5 @@ public class ErrorGUIListener implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		ui.close();
-		
 	}
-	
-	
-
 }

@@ -35,6 +35,12 @@ class PortfolioSaver {
 	 */
 	void savePortfolio(PortfolioImp portfolio, File outputFile){
 		
+		String filepath = outputFile.getAbsolutePath();
+		if(!filepath.endsWith(".ftf")){
+			filepath = filepath + ".ftf";
+			outputFile = new File(filepath);
+		}
+		
 		if (!outputFile.exists()) {
 			try {
 				outputFile.createNewFile();

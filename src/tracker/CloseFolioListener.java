@@ -43,12 +43,14 @@ public class CloseFolioListener implements ActionListener{
 			if(portfolio.isSaved()){
 				tracker.deletePortfolio(portfolio);
 			}else{
-				confirmui = new confirmationGUI("Warning: Portfolio " + portfolio.getName() + "is not saved. Are you sure you wish to close it?", this);
+				confirmui = new confirmationGUI("Warning: Portfolio " + portfolio.getName() + " is not saved. Are you sure you wish to close it?", this);
 			}
 		}else if(source.equals("Yes")){
 			System.out.println("close");
 			tracker.getPortfolios();
 			tracker.deletePortfolio(portfolio);
+			confirmui.close();
+		}else{
 			confirmui.close();
 		}
 	}

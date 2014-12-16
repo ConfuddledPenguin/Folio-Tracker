@@ -21,7 +21,6 @@ public class EditStockListener implements ActionListener, MouseListener{
 	
 	private void handleEvent(){
 		
-		System.out.println("edit me");
 		Stock s = ui.getCurrentStock();
 		
 		if(s != null){
