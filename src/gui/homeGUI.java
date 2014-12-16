@@ -136,7 +136,7 @@ public class homeGUI implements HomeGUIInterface, Observer{
 		
 		
 		JMenu options = new JMenu("Options");
-		JMenuItem setRefreash = new JMenuItem("Set Refreash Rate");
+		JMenuItem setRefreash = new JMenuItem("Set Refresh Rate");
 		setRefreash.addActionListener(setRefreshRateListener);
 		options.add(setRefreash);
 		
