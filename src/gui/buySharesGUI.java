@@ -44,7 +44,7 @@ public class buySharesGUI implements StockTradeGUIInterface{
 	 * Creates the initial buy shares frame
 	 */
 	private void makeFrame() {
-		frame = new JFrame("Buying Shares for +StockName");
+		frame = new JFrame("Buying Shares for " + stock.getName());
 		frame.setSize(400, 175);
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI

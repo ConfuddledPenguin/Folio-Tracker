@@ -43,7 +43,7 @@ public class sellShareGUI implements StockTradeGUIInterface {
 	 * methods to it
 	 */
 	private void makeFrame() {
-		frame = new JFrame("Selling Shares From +StockName");
+		frame = new JFrame("Selling Shares From " + stock.getName());
 		frame.setSize(400, 175);
 		frame.setResizable(false);
 		// allow the frame to be in front of the home GUI
