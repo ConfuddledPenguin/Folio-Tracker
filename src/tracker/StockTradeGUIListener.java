@@ -1,6 +1,8 @@
 package tracker;
 
+import gui.ErrorInterface;
 import gui.StockTradeGUIInterface;
+import gui.errorGUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,21 +26,27 @@ public class StockTradeGUIListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
+		int amount = ui.amount();
+		
+		if(amount < 0){
+			ErrorInterface ui = new errorGUI("Cant trade negative amounts");
+			ui.close();
+			return;
+		}
+		
 		if(e.getSource() instanceof JButton){
 			if((((JButton) e.getSource()).getText().equals("Buy"))){
 				try {
 					stock.addShares(ui.amount());
 				} catch (CantPurchaseMoreThanAvailableException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+					ErrorInterface ui = new errorGUI(e1.getMessage());
 				}
 				ui.close();
 			}else if((((JButton) e.getSource()).getText().equals("Sell"))){
 				try {
 					stock.removeShares(ui.amount());
 				} catch (CantRemoveMoreThanOwnedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+					ErrorInterface ui = new errorGUI(e1.getMessage());
 				}
 				ui.close();
 			}

@@ -60,6 +60,8 @@ class PortfolioImp implements Portfolio {
 		
 		StockImp s = null;
 		
+		ticker = ticker.trim();
+		ticker = ticker.toUpperCase();
 		for(Stock stock: stocks){
 			if(stock.getTicker().equals(ticker)){
 				throw new AlreadyExistsException("Stock already exists in portfolio");

@@ -23,7 +23,7 @@ public class Controller{
 		
 		//Calling example code
 		//remove this at some point
-		addPortfolio();	
+//		addPortfolio();	
 		
 		//create new gui passing it this and the model
 		home = new homeGUI(tracker);
